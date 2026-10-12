@@ -1227,20 +1227,12 @@
     "notion_url": "https://app.notion.com/p/3f786ab69e84812e9daece9d44794748",
     "install_method": "Video training course (not an installable addon), with a companion Blender Asset Library of 51 registered assets (SuperHive's own in-page Asset Browser integration widget -- UI chrome on the product page, not a separate downloadable file). Source files and asset library not yet extracted/registered in any profile.",
     "module": null,
-    "current_version": "1.0",
+    "current_version": "deleted (was downloaded, removed for disk space 2026-10-12)",
     "versions": {
-      "source-files": "cubicity/source/cgcookie_cubicity_source-files.zip (7.5MB)",
-      "videos_ch01": "cubicity/source/cubicity_videos_ch01.zip (825.2MB)",
-      "videos_ch02_01": "cubicity/source/cubicity_videos_ch02_01.zip (651.0MB)",
-      "videos_ch02_02": "cubicity/source/cubicity_videos_ch02_02.zip (557.7MB)",
-      "videos_ch03_01": "cubicity/source/cubicity_videos_ch03_01.zip (1.0GB)",
-      "videos_ch03_02": "cubicity/source/cubicity_videos_ch03_02.zip (762.9MB)",
-      "videos_ch04_01": "cubicity/source/cubicity_videos_ch04_01.zip (710.9MB)",
-      "videos_ch04_02": "cubicity/source/cubicity_videos_ch04_02.zip (755.1MB)",
-      "repack (Best of Blender Education copy)": "CUBICITY_01.zip (2.0GB) + CUBICITY_02.zip (3.2GB) -- not yet downloaded, not confirmed byte-identical to the ch01-ch04 copy above, kept separate until compared"
+      "deleted": "DELETED 2026-10-12 (disk space) -- was: source-files: cubicity/source/cgcookie_cubicity_source-files.zip (7.5MB); videos_ch01: cubicity/source/cubicity_videos_ch01.zip (825.2MB); videos_ch02_01: cubicity/source/cubicity_videos_ch02_01.zip (651.0MB); videos_ch02_02: cubicity/source/cubicity_videos_ch02_02.zip (557.7MB); videos_ch03_01: cubicity/source/cubicity_videos_ch03_01.zip (1.0GB); videos_ch03_02: cubicity/source/cubicity_videos_ch03_02.zip (762.9MB); videos_ch04_01: cubicity/source/cubicit"
     },
     "installed_in": {},
-    "notes": "CG Cookie training course on creating/using Blender asset libraries, bundled with a 51-asset CUBICITY asset library (SuperHive-side, not a separate file to download). SuperHive order 9vwbw3 (#2545206), Free ('Birthday Gift'), all 8 files (~5.3GB of ch01-ch04 video zips + a small source-files zip) confirmed downloaded and moved into source/ 2026-10-12 -- the 6 chapter-video zips initially got stuck mid-download (0 bytes + growing .part siblings, same pattern seen repeatedly this session), user relaunched and all completed successfully, sizes verified against the order page. No existing Notion row found -- created new; type set to asset-library since the primary cataloged artifact (the 51-asset library) is asset-library-shaped even though most of the download is video training content, not code. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12. Also appears in the SuperHive order gcuacl (#3594578) 'Best of Blender Education' bundle (Paid, Paid total) as a 2-file repack (~5.2GB total) -- not yet downloaded, so not MD5-verified against the original; treated as the same course, not a new product."
+    "notes": "CG Cookie training course on creating/using Blender asset libraries, bundled with a 51-asset CUBICITY asset library (SuperHive-side, not a separate file to download). SuperHive order 9vwbw3 (#2545206), Free ('Birthday Gift'), all 8 files (~5.3GB of ch01-ch04 video zips + a small source-files zip) confirmed downloaded and moved into source/ 2026-10-12 -- the 6 chapter-video zips initially got stuck mid-download (0 bytes + growing .part siblings, same pattern seen repeatedly this session), user relaunched and all completed successfully, sizes verified against the order page. No existing Notion row found -- created new; type set to asset-library since the primary cataloged artifact (the 51-asset library) is asset-library-shaped even though most of the download is video training content, not code. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12. Also appears in the SuperHive order gcuacl (#3594578) 'Best of Blender Education' bundle (Paid, Paid total) as a 2-file repack (~5.2GB total) -- not yet downloaded, so not MD5-verified against the original; treated as the same course, not a new product. FILES DELETED 2026-10-12 per user confirmation to free disk space (59.3GB total across 11 courses) -- not yet being used/watched. Re-downloadable from the original order page if needed again; catalog record kept intentionally."
   },
   "better-fbx-importer-exporter": {
     "type": "addon",
@@ -1333,12 +1325,12 @@
     "notion_url": "https://app.notion.com/p/0b57dc73c90f4df78f8209a414bec275",
     "install_method": "Video training course + source files -- not applicable to Blender install.",
     "module": null,
-    "current_version": "1.0",
+    "current_version": "deleted (was downloaded, removed for disk space 2026-10-12)",
     "versions": {
-      "1.0": "fasttrack-hero-asset-course/source/ (SourceFiles 1.1GB + VideoFiles_Part1 3.1GB + VideoFiles_Part2 2.5GB)"
+      "deleted": "DELETED 2026-10-12 (disk space) -- was: 1.0: fasttrack-hero-asset-course/source/ (SourceFiles 1.1GB + VideoFiles_Part1 3.1GB + VideoFiles_Part2 2.5GB)"
     },
     "installed_in": {},
-    "notes": "Hero asset creation tutorial course by FastTrackTutorials. All 3 files complete as of 2026-10-12 (VideoFiles_Part1 arrived, completing the set). Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12."
+    "notes": "Hero asset creation tutorial course by FastTrackTutorials. All 3 files complete as of 2026-10-12 (VideoFiles_Part1 arrived, completing the set). Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12. FILES DELETED 2026-10-12 per user confirmation to free disk space (59.3GB total across 11 courses) -- not yet being used/watched. Re-downloadable from the original order page if needed again; catalog record kept intentionally."
   },
   "full-environment-creation-ue5": {
     "type": "asset-library",
@@ -1347,12 +1339,12 @@
     "notion_url": "https://app.notion.com/p/06a7c5a75c6b4c9d94ec9bc720411fbb",
     "install_method": "Video training course (7-part archive, ~24.4GB) -- not applicable to Blender install.",
     "module": null,
-    "current_version": "1.0",
+    "current_version": "deleted (was downloaded, removed for disk space 2026-10-12)",
     "versions": {
-      "1.0": "full-environment-creation-ue5/source/ (part1 3.5GB, part2 3.5GB, part3 4.0GB, part4 3.8GB, part5-1 2.4GB, part5-2 4.1GB, part6 3.1GB)"
+      "deleted": "DELETED 2026-10-12 (disk space) -- was: 1.0: full-environment-creation-ue5/source/ (part1 3.5GB, part2 3.5GB, part3 4.0GB, part4 3.8GB, part5-1 2.4GB, part5-2 4.1GB, part6 3.1GB)"
     },
     "installed_in": {},
-    "notes": "In-depth environment-art course for Unreal Engine 5 and Blender. All 7 parts present and complete (~24.4GB). Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12."
+    "notes": "In-depth environment-art course for Unreal Engine 5 and Blender. All 7 parts present and complete (~24.4GB). Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12. FILES DELETED 2026-10-12 per user confirmation to free disk space (59.3GB total across 11 courses) -- not yet being used/watched. Re-downloadable from the original order page if needed again; catalog record kept intentionally."
   },
   "gamerigtools": {
     "type": "addon",
@@ -1417,12 +1409,12 @@
     "notion_url": "https://app.notion.com/p/17355de780224b55ae065dd5bfa35252",
     "install_method": "Video training course (6-file archive) -- not applicable to Blender install.",
     "module": null,
-    "current_version": "1.0",
+    "current_version": "deleted (was downloaded, removed for disk space 2026-10-12)",
     "versions": {
-      "1.0": "tread/source/ (TREAD_CH01.zip 122.5MB, TREAD_CH02.zip 815.7MB, TREAD_CH03.zip 1.1GB, TREAD_CH04.zip 139.7MB, TreadCH5.zip 72.8MB, TREAD_CourseFiles_01.zip 292.9MB)"
+      "deleted": "DELETED 2026-10-12 (disk space) -- was: 1.0: tread/source/ (TREAD_CH01.zip 122.5MB, TREAD_CH02.zip 815.7MB, TREAD_CH03.zip 1.1GB, TREAD_CH04.zip 139.7MB, TreadCH5.zip 72.8MB, TREAD_CourseFiles_01.zip 292.9MB)"
     },
     "installed_in": {},
-    "notes": "Hard-surface asset creation course for video games. All 6 files present and complete. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12."
+    "notes": "Hard-surface asset creation course for video games. All 6 files present and complete. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12. FILES DELETED 2026-10-12 per user confirmation to free disk space (59.3GB total across 11 courses) -- not yet being used/watched. Re-downloadable from the original order page if needed again; catalog record kept intentionally."
   },
   "ultimate-game-asset-course-blender": {
     "type": "asset-library",
@@ -1431,12 +1423,12 @@
     "notion_url": "https://app.notion.com/p/82dedf5504774f20bc9d27b065083075",
     "install_method": "Video training course -- not applicable to Blender install. Author: Victor Deno.",
     "module": null,
-    "current_version": "1.0",
+    "current_version": "deleted (was downloaded, removed for disk space 2026-10-12)",
     "versions": {
-      "1.0": "/home/jose-daniel/apps/blender/addons-library/ultimate-game-asset-course-blender/source/Ultimate Game Asset Course With Blender Victor Deno.zip (3.0GB)"
+      "deleted": "DELETED 2026-10-12 (disk space) -- was: 1.0: /home/jose-daniel/apps/blender/addons-library/ultimate-game-asset-course-blender/source/Ultimate Game Asset Course With Blender Victor Deno.zip (3.0GB)"
     },
     "installed_in": {},
-    "notes": "Game asset creation course using Blender, by Victor Deno. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12."
+    "notes": "Game asset creation course using Blender, by Victor Deno. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12. FILES DELETED 2026-10-12 per user confirmation to free disk space (59.3GB total across 11 courses) -- not yet being used/watched. Re-downloadable from the original order page if needed again; catalog record kept intentionally."
   },
   "uvpackmaster3": {
     "type": "addon",
@@ -1459,12 +1451,12 @@
     "notion_url": "https://app.notion.com/p/77d2431f0b57455c8ef3e4a613c985ec",
     "install_method": "Video tutorial course -- not an addon, reference material only.",
     "module": null,
-    "current_version": "1.0",
+    "current_version": "deleted (was downloaded, removed for disk space 2026-10-12)",
     "versions": {
-      "1.0": "blender-game-development-tutorial/source/Blender Game Development Tutorial Mesh Online.zip (1.4GB)"
+      "deleted": "DELETED 2026-10-12 (disk space) -- was: 1.0: blender-game-development-tutorial/source/Blender Game Development Tutorial Mesh Online.zip (1.4GB)"
     },
     "installed_in": {},
-    "notes": "Video tutorial course on Blender game development, by Mesh Online. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. No existing Notion row found -- new row created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12."
+    "notes": "Video tutorial course on Blender game development, by Mesh Online. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. No existing Notion row found -- new row created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12. FILES DELETED 2026-10-12 per user confirmation to free disk space (59.3GB total across 11 courses) -- not yet being used/watched. Re-downloadable from the original order page if needed again; catalog record kept intentionally."
   },
   "sci-fi-crate-pack": {
     "type": "asset-library",
@@ -1599,12 +1591,12 @@
     "notion_url": "https://app.notion.com/p/a7296afe4dc14662b11fb390ebf55d17",
     "install_method": "Video training course (.zip) -- not applicable to Blender install.",
     "module": null,
-    "current_version": "1.0",
+    "current_version": "deleted (was downloaded, removed for disk space 2026-10-12)",
     "versions": {
-      "1.0": "animating-first-person-character-weapons/source/AnimatingFirstPersonCHaracterWeapons.zip (2.7GB)"
+      "deleted": "DELETED 2026-10-12 (disk space) -- was: 1.0: animating-first-person-character-weapons/source/AnimatingFirstPersonCHaracterWeapons.zip (2.7GB)"
     },
     "installed_in": {},
-    "notes": "Training course on animating first-person weapon views in Blender. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12."
+    "notes": "Training course on animating first-person weapon views in Blender. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12. FILES DELETED 2026-10-12 per user confirmation to free disk space (59.3GB total across 11 courses) -- not yet being used/watched. Re-downloadable from the original order page if needed again; catalog record kept intentionally."
   },
   "animation-bootcamp": {
     "type": "asset-library",
@@ -1613,13 +1605,12 @@
     "notion_url": "https://app.notion.com/p/97230fb947774809a75183ed09db0f56",
     "install_method": "Video training course (.zip) -- not applicable to Blender install.",
     "module": null,
-    "current_version": "1.0",
+    "current_version": "deleted (was downloaded, removed for disk space 2026-10-12)",
     "versions": {
-      "1.0": "animation-bootcamp/source/AnimationBootcamp.zip (3.6GB)",
-      "repack (Best of Blender Education copy)": "Animation Bootcamp.zip (3.4GB) -- not yet downloaded, not confirmed byte-identical to the 1.0 copy above, kept separate until compared"
+      "deleted": "DELETED 2026-10-12 (disk space) -- was: 1.0: animation-bootcamp/source/AnimationBootcamp.zip (3.6GB); repack (Best of Blender Education copy): Animation Bootcamp.zip (3.4GB) -- not yet downloaded, not confirmed byte-identical to the 1.0 copy above, kept separate until compared"
     },
     "installed_in": {},
-    "notes": "Training course for Blender animation fundamentals and production workflows, by CG Cookie (same studio as the already-cataloged cubicity, rig-blenders-character-rigging-playbook, printlab, cgcookie-pothead-hard-surface-character, cgcookie-realistic-industrial-environment, cgcookie-off-road, and cgcookie-particles). Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12. Also appears in the SuperHive order gcuacl (#3594578) 'Best of Blender Education' bundle (Paid, Paid total) as a slightly different-sized repack (3.4GB vs 3.6GB) -- not yet downloaded, so not MD5-verified against the original; treated as the same course, not a new product."
+    "notes": "Training course for Blender animation fundamentals and production workflows, by CG Cookie (same studio as the already-cataloged cubicity, rig-blenders-character-rigging-playbook, printlab, cgcookie-pothead-hard-surface-character, cgcookie-realistic-industrial-environment, cgcookie-off-road, and cgcookie-particles). Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12. Also appears in the SuperHive order gcuacl (#3594578) 'Best of Blender Education' bundle (Paid, Paid total) as a slightly different-sized repack (3.4GB vs 3.6GB) -- not yet downloaded, so not MD5-verified against the original; treated as the same course, not a new product. FILES DELETED 2026-10-12 per user confirmation to free disk space (59.3GB total across 11 courses) -- not yet being used/watched. Re-downloadable from the original order page if needed again; catalog record kept intentionally."
   },
   "cairo-city-cyberpunk-street": {
     "type": "asset-library",
@@ -1642,12 +1633,12 @@
     "notion_url": "https://app.notion.com/p/2c780bcb3ad649bab172a3110bea1059",
     "install_method": "Video training course (.zip) -- not applicable to Blender install.",
     "module": null,
-    "current_version": "1.0",
+    "current_version": "deleted (was downloaded, removed for disk space 2026-10-12)",
     "versions": {
-      "1.0": "modeling-robot-game-character/source/ModelingRobotGameCharacter.zip (3.2GB)"
+      "deleted": "DELETED 2026-10-12 (disk space) -- was: 1.0: modeling-robot-game-character/source/ModelingRobotGameCharacter.zip (3.2GB)"
     },
     "installed_in": {},
-    "notes": "Training course for modeling a robot game character in Blender. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12."
+    "notes": "Training course for modeling a robot game character in Blender. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12. FILES DELETED 2026-10-12 per user confirmation to free disk space (59.3GB total across 11 courses) -- not yet being used/watched. Re-downloadable from the original order page if needed again; catalog record kept intentionally."
   },
   "outpost": {
     "type": "asset-library",
@@ -1740,12 +1731,12 @@
     "notion_url": "https://app.notion.com/p/2f575e93fbe44925a1c20b2b652935bf",
     "install_method": "Video training course (4 chapters + source files) -- not applicable to Blender install. CG Cookie, instructor Wayne Dixon.",
     "module": null,
-    "current_version": "1.0",
+    "current_version": "deleted (was downloaded, removed for disk space 2026-10-12)",
     "versions": {
-      "1.0": "rig-blenders-character-rigging-playbook/source/RIG.zip (3.1GB; contains RIG Chapter 1-4.zip, luna-source-files.zip, warm-up-exercise-files.zip, Humble Bundle Welcome.pdf, Royalty Free License.pdf -- not extracted)"
+      "deleted": "DELETED 2026-10-12 (disk space) -- was: 1.0: rig-blenders-character-rigging-playbook/source/RIG.zip (3.1GB; contains RIG Chapter 1-4.zip, luna-source-files.zip, warm-up-exercise-files.zip, Humble Bundle Welcome.pdf, Royalty Free License.pdf -- not extracted)"
     },
     "installed_in": {},
-    "notes": "Character rigging training course covering practical Blender rig setup and workflows. \"Luna\" is the character CG Cookie designed specifically for this course. Identified via web search (cgcookie.com/courses/rig-blender-s-character-rigging-playbook, blendermarket.com/products/rig-blenders-character-rigging-playbook) since the downloaded filename ('RIG.zip') and internal contents did not state the product name directly. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12."
+    "notes": "Character rigging training course covering practical Blender rig setup and workflows. \"Luna\" is the character CG Cookie designed specifically for this course. Identified via web search (cgcookie.com/courses/rig-blender-s-character-rigging-playbook, blendermarket.com/products/rig-blenders-character-rigging-playbook) since the downloaded filename ('RIG.zip') and internal contents did not state the product name directly. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12. FILES DELETED 2026-10-12 per user confirmation to free disk space (59.3GB total across 11 courses) -- not yet being used/watched. Re-downloadable from the original order page if needed again; catalog record kept intentionally."
   },
   "brushflow": {
     "type": "asset-library",
@@ -1851,12 +1842,12 @@
     "notion_url": "https://app.notion.com/p/3f786ab69e84813ba611ed4581179569",
     "install_method": "Video training course (course files + captions + videos) -- not applicable to Blender install. CG Cookie (same brand as the already-cataloged Cubicity and RIG: Blender's Character Rigging Playbook).",
     "module": null,
-    "current_version": "01",
+    "current_version": "deleted (was downloaded, removed for disk space 2026-10-12)",
     "versions": {
-      "01": "printlab/source/Printlab-CourseFiles-01.zip (209.8MB) + Printlab-Captions-English-01.zip (172.7KB) + Printlab-Videos-01.zip (2.1GB)"
+      "deleted": "DELETED 2026-10-12 (disk space) -- was: 01: printlab/source/Printlab-CourseFiles-01.zip (209.8MB) + Printlab-Captions-English-01.zip (172.7KB) + Printlab-Videos-01.zip (2.1GB)"
     },
     "installed_in": {},
-    "notes": "3D printing training course (Blender-to-Prusa-printer workflow), seller CG Cookie. Order 841uzi (#3050716), Free. No existing Notion row found -- new row created. All 3 files now complete and moved 2026-10-12. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12."
+    "notes": "3D printing training course (Blender-to-Prusa-printer workflow), seller CG Cookie. Order 841uzi (#3050716), Free. No existing Notion row found -- new row created. All 3 files now complete and moved 2026-10-12. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12. FILES DELETED 2026-10-12 per user confirmation to free disk space (59.3GB total across 11 courses) -- not yet being used/watched. Re-downloadable from the original order page if needed again; catalog record kept intentionally."
   },
   "furnishing": {
     "type": "asset-library",
