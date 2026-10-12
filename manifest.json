@@ -1,0 +1,1957 @@
+{
+  "_schema_note": "Local technical companion to the authoritative tracker: the 'Addons' database under the 'Blender' page in Notion (https://app.notion.com/p/a899ed69265744e7855528f65d002731). Check Notion FIRST for 'do I already have this / is it enabled' (Status: Wishlist/Backlog/Testing/Using/Archived/Avoid, Owned Yes/No/Free) — this file only adds the machine-local detail Notion doesn't track: exact module names, file paths, and per-profile install state on THIS computer. Every entry should carry a matching 'notion_url'. 'type' is 'addon' (Python code, goes in scripts/addons or Extensions) or 'asset-library' (.blend files registered as a Blender Asset Library, no enable/disable — just present or not). 'installed_in' maps profile name -> {version, enabled, last_checked} for addons; for asset-library entries it maps profile name -> {version, registered, last_checked} once actually added to that profile's Asset Libraries. A disabled/unregistered entry stays listed with enabled/registered:false — never delete it just because it's turned off, that's exactly the state this exists to remember. Use scripts/addon-status.sh to query/update instead of hand-editing where possible.",
+  "dynamic-pose-library-free": {
+    "type": "asset-library",
+    "display_name": "Dynamic Pose Library Free - Blender and Human Generator",
+    "source_url": "https://gumroad.com/d/bac0ea58268eae05479f6b548c9b03e1",
+    "notion_url": "https://app.notion.com/p/3f386ab69e848116b499dba78969fbfc",
+    "install_method": "N/A as a general pose library -- entirely locked to Human Generator's own proprietary pose system (not Blender's native Asset Browser pose-asset system despite the marketing copy), so it can't be registered as a library against the Rigify rig Photo Pose targets. Only useful if posing a Human Generator character's own rig directly.",
+    "module": null,
+    "current_version": "v6.03",
+    "versions": {
+      "v6.03": "dynamic-pose-library-free/source/Dynamic_Pose_Library_-_Human_Generator_v6.03.zip"
+    },
+    "installed_in": {},
+    "notes": "Investigated in an earlier session while looking for pose assets for the Rigify rig: found to be entirely tied to Human Generator's own pose system, not the Rigify bone naming Photo Pose and Adjustable Mannequin use -- useless for that purpose. Was cataloged in Notion at the time but missed the manifest.json entry (a gap in the standing cataloging rule), found and fixed 2026-10-11 while cleaning leftover Downloads files from before this library existed. Companion files also moved here: DPL-Assets-Free.zip (100.6MB, extra pose assets), DPL_Blender_and_Assets_Browser.zip (3.2MB, asset-browser-ready version), Read_Me_and_Set_Up_Info.zip (314KB, setup docs)."
+  },
+  "plant-library": {
+    "type": "asset-library",
+    "display_name": "The Plant Library",
+    "source_url": "https://blendermarket.com/products/the-plant-library",
+    "notion_url": "https://app.notion.com/p/a8facdcabf78436e9250591c49318be2",
+    "install_method": "Geo-Scatter biome/plant asset pack -- requires the separate Geo-Scatter addon (not owned, see the existing Geo-Scatter row) to actually scatter it. No bl_info/module to enable. Register as a Blender Asset Library once extracted, or load the .scatpack directly into Geo-Scatter.",
+    "module": null,
+    "current_version": "unversioned (BIOMES brand release)",
+    "versions": {
+      "Octane (Blender 3.5+)": "plant-library/source/ASSETS-plant_library_for_b3.5+(octane render).rar -- 767.3 MB -- 07-14-23",
+      "Cycles/Eevee (Blender 3.3+)": "plant-library/source/ASSETS-plant_library_for_b3.3+(cycles and eevee render).rar -- 721.9 MB -- 07-14-23",
+      "Cycles/Eevee legacy (Blender 3.3+, old)": "plant-library/source/ASSETS-plant_library_for_b3.3+(cycles and eevee render)(old legacy version).rar -- 921.0 MB -- 07-14-23 -- kept as-is, NOT assumed superseded by the non-legacy Cycles/Eevee file above (may contain different content, not just an older build of the same thing -- don't delete without checking)",
+      "catalog/scatpack": "plant-library/source/BIOMES-plant_library.scatpack -- 8.9 MB -- 07-02-23 (Geo-Scatter preset file)"
+    },
+    "installed_in": {},
+    "notes": "Three render-engine-specific asset variants (Octane, Cycles/Eevee, and a Cycles/Eevee 'old legacy version' of unclear relationship to the non-legacy one) plus docs (BIOMES-plant_library_catalog.pdf 29.8MB, QuickStartGuide.pdf 4.9MB, InstallTutorial.url). These are render-engine variants, not Blender-version-upgrade builds, so the 'only keep the build matching your Blender version' cleanup policy doesn't apply here -- keep whichever render-engine variants you actually use. Order 8qtg5f (#2894562), seller bd3d, Free."
+  },
+  "blenrig": {
+    "type": "addon",
+    "display_name": "Blenrig 6",
+    "source_url": "https://blendermarket.com/products/blenrig",
+    "notion_url": "https://app.notion.com/p/12f86ab69e8480daafc9cf59b75921fa",
+    "install_method": "Legacy addon zip -- extract into a profile's scripts/addons/ and enable via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "5.0.0",
+    "versions": {
+      "5.0.0": "blenrig/source/BlenRig-6_v5_0_0.zip -- 29.9 MB -- 09-14-26 (latest; only build matching the Blender 4.0+ line kept, per README's Blender-version-build policy)",
+      "4.0.1": "deleted 2026-10-11 -- superseded within the Blender 4.0+ line, re-download from the product's own page if ever needed again",
+      "4.0.0": "deleted 2026-10-11 -- superseded within the Blender 4.0+ line, re-download from the product's own page if ever needed again",
+      "2.2.0": "deleted 2026-10-11 -- pre-4.0 line, incompatible since Blender 4.0 removed bone layers, re-download from the product's own page if ever needed again",
+      "2.1.0": "deleted 2026-10-11 -- pre-4.0 line, incompatible since Blender 4.0 removed bone layers, re-download from the product's own page if ever needed again",
+      "2.0.0": "deleted 2026-10-11 -- pre-4.0 line, incompatible since Blender 4.0 removed bone layers, re-download from the product's own page if ever needed again",
+      "master (GitHub snapshot)": "blenrig/source/BlenRig-master.zip -- 29.2 MB -- 04-10-23 (unstable dev snapshot, not a tagged release -- kept separately from the version-build cleanup above)"
+    },
+    "installed_in": {},
+    "notes": "Character rigging system (free tier downloaded; Notion's Cost type says Paid because Blender Market also sells a patron/paid tier with extras -- this is the free version). These are sequential addon-version upgrades, not per-Blender-version builds like Speedsculpt/Simply Cloth -- the 'only keep the build matching your Blender version' cleanup policy does NOT apply here; kept all versions per the original 'don't delete old addon versions' rule. Not in the extensions.blender.org catalog (checked 2026-10-11, zero match)."
+  },
+  "blender-mcp": {
+    "type": "addon",
+    "display_name": "Blender MCP",
+    "source_url": "https://github.com/ahujasid/blender-mcp",
+    "notion_url": "https://app.notion.com/p/3d386ab69e848198bc5edcf4af576a65",
+    "install_method": "uvx blender-mcp install-addon (BLENDERMCP_ADDONS_DIR override for a specific profile)",
+    "module": "blender_mcp",
+    "current_version": "1.6",
+    "versions": {
+      "1.6": "blender-mcp/source/blender_mcp-1.6.py"
+    },
+    "installed_in": {
+      "claude-mcp": {
+        "version": "1.6",
+        "enabled": true,
+        "last_checked": "2026-09-06"
+      }
+    },
+    "notes": "Lets Claude Code drive a running Blender instance over MCP. Requires clicking 'Start MCP Server' in the BlenderMCP N-panel tab inside the running Blender GUI."
+  },
+  "adjustable-mannequin": {
+    "type": "asset-library",
+    "display_name": "Adjustable Mannequin",
+    "source_url": "https://superhivemarket.com/products/adjustable-mannequin",
+    "notion_url": "https://app.notion.com/p/3d386ab69e848186bb19e072190faeed",
+    "install_method": "Register the source/ folder as a Blender Asset Library (Preferences → File Paths → Asset Libraries). No module/enable step — not a Python addon.",
+    "module": null,
+    "current_version": "1.3",
+    "versions": {
+      "1.3": "adjustable-mannequin/source/Adjustable Mannequin v1.3.zip"
+    },
+    "extracted_at": "adjustable-mannequin/extracted/ (the live folder registered with Blender; source/ zip is the untouched archival original)",
+    "installed_in": {
+      "claude-mcp": {
+        "version": "1.3",
+        "registered": true,
+        "last_checked": "2026-09-06"
+      },
+      "photo-pose": {
+        "version": "1.3",
+        "registered": true,
+        "last_checked": "2026-09-06"
+      }
+    },
+    "notes": "Posable mannequin .blend asset pack (base + Rigify rig + adjustable fantasy body parts), not a code addon. Registered as an Asset Library named 'Adjustable Mannequin' in the claude-mcp profile on 2026-09-06 (Notion Status: Testing). Re-delivered via a second order, 17uppz (#3973744), Paid -- confirmed byte-identical (MD5) to the file already archived here, so it's the exact same product re-downloaded, not a new version. The duplicate was deleted from ~/Downloads 2026-10-12 per user confirmation."
+  },
+  "photo-pose": {
+    "type": "addon",
+    "display_name": "Photo Pose (MediaPipe -> Rigify)",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3d386ab69e8481148911f4f895a7e9d0",
+    "install_method": "Custom-built in-session. pip install mediapipe (+ deps) into the target profile's bundled Python, then copy the photo_pose/ package into that profile's portable/scripts/addons/.",
+    "module": "photo_pose",
+    "current_version": "0.4.0",
+    "versions": {
+      "0.1.0": "superseded, not kept",
+      "0.2.0": "photo-pose/source/photo_pose/",
+      "0.4.0": "photo-pose/source/photo_pose/"
+    },
+    "installed_in": {
+      "photo-pose": {
+        "version": "0.2.0",
+        "enabled": true,
+        "last_checked": "2026-09-06"
+      }
+    },
+    "notes": "Detects a body pose from a single reference photo (MediaPipe Pose Landmarker, local/offline) and applies it to a Rigify FK rig: spine (single bend), head, upper/lower arms, upper/lower legs. v0.2.0 adds basic ground-snap: after posing the limbs, shifts the whole body (via the 'torso' bone) so the lower foot rests at its original ground height instead of floating -- fixes kneel/crouch poses, still no horizontal (X/Y) weight-shift correction. Requires the generated Rigify rig object, not the metarig. Bakes in a fix for standard Rigify limb rigs: forces IK_FK=1.0 on limb parent bones before posing (the IK constraint's driver-controlled influence otherwise silently overrides FK edits), and translates 'torso' rather than 'root' for grounding since 'root' is an unrelated disconnected bone in this rig and torso's own parent has a switch-parent constraint that would override a direct edit. MediaPipe + deps installed straight into the photo-pose profile's own bundled Python (fully isolated). Validated against both a standing (yoga) and a kneeling reference photo. v0.4.0 adds sync_ik (on by default): after posing, snaps every limb's IK end controls and pole targets to match the FK result, so a limb's IK_FK can be flipped to 0 afterward for manual IK dragging with no visual jump (verified live: <0.0002 jump distance on both an arm and a leg). This is a from-scratch reimplementation of Rigify's own IK-to-FK snap, not a call to Rigify's operator -- that operator did nothing when invoked headlessly/via MCP despite reporting success."
+  },
+  "resin2fdm": {
+    "type": "addon",
+    "display_name": "Resin2FDM Advanced",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3e386ab69e8481cca87ede7ba7262e78",
+    "install_method": "Blender Extension (blender_manifest.toml, requires Blender 4.2+). bpy.ops.extensions.package_install_files(filepath=zip, repo='user_default', enable_on_install=True), then bpy.ops.wm.save_userpref() -- package_install_files does NOT persist on its own, confirmed by testing.",
+    "module": "bl_ext.user_default.Resin2FDM",
+    "current_version": "1.6.1",
+    "versions": {
+      "1.6.1": "resin2fdm/source/Resin2FDM-Advanced-v1.6.1.zip"
+    },
+    "installed_in": {
+      "resin2fdm": {
+        "version": "1.6.1",
+        "enabled": true,
+        "last_checked": "2026-09-22"
+      }
+    },
+    "notes": "Converts resin-print supports/models for FDM printing: import, manifold repair, raft generation, support thickening/tips, 3MF export. Paid via Patreon subscription (author: Painted4Combat, maintainer: Clonephaze). Installed as an Extension, not legacy scripts/addons -- registers under the bl_ext.user_default.* namespace. Verified all 30 operators registered cleanly, no errors."
+  },
+  "threemf-io": {
+    "type": "addon",
+    "display_name": "3MF Import/Export",
+    "source_url": "https://extensions.blender.org/add-ons/threemf-io/",
+    "notion_url": "https://app.notion.com/p/3e386ab69e8481809c22eacd9f25019f",
+    "install_method": "Official Blender Extension, installed directly from the extensions.blender.org repo: bpy.ops.extensions.package_install(repo_index=0, pkg_id='ThreeMF_io', enable_on_install=True), then bpy.ops.wm.save_userpref() (same persistence gotcha as Resin2FDM). Requires preferences.system.use_online_access = True first, and a repo sync (bpy.ops.extensions.repo_sync_all) before the package id is resolvable.",
+    "module": "bl_ext.blender_org.ThreeMF_io",
+    "current_version": "2.7.7",
+    "versions": {
+      "2.7.7": "installed directly from the online repo, no local zip kept"
+    },
+    "installed_in": {
+      "resin2fdm": {
+        "version": "2.7.7",
+        "enabled": true,
+        "last_checked": "2026-09-22"
+      }
+    },
+    "notes": "Official Blender extension for native .3mf import/export. Installed alongside Resin2FDM Advanced per that addon's own install guide (required for its v1.5+ 3MF export features). Registers as export_mesh.threemf / import_mesh.threemf, not the *_scene.threemf the naming convention might suggest."
+  },
+  "flowpose": {
+    "type": "addon",
+    "display_name": "FlowPose",
+    "source_url": "https://github.com/Aar-os01/Flowpose-Addon-for-blender",
+    "notion_url": "https://app.notion.com/p/3ee86ab69e848139a175e1557d39315f",
+    "install_method": "Legacy single-file addon, curl'd directly from GitHub raw. No Rigify dependency. Enabled via MCP execute_blender_code inside the already-open photo-pose window, avoiding the usual outside-file-edit vs live-window preference race.",
+    "module": "FlowPose",
+    "current_version": "1.6",
+    "versions": {
+      "1.6": "flowpose/source/FlowPose.py"
+    },
+    "installed_in": {
+      "photo-pose": {
+        "version": "1.6",
+        "enabled": true,
+        "last_checked": "2026-10-03"
+      },
+      "claude-mcp": {
+        "version": "1.6",
+        "enabled": true,
+        "last_checked": "2026-10-03"
+      }
+    },
+    "notes": "Fluid FK posing (Smart Pull, drag an FK bone and motion propagates up the chain) with BVH-based surface collision. GPL-3.0, no Rigify dependency, works on any FK chain. Author's own docs flag the IK mode as 'very experimental' -- FK is the tested path. Registers panel PT_FlowPose + 2 keymaps (D key). One cosmetic naming-convention warning on enable, no functional impact."
+  },
+  "images-as-planes": {
+    "type": "addon",
+    "display_name": "Import Images as Planes",
+    "source_url": "https://extensions.blender.org/add-ons/import-images-as-planes/versions",
+    "notion_url": "https://app.notion.com/p/3d586ab69e8481d094f4d099eb5f87c9",
+    "install_method": "No install needed on Blender 4.2+ -- confirmed built into core: Add (Shift+A) -> Image -> Mesh Plane. This is the recommended path, verified against the user's own Blender docs reference. A legacy standalone Extension of the same name still exists at the source_url above (v3.6.1) but is marked 'Unlisted by author' and unreviewed, so it never shows up in Preferences -> Get Extensions browse/search (confirmed: searched the full synced blender_org index for 'plane', got only unrelated products) -- only relevant if its extra per-image options are needed beyond the core Add-menu version. If ever installed: direct download + Preferences -> Get Extensions -> Install from Disk, or bpy.ops.extensions.package_install_files(filepath=zip, repo='user_default', enable_on_install=True) + explicit wm.save_userpref() (same persistence pattern as Resin2FDM). Exact pkg_id/module not confirmed -- read it off the installed package list if this path is ever taken.",
+    "module": null,
+    "current_version": "core (Blender 4.2+); legacy standalone Extension v3.6.1 also exists, not installed in any profile",
+    "versions": {
+      "core": "built into Blender 4.2+, no file to track",
+      "3.6.1": "legacy standalone Extension, not downloaded -- investigated only"
+    },
+    "installed_in": {},
+    "notes": "Imports image(s) as a textured plane sized to the image's aspect ratio -- useful for illustration reference/billboard planes. GPL-2.0-or-later (legacy extension) / core Blender (built-in path). Investigated 2026-10-10 while trying to enable it in claude-mcp per the user's 'enable Grease Pencil + Import Images as Planes + Human Generator' request; initially wrongly concluded it no longer existed in Blender 5.2 at all (confused 'not in the default browse list' with 'removed'), then wrongly treated the legacy Unlisted extension as the only path -- corrected 2026-10-11 after the user confirmed the native Add (Shift+A) > Image > Mesh Plane menu path works directly, no addon required."
+  },
+  "home-builder-5": {
+    "type": "addon",
+    "display_name": "Home Builder 5",
+    "source_url": "https://extensions.blender.org/add-ons/home-builder-5/",
+    "notion_url": "https://app.notion.com/p/3f586ab69e84814ba62ad9dbaec099be",
+    "install_method": "Official Blender Extension, extensions.blender.org repo (pkg_id='home_builder_5'). Same pattern as 3MF Import/Export: bpy.ops.extensions.package_install(repo_index=0, pkg_id=..., enable_on_install=True) + explicit wm.save_userpref().",
+    "module": "bl_ext.blender_org.home_builder_5",
+    "current_version": "5.2.4",
+    "versions": {
+      "5.2.4": "installed directly from the online repo, no local zip kept"
+    },
+    "installed_in": {
+      "claude-mcp": {
+        "version": "5.2.4",
+        "enabled": true,
+        "last_checked": "2026-10-10"
+      }
+    },
+    "notes": "Interior-design add-on (rooms, cabinets, doors/windows, elevation/floor plan views). GPL-3.0-or-later, requires Blender 5.1+. A user review reported a Python version error on 5.2.1 LTS; dev's fix was the official blender.org build. Installed clean on our 5.2.0 LTS official build, verified all 8 operator groups registered, not just the enabled flag."
+  },
+  "botaniq": {
+    "type": "asset-library",
+    "display_name": "Botaniq",
+    "source_url": "https://superhivemarket.com/products/botaniq-trees",
+    "notion_url": "https://app.notion.com/p/29986ab69e8480cb8f08fac53a386090",
+    "install_method": "Register as a Blender Asset Library (Preferences -> File Paths -> Asset Libraries) pointed at an extracted copy of the source file(s) -- not yet installed in any profile.",
+    "module": null,
+    "current_version": "HB2024",
+    "versions": {
+      "HB2024 (subset)": "botaniq/source/Botaniq_HB2024.zip (5.3MB)",
+      "full library": "botaniq/source/Botaniq.zip (4.2GB)"
+    },
+    "installed_in": {},
+    "notes": "Vegetation asset library (polygoniq) -- RESOLVED 2026-10-11: Botaniq.zip (4.2GB) is the full combined library, not just the 'Trees' SKU the Notion row was originally created for; that row's Category was updated to include Library alongside Model. Some polygoniq products ship a small addon (materialiq/engon integration) alongside the asset blend files, not verified here since nothing has been extracted yet. Acquired via Humble Bundle, downloaded 2026-10-10. The duplicate blank 'Botaniq' Notion placeholder page has been archived (title marked duplicate, Status: Archived, Description points back here) and cross-linked to this entry's notion_url, which already pointed at the canonical 'Tree And Grass Library Botaniq - Trees' row. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "true-terrain-5": {
+    "type": "addon",
+    "display_name": "True-Terrain 5",
+    "source_url": "https://truevfx.gumroad.com/",
+    "notion_url": "https://app.notion.com/p/29986ab69e8480878f0fc113041460ec",
+    "install_method": "Legacy addon zip (or Extension, exact packaging unconfirmed) -- not yet installed in any profile. Extract into a profile's scripts/addons/ (or Preferences -> Get Extensions -> Install from Disk if packaged as an Extension) and enable via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "5.0.3",
+    "versions": {
+      "5.0.3": "true-terrain-5/source/true_terrain_v5.0.3_humble.zip (57.5MB core addon; a byte-identical duplicate download true_terrain_v5.0.3_humble(1).zip was left untouched in ~/Downloads/, not moved or deleted)",
+      "5.0.3 asset starter pack": "true-terrain-5/source/tt5_asset_starter_pack.tt_pack (3.8GB)",
+      "5.0.3 heightmaps": "true-terrain-5/source/tt5_heightmaps.tt_pack (3.8GB)",
+      "5.0.3 terrain elements": "true-terrain-5/source/tt5_terrain_elements.tt_pack (2.0GB)",
+      "5.0.3 materials part01": "true-terrain-5/source/tt5_materials_part01.tt_pack (4.2GB)",
+      "5.0.3 materials part02": "true-terrain-5/source/tt5_materials_part02.tt_pack (1.6GB)"
+    },
+    "installed_in": {},
+    "notes": "Terrain generator addon (True-VFX / Richard Traynor). Acquired via Humble Bundle, downloaded 2026-10-10. TRUE-VFX_README.zip (~/Downloads/TRUE-VFX_README.zip, 4.7KB) is a shared readme for the whole True-VFX family (True-Terrain, True-Sky, Undergrowth) and does not get its own catalog row per the task briefing -- mentioned here and on the true-sky/true-vfx-undergrowth entries instead. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "true-sky": {
+    "type": "addon",
+    "display_name": "True-Sky",
+    "source_url": "https://truevfx.gumroad.com/",
+    "notion_url": "https://app.notion.com/p/29986ab69e8480bdbe52c0fe845df55e",
+    "install_method": "Legacy addon zip (or Extension, exact packaging unconfirmed) -- not yet installed in any profile. Extract into a profile's scripts/addons/ (or Preferences -> Get Extensions -> Install from Disk if packaged as an Extension) and enable via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "2.2.4",
+    "versions": {
+      "2.2.4": "true-sky/source/TrueSky_v2.2.4.zip (510.7MB)"
+    },
+    "installed_in": {},
+    "notes": "Sky/atmosphere addon (True-VFX / Richard Traynor). Acquired via Humble Bundle, downloaded 2026-10-10. Shares TRUE-VFX_README.zip with True-Terrain 5 and True-VFX Undergrowth (same product family, see true-terrain-5 notes). Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "true-vfx-undergrowth": {
+    "type": "asset-library",
+    "display_name": "True-VFX Undergrowth",
+    "source_url": "https://truevfx.gumroad.com/l/undergrowth",
+    "notion_url": "https://app.notion.com/p/3f586ab69e8481ff94bec79f122dc184",
+    "install_method": "Register as a Blender Asset Library (Preferences -> File Paths -> Asset Libraries) pointed at an extracted copy of the source file(s) -- not yet installed in any profile.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "standard (2K/4K)": "true-vfx-undergrowth/source/tVFX-Undergrowth (Asset Browser) Richard Traynor.zip (2.2GB)",
+      "8K": "true-vfx-undergrowth/source/tVFX-Undergrowth - 8K (Asset Browser) Richard Traynor.zip (3.0GB)"
+    },
+    "installed_in": {},
+    "notes": "Ground-cover/plants Asset Browser asset library (Richard Traynor / True-VFX): photoscanned rocks, stumps, deadwood, debris, mushrooms. Confirmed via web search to be pure Asset Browser content (no bl_info/code) -- type 'asset-library' is correct, not a code addon. Works standalone or alongside True-Terrain 5. Shares TRUE-VFX_README.zip with True-Terrain 5 and True-Sky. License is royalty-free but non-transferable. Acquired via Humble Bundle, downloaded 2026-10-10. No existing Notion row was found for this product -- created new. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "blendshop": {
+    "type": "addon",
+    "display_name": "BlendShop",
+    "source_url": "https://superhivemarket.com/products/blendshop-compositing-tool-for-blender",
+    "notion_url": "https://app.notion.com/p/29986ab69e848098b022cc790cf5d616",
+    "install_method": "Legacy addon zip (or Extension, exact packaging unconfirmed) -- not yet installed in any profile. Extract into a profile's scripts/addons/ (or Preferences -> Get Extensions -> Install from Disk if packaged as an Extension) and enable via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "blendshop/source/BlendShop-Casey_Sheep.zip (13.3MB)"
+    },
+    "installed_in": {},
+    "notes": "Layer-based compositing / color grading tool. Verified via web search: 'BlendShop' is Casey Sheep's own product name (sold under the Casey_Sheep brand on Superhive Market, Paid, GPL, Blender 4.0-5.1) -- product identity is clean, not ambiguous between a brand and a product. Acquired via Humble Bundle, downloaded 2026-10-10. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "florapaint": {
+    "type": "addon",
+    "display_name": "FloraPaint",
+    "source_url": "https://caseysheep.gumroad.com/",
+    "notion_url": "https://app.notion.com/p/29986ab69e8480b59cafe273dd43d6c2",
+    "install_method": "Legacy addon zip (or Extension, exact packaging unconfirmed) -- not yet installed in any profile. Extract into a profile's scripts/addons/ (or Preferences -> Get Extensions -> Install from Disk if packaged as an Extension) and enable via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "florapaint/source/FloraPaint-Casey_Sheep.zip (3.5GB)"
+    },
+    "installed_in": {},
+    "notes": "Foliage-painting tool (Casey Sheep brand). Acquired via Humble Bundle, downloaded 2026-10-10. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "realcloud": {
+    "type": "addon",
+    "display_name": "RealCloud Generator - VDB Clouds Library",
+    "source_url": "https://caseysheep.gumroad.com/",
+    "notion_url": "https://app.notion.com/p/29986ab69e84807998ebe25b2717d602",
+    "install_method": "Legacy addon zip (or Extension, exact packaging unconfirmed) -- not yet installed in any profile. The real_cloud_addon_1.0.x.zip files are the lightweight installable addon code; RealCloud-Casey_Sheep.zip / RealCloud-Pro-SuperHive.zip are the heavy VDB cloud asset libraries that the addon loads. Extract the addon zip into a profile's scripts/addons/ (or Preferences -> Get Extensions -> Install from Disk if packaged as an Extension) and enable via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "1.0.4",
+    "versions": {
+      "1.0.0": "realcloud/source/real_cloud_addon_1.0.0.zip (389.0KB)",
+      "1.0.1": "realcloud/source/real_cloud_addon_1.0.1.zip (387.3KB)",
+      "1.0.2": "realcloud/source/real_cloud_addon_1.0.2.zip (388.0KB)",
+      "1.0.3": "realcloud/source/real_cloud_addon_1.0.3.zip (388.3KB) + realcloud/source/Update1.0.3.txt changelog",
+      "1.0.4": "realcloud/source/real_cloud_addon_1.0.4.zip (388.5KB)",
+      "asset-library (Humble Bundle)": "realcloud/source/RealCloud-Casey_Sheep.zip (2.2GB)",
+      "asset-library (SuperHive Pro)": "realcloud/source/RealCloud-Pro-SuperHive.zip (2.2GB)"
+    },
+    "installed_in": {},
+    "notes": "Cloud generator addon, Casey_Sheep brand. Two acquisitions now cataloged: Humble Bundle (downloaded 2026-10-10, just the asset zip, no addon-version files) and SuperHive order a4pjrk (#2218012, Paid, 'RealCloud Pro' tier, downloaded 2026-10-11, full 10-file bundle: 5 sequential addon-version zips 1.0.0-1.0.4, 3 changelog txts, 1 documentation .url, and its own RealCloud.zip asset bundle). IMPORTANT: the two RealCloud.zip asset bundles are NOT byte-identical (RealCloud-Casey_Sheep.zip = 2373406600 bytes / md5 9277849adf60353c2bd7f2f937223d89; RealCloud-Pro-SuperHive.zip = 2369688052 bytes / md5 c5ddf4e5e0c0ce3fb81bee566bfc3989) -- different sizes and hashes, so NOT a confirmed exact duplicate; kept both rather than guessing which supersedes which. Flag for user: if these are just a repack/compression difference of the same VDB content, the older Humble Bundle copy could be deleted to free ~2.2GB, but that needs explicit confirmation, not an assumption. Addon-version zips (1.0.0-1.0.4) are sequential releases, kept all per default rule. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "shaders-plus": {
+    "type": "asset-library",
+    "display_name": "Shaders Plus (SMOUSE)",
+    "source_url": "https://superhivemarket.com/products/shaders-plus",
+    "notion_url": "https://app.notion.com/p/29986ab69e8480e58fadc86823df805b",
+    "install_method": "Register as a Blender Asset Library (Preferences -> File Paths -> Asset Libraries) pointed at an extracted copy of the source file(s) -- not yet installed in any profile.",
+    "module": null,
+    "current_version": "v3 + Modules (BDay Gift)",
+    "versions": {
+      "v2 (HB)": "shaders-plus/source/SMOUSE Humble Bundle (v2) - Shaders Plus, Gobos Plus, Underwater Caustics Spastic Mouse.zip (4.9GB, now in source/ -- shared download, see gobos-plus and underwater-caustics entries)",
+      "v3 + Modules (BDay Gift)": "shaders-plus/source/Shaders Plus v3 + Modules (BDay Gift).zip (4.2MB) + ReadMe - Upgrade Discount Code.txt changelog/doc",
+      "example scenes": "shaders-plus/source/Shaders Plus - Animatied Reflective Caustics Pool Scene - Example File.zip (249.9MB) + Shaders Plus - Blade Runner Real-Time Caustics Scenes.zip (99.6MB) + Shaders Plus - Underwater Ocean Caustics - Example File.zip (1.4MB) + Underwater Caustics Bunker_Breakdown.zip (31.4MB)"
+    },
+    "installed_in": {},
+    "notes": "Shader/node-group pack: caustics, thin film, dispersion for Cycles & Eevee (Spastic Mouse 'SMOUSE' brand). Likely asset-library (material node groups) rather than a code addon -- not yet verified by opening the file. v2 ships combined in one zip with Gobos Plus and Underwater Caustics Shader (separate existing Notion rows), downloaded 2026-10-10 via Humble Bundle. A separate SuperHive order 1gw8ba (#2495467), Free ('Free Birthday Gift! Shaders Plus v3 + Modules'), downloaded 2026-10-12, added the newer standalone v3+Modules addon zip plus 4 example/demo scene files (one of which, 'Underwater Caustics Bunker_Breakdown.zip', relates to the sibling Underwater Caustics product but was delivered as an example scene within this order, so kept here rather than split into that entry). Both v2 and v3 kept per the default sequential-version rule. The Humble Bundle acquisition specifically was part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "gobos-plus": {
+    "type": "asset-library",
+    "display_name": "Gobos Plus (SMOUSE)",
+    "source_url": "https://superhivemarket.com/products/gobos-plus",
+    "notion_url": "https://app.notion.com/p/29986ab69e8480cb8b84e46f085a73fb",
+    "install_method": "Register as a Blender Asset Library (Preferences -> File Paths -> Asset Libraries) pointed at an extracted copy of the source file(s) -- not yet installed in any profile.",
+    "module": null,
+    "current_version": "v2 (HB)",
+    "versions": {
+      "v2 (HB)": "shaders-plus/source/SMOUSE Humble Bundle (v2) - Shaders Plus, Gobos Plus, Underwater Caustics Spastic Mouse.zip (4.9GB, now in source/ -- shared download, see shaders-plus and underwater-caustics entries)"
+    },
+    "installed_in": {},
+    "notes": "Procedural & 4K gobo library for patterned lighting (Spastic Mouse 'SMOUSE' Humble Bundle v2). Likely asset-library -- not yet verified. Shares one download with Shaders Plus and Underwater Caustics Shader, downloaded 2026-10-10. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "underwater-caustics": {
+    "type": "asset-library",
+    "display_name": "Underwater Caustics Shader (SMOUSE)",
+    "source_url": "https://superhivemarket.com/products/shaders-plus",
+    "notion_url": "https://app.notion.com/p/29986ab69e848024bdc4f2b78623c030",
+    "install_method": "Register as a Blender Asset Library (Preferences -> File Paths -> Asset Libraries) pointed at an extracted copy of the source file(s) -- not yet installed in any profile.",
+    "module": null,
+    "current_version": "v2 (HB)",
+    "versions": {
+      "v2 (HB)": "shaders-plus/source/SMOUSE Humble Bundle (v2) - Shaders Plus, Gobos Plus, Underwater Caustics Spastic Mouse.zip (4.9GB, now in source/ -- shared download, see shaders-plus and gobos-plus entries)"
+    },
+    "installed_in": {},
+    "notes": "Underwater caustics shader, part of the Shaders Plus family (Spastic Mouse 'SMOUSE' Humble Bundle v2). Likely asset-library -- not yet verified. Shares one download with Shaders Plus and Gobos Plus, downloaded 2026-10-10. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "clay-doh": {
+    "type": "addon",
+    "display_name": "Clay Doh",
+    "source_url": "https://blendermarket.com/products/clay-doh",
+    "notion_url": "https://app.notion.com/p/29286ab69e8480cca551fa3cf9cc55f0",
+    "install_method": "Legacy addon zip (or Extension, exact packaging unconfirmed) -- not yet installed in any profile. Extract into a profile's scripts/addons/ (or Preferences -> Get Extensions -> Install from Disk if packaged as an Extension) and enable via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "clay-doh/source/Clay Doh Rahul Parihar.zip (13.5MB)"
+    },
+    "installed_in": {},
+    "notes": "Sculpting/clay material tool (Rahul Parihar). Acquired via Humble Bundle, downloaded 2026-10-10. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "flipfluids": {
+    "type": "addon",
+    "display_name": "FlipFluids",
+    "source_url": "https://github.com/rlguy/Blender-FLIP-Fluids",
+    "notion_url": "https://app.notion.com/p/29986ab69e848043a5d2d687f9795b5d",
+    "install_method": "Legacy addon zip (or Extension, exact packaging unconfirmed) -- not yet installed in any profile. Extract into a profile's scripts/addons/ (or Preferences -> Get Extensions -> Install from Disk if packaged as an Extension) and enable via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "flipfluids/source/FlipFluids RLGUY.zip (702.4MB)"
+    },
+    "installed_in": {},
+    "notes": "Well-known fluid simulation addon (author RLGUY / Ryan Guy). Acquired via Humble Bundle, downloaded 2026-10-10. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "procedural-alleys": {
+    "type": "asset-library",
+    "display_name": "Procedural Alleys",
+    "source_url": "https://superhivemarket.com/products/procedural-alleys",
+    "notion_url": "https://app.notion.com/p/29986ab69e84804ba50df2af457b8671",
+    "install_method": "Register as a Blender Asset Library (Preferences -> File Paths -> Asset Libraries) pointed at an extracted copy of the source file(s) -- not yet installed in any profile.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "procedural-alleys/source/ProceduralAlleys Difffuse Studio.zip (344.8MB)"
+    },
+    "installed_in": {},
+    "notes": "Geometry Nodes asset (Diffuse Studio) -- likely asset-library, not yet verified by opening the file. Acquired via Humble Bundle, downloaded 2026-10-10. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "summer-pack-people-set": {
+    "type": "asset-library",
+    "display_name": "Summer Pack - People Set",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/29986ab69e848018b91df5a591e094ed",
+    "install_method": "Register as a Blender Asset Library (Preferences -> File Paths -> Asset Libraries) pointed at an extracted copy of the source file(s) -- not yet installed in any profile.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "summer-pack-people-set/source/SummerPackPeopleSet Difffuse Studio.zip (2.3GB)"
+    },
+    "installed_in": {},
+    "notes": "People/character asset pack (Diffuse Studio) -- likely asset-library, not yet verified by opening the file. Acquired via Humble Bundle, downloaded 2026-10-10. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "procedural-signs": {
+    "type": "asset-library",
+    "display_name": "Procedural Signs",
+    "source_url": "https://superhivemarket.com/products/procedural-signs",
+    "notion_url": "https://app.notion.com/p/29986ab69e8480739dd1f84bce71ac5b",
+    "install_method": "Register as a Blender Asset Library (Preferences -> File Paths -> Asset Libraries) pointed at an extracted copy of the source file(s) -- not yet installed in any profile.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "procedural-signs/source/ProceduralSigns Difffuse Studio.zip (456.7MB)"
+    },
+    "installed_in": {},
+    "notes": "Geometry Nodes asset (Diffuse Studio) -- likely asset-library, not yet verified by opening the file. Acquired via Humble Bundle, downloaded 2026-10-10. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "spock": {
+    "type": "addon",
+    "display_name": "Spock",
+    "source_url": "https://superhivemarket.com/products/spock",
+    "notion_url": "https://app.notion.com/p/29986ab69e84809dbddcc944688488ec",
+    "install_method": "Legacy addon zip (or Extension, exact packaging unconfirmed) -- not yet installed in any profile. Extract into a profile's scripts/addons/ (or Preferences -> Get Extensions -> Install from Disk if packaged as an Extension) and enable via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "1.1.2 (Windows) / 1.1.1 (Mac/Linux)",
+    "versions": {
+      "1.1.2-WINDOWS": "spock/source/spock-v1.1.2-WINDOWS Chipp Walters.zip (59.0MB)",
+      "1.1.1-MAC-LINUX": "spock/source/spock-v1.1.1-MAC-LINUX Chipp Walters.zip (59.0MB)"
+    },
+    "installed_in": {},
+    "notes": "'Structured Scifi Packer' -- packs greebles onto faces, Python addon using instancing. Verified via web search: Chipp Walters is Spock's actual developer (credited directly on the Superhive Market listing), not merely a bundle curator/uploader. Acquired via Humble Bundle, downloaded 2026-10-10. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "scififlex": {
+    "type": "addon",
+    "display_name": "SciFiFlex",
+    "source_url": "https://superhivemarket.com/products/sci-fi-flex",
+    "notion_url": "https://app.notion.com/p/29986ab69e84801f9a2de9765d194ae5",
+    "install_method": "Legacy addon zip (or Extension, exact packaging unconfirmed) -- not yet installed in any profile. Extract into a profile's scripts/addons/ (or Preferences -> Get Extensions -> Install from Disk if packaged as an Extension) and enable via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "2.4.7",
+    "versions": {
+      "2.4.7": "scififlex/source/scififlex-v2.4.7 Chipp Walters.zip (209.7MB)"
+    },
+    "installed_in": {},
+    "notes": "Sci-fi hard-surface modeling tool, same Chipp Walters product family as Spock and Kit Ops. Acquired via Humble Bundle, downloaded 2026-10-10. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "kitops-pro": {
+    "type": "addon",
+    "display_name": "Kit Ops Pro",
+    "source_url": "https://superhivemarket.com/products/kit-ops-3-pro",
+    "notion_url": "https://app.notion.com/p/29986ab69e8480b68bb8fcb180fa8921",
+    "install_method": "Legacy addon zip (or Extension, exact packaging unconfirmed) -- not yet installed in any profile. Extract into a profile's scripts/addons/ (or Preferences -> Get Extensions -> Install from Disk if packaged as an Extension) and enable via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "3.0.24",
+    "versions": {
+      "3.0.24": "kitops-pro/source/kitops-pro-v3.0.24-humblebundle Chipp Walters.zip (26.2MB)"
+    },
+    "installed_in": {},
+    "notes": "Well-known hard-surface kitbashing addon. CORRECTION to initial task briefing: web search confirms Chipp Walters IS the actual Kit Ops developer, credited as author on both the Superhive Market listing and his own Gumroad store -- the briefing's 'actual author Jeffrey Harrison/gold9472' attribution could not be verified anywhere and appears incorrect. Acquired via Humble Bundle, downloaded 2026-10-10. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "traffiq": {
+    "type": "asset-library",
+    "display_name": "Traffiq",
+    "source_url": "https://superhivemarket.com/products/car-library-traffiq-vehicles-for-blender",
+    "notion_url": "https://app.notion.com/p/29986ab69e848024accae74cfbc83b58",
+    "install_method": "Register as a Blender Asset Library (Preferences -> File Paths -> Asset Libraries) pointed at an extracted copy of the source file(s) -- not yet installed in any profile.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "traffiq/source/Traffiq.zip (1.2GB)"
+    },
+    "installed_in": {},
+    "notes": "Vehicle asset library (polygoniq, same family as Botaniq) -- rigged cars; likely primarily asset-library though polygoniq products sometimes bundle a small addon helper, not verified. Acquired via Humble Bundle, downloaded 2026-10-10. RESOLVED 2026-10-11: the duplicate 'Traffiq 1.4' Notion row has been archived (title marked duplicate, Status: Archived, Description points back here) and cross-linked to this entry's notion_url, which already pointed at the canonical 'Car Library - Traffiq...' row. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "cloudscapes-geoscatter-biomes": {
+    "type": "asset-library",
+    "display_name": "CloudScapes Geo-Scatter Biomes Pack",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3f586ab69e8481a9b1a3fdbe9ba3509c",
+    "install_method": "Register as a Blender Asset Library (Preferences -> File Paths -> Asset Libraries) pointed at an extracted copy of the source file(s) -- not yet installed in any profile. Additionally requires the separate Geo-Scatter addon (not owned) to be installed first before this .scatpack file is usable.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "cloudscapes-geoscatter-biomes/source/cloudscapes_geoscatter_biomes.scatpack (7.1MB)"
+    },
+    "installed_in": {},
+    "notes": "Geo-Scatter biome/preset companion pack for CloudScapes (Bproduction / Florian Benedetto). Dependency: requires the separate Geo-Scatter addon (not owned, not in this bundle -- see the existing 'Geo-Scatter 5.4' Notion row, currently unowned) to actually use the .scatpack file. Cross-reference the 'cloudscapes' manifest entry (same bundle, same author) for the base cloud library this pack scatters. No existing Notion row was found for this companion pack -- created new, cross-linked rather than merged into the CloudScapes row per the task's own judgment call. Acquired via Humble Bundle, downloaded 2026-10-10. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "retopoflow": {
+    "type": "addon",
+    "display_name": "RetopoFlow",
+    "source_url": "https://blendermarket.com/products/retopoflow",
+    "notion_url": "https://app.notion.com/p/29986ab69e84802caeccd843febecb64",
+    "install_method": "Legacy addon zip (or Extension, exact packaging unconfirmed) -- not yet installed in any profile. Extract into a profile's scripts/addons/ (or Preferences -> Get Extensions -> Install from Disk if packaged as an Extension) and enable via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "3.4.4",
+    "versions": {
+      "3.4.4": "retopoflow/source/RetopoFlow_v3.4.4_HB.zip (14.6MB)",
+      "3.4.3": "retopoflow/source/retopoflow_v3.4.3_HB.zip (13.3MB)"
+    },
+    "installed_in": {},
+    "notes": "Well-known retopology addon (CG Cookie / Orange Turbine). Acquired via Humble Bundle. v3.4.4 downloaded 2026-10-10; v3.4.3 downloaded 2026-10-12 as part of the SuperHive order acxstv (#2789580) mega-bundle -- confirmed via MD5 to be a genuinely distinct older version (not a duplicate), kept per the sequential-addon-version rollback rule. A separate 'Retopoflow 4 [Beta]' Notion row (Owned: No) also exists for the newer major version -- left untouched. That newer line is cataloged separately as the 'retopoflow-4' manifest entry. The Humble Bundle acquisition specifically was part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "retopoflow-4": {
+    "type": "addon",
+    "display_name": "RetopoFlow 4 (Alpha)",
+    "source_url": "https://superhivemarket.com/products/retopoflow",
+    "notion_url": "https://app.notion.com/p/29286ab69e848009b4c9cfd9bef457ce",
+    "install_method": "SuperHive 'Install in Blender as Extension' (account-gated Remote Extension, requires a personal SuperHive API token set up once as a Blender remote repository) or manual download. NOT in the free public extensions.blender.org catalog (checked 2026-10-12, zero match). Not yet installed in any profile.",
+    "module": null,
+    "current_version": "4.0.0",
+    "versions": {
+      "4.0.0": "retopoflow-4/source/Retopoflow_4.0.0.zip (7.1MB)"
+    },
+    "installed_in": {},
+    "notes": "Free Alpha build of the next major RetopoFlow version, Orange Turbine/CG Cookie brand. Distinct product line from the owned v3.4.4 (see 'retopoflow' entry) -- kept as a separate manifest slug/Notion row to match how Notion already split them. SuperHive order 7vh3dz (#2275122), Free. Order also included 'RF4_alpha_tutorial.zip' (177.6MB, tutorial/learning material) and a 'Perk - Unlock Your Full Potential with CG Cookie - Save 20%.pdf' (105.9KB, marketing/promo collateral, not addon content) -- both kept as companion files, not installable content. Downloaded and moved 2026-10-12."
+  },
+  "boxcutter": {
+    "type": "addon",
+    "display_name": "BoxCutter",
+    "source_url": "https://superhivemarket.com/products/box-cutter",
+    "notion_url": "https://app.notion.com/p/29986ab69e848041972fdd00d923cfa8",
+    "install_method": "Legacy addon zip (or Extension, exact packaging unconfirmed) -- not yet installed in any profile. Extract into a profile's scripts/addons/ (or Preferences -> Get Extensions -> Install from Disk if packaged as an Extension) and enable via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "720_5b",
+    "versions": {
+      "720_5b (HB)": "boxcutter/source/BoxCutter 720_5b(hb) jerry perkins.zip (1.5MB)"
+    },
+    "installed_in": {},
+    "notes": "Well-known hard-surface modeling addon (Jerry Perkins/Andrew Richardson). Acquired via Humble Bundle, downloaded 2026-10-10. Shares its Notion row ('Hard Ops / Boxcutter Ultimate Bundle') with the separate 'hardops' manifest entry below, since this database already tracks the two as one combined bundle product -- kept as two manifest entries (distinct addons on disk) cross-linked to the same Notion URL. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "hardops": {
+    "type": "addon",
+    "display_name": "Hard Ops",
+    "source_url": "https://superhivemarket.com/products/hard-ops",
+    "notion_url": "https://app.notion.com/p/29986ab69e848041972fdd00d923cfa8",
+    "install_method": "Legacy addon zip (or Extension, exact packaging unconfirmed) -- not yet installed in any profile. Extract into a profile's scripts/addons/ (or Preferences -> Get Extensions -> Install from Disk if packaged as an Extension) and enable via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "988_5b",
+    "versions": {
+      "988_5b (HB)": "hardops/source/HardOps 988_5b(hb) jerry perkins.zip (5.7MB)"
+    },
+    "installed_in": {},
+    "notes": "Well-known hard-surface modeling addon, same ecosystem as BoxCutter (Jerry Perkins). Acquired via Humble Bundle, downloaded 2026-10-10. Shares its Notion row ('Hard Ops / Boxcutter Ultimate Bundle') with the separate 'boxcutter' manifest entry above -- see that entry's notes. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "cablerator": {
+    "type": "addon",
+    "display_name": "Cablerator",
+    "source_url": "https://superhivemarket.com/products/cablerator",
+    "notion_url": "https://app.notion.com/p/29986ab69e8480a792bfdbb5a27e3ea3",
+    "install_method": "Legacy addon zip (or Extension, exact packaging unconfirmed) -- not yet installed in any profile. Extract into a profile's scripts/addons/ (or Preferences -> Get Extensions -> Install from Disk if packaged as an Extension) and enable via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "cablerator/source/Cablerator Sergey Kritskiy.zip (395.2KB)"
+    },
+    "installed_in": {},
+    "notes": "Cable/wire generator addon (Sergey Kritskiy/CodeOfArt). Acquired via Humble Bundle, downloaded 2026-10-10. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "cloudscapes": {
+    "type": "addon",
+    "display_name": "CloudScapes",
+    "source_url": "https://superhivemarket.com/products/cloudscapes-v2-hyper-realistic-vdb-clouds-explosions",
+    "notion_url": "https://app.notion.com/p/29986ab69e84808db887f3cd92c8cd31",
+    "install_method": "Legacy addon zip (or Extension, exact packaging unconfirmed) -- not yet installed in any profile. Extract into a profile's scripts/addons/ (or Preferences -> Get Extensions -> Install from Disk if packaged as an Extension) and enable via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "2.0",
+    "versions": {
+      "2.0": "cloudscapes/source/CloudScapes Bproduction Florian Benedetto.rar (1.7GB)",
+      "2.0 (Free tier)": "cloudscapes/source/CloudScapes_Free.rar (51.7MB)"
+    },
+    "installed_in": {},
+    "notes": "Volumetric cloud addon (Bproduction/Florian Benedetto). Companion Geo-Scatter biome pack cataloged separately as 'cloudscapes-geoscatter-biomes' (requires the separate Geo-Scatter addon, not owned). Full 2.0 acquired via Humble Bundle, downloaded 2026-10-10. A smaller free tier was separately acquired via SuperHive order af1rih (#2605892), Free ('Gift Birthday'), downloaded 2026-10-12 -- kept alongside the full version as a distinct limited edition, not a duplicate. The Humble Bundle acquisition specifically was part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "human-generator": {
+    "type": "addon",
+    "display_name": "Human Generator",
+    "source_url": "https://superhivemarket.com/products/human-generator",
+    "notion_url": "https://app.notion.com/p/29986ab69e8480cca6c2f0b0b672e449",
+    "install_method": "Legacy addon zip (or Extension, exact packaging unconfirmed) -- not yet installed in any profile. Extract into a profile's scripts/addons/ (or Preferences -> Get Extensions -> Install from Disk if packaged as an Extension) and enable via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "HB",
+    "versions": {
+      "HB": "human-generator/source/HumanGeneratorHumbleBundle.zip (1.8GB)"
+    },
+    "installed_in": {},
+    "notes": "Human character generator addon. Existing Notion page 'Human Generator (Personal)' updated: Status Wishlist -> Backlog, Owned stays Yes, Last checked set to 2026-10-10, Description notes this copy arrived via Humble Bundle rather than the SuperHive/Blender Market checkout that was previously blocking it. No prior 'human-generator' manifest entry existed under this or another slug -- created new. Note: unlike the other 29 updated items, Store on this Notion page was intentionally left as 'Blender Market' (not changed to 'Humble Bundle') per the task's narrower per-item instruction for this specific product. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "malfunktion": {
+    "type": "addon",
+    "display_name": "Malfunktion",
+    "source_url": "https://superhivemarket.com/products/malfunktion",
+    "notion_url": "https://app.notion.com/p/29986ab69e8480afa5aec6db2c4a1520",
+    "install_method": "Legacy addon zip (or Extension, exact packaging unconfirmed) -- not yet installed in any profile. Extract into a profile's scripts/addons/ (or Preferences -> Get Extensions -> Install from Disk if packaged as an Extension) and enable via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "malfunktion/source/Malfunktion Rahul Parihar.zip (11.1MB)"
+    },
+    "installed_in": {},
+    "notes": "Glitch/destruction effect addon (Rahul Parihar). Acquired via Humble Bundle, downloaded 2026-10-10. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "physical-open-waters": {
+    "type": "addon",
+    "display_name": "Physical Open Waters",
+    "source_url": "https://superhivemarket.com/products/physical-open-waters",
+    "notion_url": "https://app.notion.com/p/29986ab69e848019b6c7dbca6db864b7",
+    "install_method": "Legacy addon zip (or Extension, exact packaging unconfirmed) -- not yet installed in any profile. Extract into a profile's scripts/addons/ (or Preferences -> Get Extensions -> Install from Disk if packaged as an Extension) and enable via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "physical-open-waters/source/PhysicalOpenWaters Martins Upitis.zip (2.6MB)"
+    },
+    "installed_in": {},
+    "notes": "Ocean/water shader addon (Martins Upitis -- known for Physical Starlight and Atmosphere). Companion to 'physical-celestial-objects' (same author). Acquired via Humble Bundle, downloaded 2026-10-10. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "physical-celestial-objects": {
+    "type": "addon",
+    "display_name": "Physical Celestial Objects",
+    "source_url": "https://superhivemarket.com/products/physical-celestial-objects",
+    "notion_url": "https://app.notion.com/p/29986ab69e8480dc9ae4f6030eb32363",
+    "install_method": "Legacy addon zip (or Extension, exact packaging unconfirmed) -- not yet installed in any profile. Extract into a profile's scripts/addons/ (or Preferences -> Get Extensions -> Install from Disk if packaged as an Extension) and enable via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "physical-celestial-objects/source/PhysicalCelestialObjects Martins Upitis.zip (184.5MB)"
+    },
+    "installed_in": {},
+    "notes": "Sun/moon/stars shader addon, companion to 'physical-open-waters' (Martins Upitis). Acquired via Humble Bundle, downloaded 2026-10-10. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "realistic-touch": {
+    "type": "asset-library",
+    "display_name": "Realistic Touch",
+    "source_url": "https://superhivemarket.com/products/realistic-touch-surface-imperfection",
+    "notion_url": "https://app.notion.com/p/bb401917c365497aaebc520a2fd60f95",
+    "install_method": "Register as a Blender Asset Library (Preferences -> File Paths -> Asset Libraries) pointed at an extracted copy of the source file(s) -- not yet installed in any profile.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "realistic-touch/source/Realistic_Touch Bproduction Florian Benedetto.zip (4.1GB)"
+    },
+    "installed_in": {},
+    "notes": "PBR material/shader pack for surface imperfections (Bproduction/Florian Benedetto) -- likely asset-library (material node groups), not yet verified by opening the file. Acquired via Humble Bundle, downloaded 2026-10-10. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "realtime-materials": {
+    "type": "asset-library",
+    "display_name": "Real-time Materials",
+    "source_url": "https://blendermarket.com/products/realtime-materials-for-blender",
+    "notion_url": "https://app.notion.com/p/12f86ab69e848019b7a3cad4e87dc1fb",
+    "install_method": "Register as a Blender Asset Library (Preferences -> File Paths -> Asset Libraries) pointed at an extracted copy of the source file(s) -- not yet installed in any profile.",
+    "module": null,
+    "current_version": "2.1.6",
+    "versions": {
+      "2.1.6": "realtime-materials/source/Realtime_Materials_2.1.6 Nathan Duck.zip (187.7MB)",
+      "Free Demo (40 materials)": "realtime-materials/source/Realtime_Materials_Free.zip (9.4MB) + realtime-materials/source/How To Install (free) .mp4 (181.6MB) -- SuperHive product page 'Realtime Materials for Blender' by Ducky 3D in Surfacing, Free, uploaded 01-23-23 / 07-17-22"
+    },
+    "installed_in": {},
+    "notes": "EEVEE material pack (Nathan Duck) -- likely asset-library, not yet verified. Matched an existing Notion row 'Realtime Materials For Blender' that a prior session had already added an image/preview to -- confirmed correct dedup match, no duplicate created. Acquired via Humble Bundle, downloaded 2026-10-10. Same product/author also has a free 40-material demo tier on SuperHive (Ducky 3D is Nathan Duck's seller brand) -- not yet downloaded. A separate stale placeholder Notion row 'Ducky 3D Real-Time Materials' (Store: Gumroad, blank content) was found for this same product and archived as a duplicate -- see that page's note. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "minecraft-world-generator": {
+    "type": "addon",
+    "display_name": "Minecraft World Generator",
+    "source_url": "https://superhivemarket.com/products/free-addon-mc-world-generator",
+    "notion_url": "https://app.notion.com/p/3d586ab69e848187b596d687e2fd395a",
+    "install_method": "Addon zip -- not yet installed in any profile.",
+    "module": null,
+    "current_version": "1.0.0",
+    "versions": {
+      "1.0.0": "minecraft-world-generator/source/minecraft_world_1.0.0.zip -- 1.6 MB -- 02-27-24"
+    },
+    "installed_in": {},
+    "notes": "Voxel/Minecraft-style procedural landscape generator by Blender Procedural. SuperHive order avoew2 (#2172270), Paid 'Support The Developer' version (functionally free). Downloaded and moved 2026-10-11. Matched an existing stale placeholder Notion row ('Minecraft World Generator', auto-populated from a YouTube video pass, blank) -- filled in, no duplicate created."
+  },
+  "ultimate-imm-anatomy-primitives": {
+    "type": "asset-library",
+    "display_name": "Ultimate IMM Anatomy Primitives",
+    "source_url": "https://georgezaky108.gumroad.com/l/rwewi",
+    "notion_url": "https://app.notion.com/p/3f486ab69e848197b65dc8403c671aa7",
+    "install_method": "Not yet downloaded (reference only). Ships in 3 formats: ZBrush IMM brush, native .blend Asset Library (Blender), FBX/OBJ (other software). For Nomad Sculpt, import the OBJ file -- Nomad imports OBJ stably, FBX only experimentally.",
+    "module": null,
+    "current_version": "2.0",
+    "versions": {
+      "2.0": "not yet downloaded -- Gumroad product, ships ZBrush IMM brush + .blend Asset Library + FBX/OBJ (per the listing's release notes, v2.0 improved topology flow across head/torso/limbs/feet; includes 4 free character blockouts)"
+    },
+    "installed_in": {},
+    "notes": "Anatomy primitive/insert-mesh brush set, cross-compatible across ZBrush, Blender, and Nomad Sculpt via its 3 bundled formats. Owned via Gumroad, not yet downloaded. Existing Notion row originally tagged Compatibility: Other only (ZBrush-only assumption) -- corrected to also include Blender after verifying via web search that a native .blend Asset Library is bundled. Not a Decision-Gate case (single current version, no Blender-version-build or sequential-version choice needed yet)."
+  },
+  "quick-brush-selector": {
+    "type": "addon",
+    "display_name": "Quick Brush Selector",
+    "source_url": "https://superhivemarket.com/products/quick-brush-selector",
+    "notion_url": "https://app.notion.com/p/3f686ab69e848137be6beb96a300a11c",
+    "install_method": "Addon zip -- not yet installed in any profile.",
+    "module": null,
+    "current_version": "3.0.0",
+    "versions": {
+      "3.0.0 (Quick Brush Selector, Blender 4.3+)": "quick-brush-selector/source/quick_brush_selector_3.0.0_Blender4.3orHigher.zip -- 165.2 KB -- 01-03-26 (latest)",
+      "2.1.1 (Quick Brush Selector, Blender 4.3+)": "quick-brush-selector/source/quick_brush_selector_2.1.1_Blender4.3orHigher.zip -- 165.2 KB -- 08-19-25",
+      "2.1.0 (Quick Brush Selector, Blender 4.3+)": "quick-brush-selector/source/quick_brush_selector_2.1.0_Blender4.3orHigher.zip -- 149.0 KB -- 01-27-25",
+      "1.2.2 (Sculpt Brush Toolset)": "quick-brush-selector/source/sculpt_brush_toolset_1.2.2.zip -- 1.6 MB -- 09-07-24 (last release under the old product name)",
+      "1.2.1 (Sculpt Brush Toolset)": "quick-brush-selector/source/sculpt_brush_toolset_1.2.1.zip -- 1.2 MB -- 08-19-24",
+      "1.2.0 (Sculpt Brush Toolset)": "quick-brush-selector/source/sculpt_brush_toolset_1.2.0.zip -- 1.1 MB -- 11-16-23",
+      "1.1.1 (Sculpt Brush Toolset)": "quick-brush-selector/source/sculpt_brush_toolset_1.1.1.zip -- 1.1 MB -- 09-13-23",
+      "1.1.0 (Sculpt Brush Toolset)": "quick-brush-selector/source/sculpt_brush_toolset_1.1.0.zip -- 1.1 MB -- 07-09-23",
+      "1.0.0 (Sculpt Brush Toolset)": "quick-brush-selector/source/sculpt_brush_toolset_1.0.0.zip -- 1.1 MB -- 06-29-23 (first release)"
+    },
+    "installed_in": {},
+    "notes": "Brush-select toolset, seller sum studio. SuperHive order fu1arr (#2152676), Paid. Product was renamed partway through its lifetime: 'Sculpt Brush Toolset' (v1.0.0-1.2.2) became 'Quick Brush Selector' starting at v2.1.0 when it gained Blender 4.3+ support. All 9 files kept as ordinary sequential addon-version history across the rename, not a repackaged-per-Blender-version case. Downloaded and moved 2026-10-11. No existing Notion row was found -- created new."
+  },
+  "spring-grass-set": {
+    "type": "asset-library",
+    "display_name": "Free Spring Grass Set",
+    "source_url": "https://superhivemarket.com/products/free-spring-grass-set",
+    "notion_url": "https://app.notion.com/p/3f686ab69e8481259331e2b5b1bd0d2c",
+    "install_method": "Append/import .blend content from the extracted archive, or use as a Geo-Scatter pack -- not yet installed in any profile.",
+    "module": null,
+    "current_version": "unversioned",
+    "versions": {
+      "Geo-Scatter format": "spring-grass-set/source/Spring_grass_set_(geoscatter_version).rar -- 76.7 MB -- 09-20-23",
+      "Asset Manager format": "spring-grass-set/source/Spring_grass_set_#1_asset manager.zip -- 76.6 MB -- 07-28-23",
+      "plain particle-system format": "spring-grass-set/source/Spring_grass_set_#1.zip -- 76.1 MB -- 07-28-23"
+    },
+    "installed_in": {},
+    "notes": "Landscaping asset (plane with particle systems) by 3D SHAKER. SuperHive order 6yx1ik (#1779196), Free (free). 3 files are different delivery formats of the same content, not sequential versions or Blender-version builds -- kept all. Downloaded and moved 2026-10-11. No existing Notion row was found -- created new. Re-delivered via a second order, fryqxb (#2894567) -- confirmed byte-identical (MD5) to this archived copy; the duplicate was deleted from ~/Downloads 2026-10-12 per user confirmation."
+  },
+  "bumarin-for-sculptor": {
+    "type": "addon",
+    "display_name": "Bumarin for Sculptor",
+    "source_url": "https://superhivemarket.com/products/bumarin-for-sculptor",
+    "notion_url": "https://app.notion.com/p/3f686ab69e84813e9aaee96e6dcae705",
+    "install_method": "Addon zip -- not yet installed in any profile.",
+    "module": null,
+    "current_version": "1.0 (Blender 4.3)",
+    "versions": {
+      "1.0 (Blender 4.3)": "bumarin-for-sculptor/source/bumarin.zip -- 254.0 KB -- 02-07-25 (title explicitly states 'Blender 4.3'; single build, no alternate Blender-version files to choose between)",
+      "docs": "bumarin-for-sculptor/source/bfsv1.0_doc.pdf -- 19.3 MB -- 02-07-25",
+      "bonus: sonic brushes tutorials": "bumarin-for-sculptor/source/sonic_brushes_basic_tutorials.zip -- 199.4 MB -- 06-15-21"
+    },
+    "installed_in": {},
+    "notes": "Sculpting brush pack by bumarin. SuperHive order 83y89a (#1766919), Free (free). Downloaded and moved 2026-10-11. Compatibility with Blender 5.2.0 not yet verified (title only confirms 4.3). No existing Notion row was found -- created new."
+  },
+  "sculpture-pencils": {
+    "type": "addon",
+    "display_name": "Sculpture Pencils",
+    "source_url": "https://superhivemarket.com/products/sculpture-pencils",
+    "notion_url": "https://app.notion.com/p/3f686ab69e8481f3a100fcebd376811e",
+    "install_method": "N/A -- no files available.",
+    "module": null,
+    "current_version": null,
+    "versions": {},
+    "installed_in": {},
+    "notes": "SuperHive order 83y89a (#1766919), Free (free), same creator as Bumarin for Sculptor (bumarin). Product page shows 'No downloads found for this product. Please contact the creator(s) or request assistance from customer support.' -- nothing to acquire. Catalogued per the standing rule (every addon mentioned gets a row, no exceptions, even dead ends). Verdict: Not useful. No existing Notion row was found -- created new."
+  },
+  "sculpt-paint-wheel": {
+    "type": "addon",
+    "display_name": "Sculpt+Paint Wheel",
+    "source_url": "https://superhivemarket.com/products/sculpt-paint-wheel",
+    "notion_url": "https://app.notion.com/p/3d986ab69e8481e1b465efabf0ee5953",
+    "install_method": "SuperHive Remote Extension or manual zip install -- NOT compatible with this machine's Blender 5.2.0, see notes. Not installed.",
+    "module": null,
+    "current_version": "3.0.4_b4.2_hotfix",
+    "versions": {
+      "3.0.4 (Blender 4.2 hotfix)": "sculpt-paint-wheel/source/SPWheel_v3.0.4_b4.2_hotfix.zip -- 3.3 MB -- 08-03-24 (latest; still does NOT support Blender 4.3+/5.2.0)",
+      "3.0.4 (Blender 4.1)": "sculpt-paint-wheel/source/SPWheel_v3.0.4_b4.1.zip -- 3.5 MB -- 04-08-24",
+      "3.0.3 (Blender 4.0 rc2)": "sculpt-paint-wheel/source/SPWheel_v3.0.3_b4.0_rc2.zip -- 3.3 MB -- 11-18-23",
+      "3.0.3 (Blender 3.6.5)": "sculpt-paint-wheel/source/SPWheel_v3.0.3_b3.6.5.zip -- 3.1 MB -- 11-15-23",
+      "2.4.1 (Blender 3.3 release)": "sculpt-paint-wheel/source/SPWheel_v2.4.1_b3.3_release.zip -- 3.3 MB -- 06-14-23",
+      "2.3 (Blender 2.93.5 release fix)": "sculpt-paint-wheel/source/SPWheel_v2.3_[b2.93.5]_release_fix.zip -- 3.1 MB -- 11-21-22"
+    },
+    "installed_in": {},
+    "notes": "Radial brush-select wheel for sculpt/paint modes, seller jfmatheu. SuperHive order 83y89a (#1766919), Paid. All 6 sequential addon-version releases kept per the default rule -- each filename bundles its addon version with the Blender version it targeted at release time (ordinary version history, not a repackaged-per-Blender-version case). CONFIRMED via web search: the product's own SuperHive page explicitly states it does NOT support Blender 4.3 or later, author has no ETA for a compatible release (required API features were removed) -- currently unusable on this machine's Blender 5.2.0. Matched an existing stale placeholder Notion row ('Sculpt+Paint Wheel', auto-populated from a YouTube video pass, blank) -- filled in, no duplicate created."
+  },
+  "cracks-and-damage-maker": {
+    "type": "addon",
+    "display_name": "Cracks and Damage Maker",
+    "source_url": "https://superhivemarket.com/products/cracks-and-damage-maker-add-on",
+    "notion_url": "https://app.notion.com/p/3d986ab69e8481549ed1d97f81256fcc",
+    "install_method": "Addon zip -- not yet installed in any profile.",
+    "module": null,
+    "current_version": "1.4.0",
+    "versions": {
+      "1.4.0": "cracks-and-damage-maker/source/cracks_and_damage_maker_1.4.0.zip -- 159.2 KB -- 07-25-24 (latest)",
+      "1.3.0": "cracks-and-damage-maker/source/cracks_and_damage_maker_1.3.0.zip -- 159.3 KB -- 07-02-23"
+    },
+    "installed_in": {},
+    "notes": "Procedural crack/damage generator addon by Maroc Sofiane. SuperHive order camuiv (#1635341), Paid. Sequential addon-version releases, not Blender-version-tied -- kept both per the default rule. The order page listed 1.3.0 twice (identical filename/size); confirmed via md5sum it was a true duplicate download, not two different files -- deleted the extra copy. Matched an existing stale placeholder Notion row ('Cracks and Damage Maker', auto-populated from a YouTube video pass, blank) -- filled in, no duplicate created."
+  },
+  "smartify-nodes": {
+    "type": "addon",
+    "display_name": "Smartify Nodes",
+    "source_url": "https://blendermarket.com/products/smartify-nodes",
+    "notion_url": "https://app.notion.com/p/3d586ab69e8481ec92c4da4f98fd35fa",
+    "install_method": "Addon zip -- not yet installed in any profile (main zip not yet downloaded, see below).",
+    "module": null,
+    "current_version": "1.04",
+    "versions": {
+      "1.04": "smartify-nodes/source/SMARTIFY NODES_v1.04.zip -- 2.3 GB -- 11-19-23 (main addon file; initially stuck mid-download, relaunched and confirmed complete 2026-10-11)",
+      "demo: Japan (packed)": "smartify-nodes/source/Demo_Japan_PACKED.blend -- 995.3 MB -- 09-18-23 (initially stuck mid-download, relaunched and confirmed complete 2026-10-11)",
+      "demo: sand planet (packed)": "smartify-nodes/source/Demo_sand_planet_PACKED.blend -- 536.1 MB -- 09-23-23",
+      "demo: Japan video": "smartify-nodes/source/Japan_demo.mp4 -- 313.1 MB -- 09-18-23",
+      "trial scene: advanced": "smartify-nodes/source/TRIAL_scene_ADVANCED.blend -- 506.4 MB -- 11-25-23",
+      "trial scene: simple": "smartify-nodes/source/TRIAL_scene_SIMPLE_V2.blend -- 450.3 MB -- 11-25-23",
+      "docs": "smartify-nodes/source/HOW TO INSTAL & USE.jpg (1.9MB, 08-13-23) + - USEFUL INFO - .txt (2.1KB, 11-17-23)"
+    },
+    "installed_in": {},
+    "notes": "One-click procedural material/effects node system by Loïc Bramoullé. SuperHive order 9aix0d (#1611510), Paid, full version. All 8 files confirmed downloaded and moved 2026-10-11 -- 2 (the main addon zip and one demo scene) initially got stuck mid-download (same pattern seen earlier this session with FloraPaint/RealCloud/Real Water), relaunched successfully by the user. Matched an existing stale placeholder Notion row ('Smartify Nodes', auto-populated from a YouTube video pass, blank/Cost type Unknown) -- filled in, no duplicate created."
+  },
+  "tradigitalist-toolbag": {
+    "type": "asset-library",
+    "display_name": "Tradigitalist Toolbag",
+    "source_url": "https://bazaar.blendernation.com/listing/tradigitalist-toolbag/",
+    "notion_url": "https://app.notion.com/p/3f686ab69e848153a35ffff677ec2fce",
+    "install_method": "Mix of a zip addon (Tradigital3DPaint Filter) and standalone .blend files (node groups/modifiers to append) -- not yet installed in any profile.",
+    "module": null,
+    "current_version": "bundle (unversioned as a whole; individual tools versioned separately)",
+    "versions": {
+      "Tradigital3DPaint Filter": "tradigitalist-toolbag/source/Tradigital3DPaint Filter-3.2.zip -- 170.7 MB -- 09-17-25 (addon, v3.2)",
+      "PixelPasto": "tradigitalist-toolbag/source/PixelPasto 2.0.blend -- 223.7 MB -- 02-06-25 (image-to-painting tool, v2.0)",
+      "Line Art Curve Modifier": "tradigitalist-toolbag/source/Line Art Curve Modifier_1.2_Blender 4.0.blend -- 13.8 MB -- 01-27-24 (v1.2, single build -- not a multi-Blender-version case, only one file exists for this tool)",
+      "Painterly Borders": "tradigitalist-toolbag/source/Painterly Borders.blend -- 40.3 MB -- 07-14-23",
+      "Painter's Color Filter": "tradigitalist-toolbag/source/Painter's Color Filter.blend -- 1.1 MB -- 07-14-23",
+      "Illustration Shader": "tradigitalist-toolbag/source/Illustration Shader 3.0 Advanced.blend -- 62.2 MB -- 07-14-23 (v3.0 Advanced)",
+      "docs": "tradigitalist-toolbag/source/Blender Live Paint Filter 3.2 - USER MANUAL.docx (14.9MB) + Line Art Curve Modifier_Manual.docx (18.8KB)"
+    },
+    "installed_in": {},
+    "notes": "Bundle of painterly/NPR tools by Alan Wyatt (Tradigital3D). SuperHive order ew2j21 (#1553702), Paid Editorial/Personal License. Confirmed downloaded and moved 2026-10-11. Not a Blender-version-build case -- each tool is a separate deliverable with its own version, all kept as one bundle under this one manifest entry/Notion row per the task briefing's one-row-per-purchase convention (same pattern as Simply Cloth Studio). No Blender Market product URL found via web search; creator sells mainly through Gumroad -- used the Blender Bazaar listing as source_url instead. No existing Notion row was found -- created new."
+  },
+  "alt-tab-lighting": {
+    "type": "asset-library",
+    "display_name": "Alt Tab Lighting",
+    "source_url": "https://blendermarket.com/products/alt-tab-lighting",
+    "notion_url": "https://app.notion.com/p/12f86ab69e848005b4d0ec8512a73484",
+    "install_method": "Register as a Blender Asset Library -- not yet installed in any profile.",
+    "module": null,
+    "current_version": "1.1.0",
+    "versions": {
+      "1.1.0": "alt-tab-lighting/source/alt_tab_lighting_1.1.0.zip -- 11.3 MB -- 10-21-25 (latest)",
+      "1.0.0": "alt-tab-lighting/source/alt_tab_lighting_1.0.0.zip -- 11.3 MB -- 03-03-25"
+    },
+    "installed_in": {},
+    "notes": "Lighting setup asset/library (Alt Tab brand). SuperHive order 73jx2c (#1278846), Paid, downloaded 2026-10-11. Sequential addon-version releases, not Blender-version-tied -- kept both per the default 'don't delete old versions' rule. Matched existing Notion row (Owned: Yes, was Wishlist) -- updated in place, no duplicate created."
+  },
+  "real-water-shader": {
+    "type": "asset-library",
+    "display_name": "Real Water - Waters Shader",
+    "source_url": "https://blendermarket.com/products/realwater1",
+    "notion_url": "https://app.notion.com/p/12f86ab69e84801cafc3d9d1f6a2a15c",
+    "install_method": "Register as a Blender Asset Library -- not yet installed in any profile.",
+    "module": null,
+    "current_version": "2.0.3",
+    "versions": {
+      "2.0.3": "real-water-shader/source/Real_Water_2_0_3.zip -- 36.9 MB -- 03-18-25 (latest)",
+      "2.0.2": "real-water-shader/source/Real_Water_2_0_2.zip -- 36.9 MB -- 12-27-24",
+      "1.2.1 BETA": "real-water-shader/source/real_water_1.2.1_BETA.zip -- 33.7 MB -- 05-07-23",
+      "1.2.0": "real-water-shader/source/real_water_1.2.0.zip -- 33.7 MB -- 05-06-23",
+      "1.2.0 assets lib": "real-water-shader/source/RealWater_1.2.0_assets_lib.zip -- 37.8 MB -- 05-06-23",
+      "1.1.0": "real-water-shader/source/real_water_1.1.0.zip -- 27.4 MB -- 04-12-23",
+      "1.1 assets lib": "real-water-shader/source/RealWater_1.1_assets_lib.zip -- 30.3 MB -- 05-01-23",
+      "docs": "real-water-shader/source/Nodes introduction.pdf (2.2MB) + Nodes introduction_tw.pdf (2.2MB), 03-13-23; Discord.url.download (not content, browser renamed the .url extension)"
+    },
+    "installed_in": {},
+    "notes": "Water shader library, seller Casey_Sheep (same brand as BlendShop/RealCloud, already cataloged this session). SuperHive order 73jx2c (#1278846), Paid. 2.0.2 and 2.0.3 initially got stuck mid-download on 2026-10-11 (0 bytes + .part file, same pattern seen earlier this session with FloraPaint/RealCloud) -- user relaunched and all 10 files confirmed complete and moved 2026-10-11. Sequential addon-version releases plus asset-library companions, not Blender-version-tied -- kept all per the default rule. Matched existing Notion row (Owned: Yes, was Wishlist) -- updated in place, no duplicate created."
+  },
+  "alt-tab-easy-fog": {
+    "type": "asset-library",
+    "display_name": "Alt Tab Easy Fog",
+    "source_url": "https://blendermarket.com/products/alt-tab-easy-fog",
+    "notion_url": "https://app.notion.com/p/12f86ab69e84808da53ed02e35c66b23",
+    "install_method": "Register as a Blender Asset Library -- not yet installed in any profile.",
+    "module": null,
+    "current_version": "Blender 3.4+",
+    "versions": {
+      "Blender 3.4+": "alt-tab-easy-fog/source/alt_tab_easy_fog_Blender 3.4+.zip (49.1MB, covers this machine's Blender 5.2.0)",
+      "Blender 2.9-3.3": "deleted 2026-10-12 per user confirmation -- does not cover Blender 5.2.0, superseded per README's Blender-version-build policy; re-download from the SuperHive order page (73jx2c, #1278846) if ever needed again"
+    },
+    "installed_in": {},
+    "notes": "Fog asset/library (Alt Tab brand). SuperHive order 73jx2c (#1278846), Paid Commercial License. Two files are Blender-compat-RANGE builds (3.4+ vs 2.9-3.3), not sequential addon versions -- classified as the Blender-version-build case per the Decision Gate, same treatment as Speedsculpt/Simply Cloth/BlenRig. Both files finished downloading 2026-10-11 but sat unprocessed in ~/Downloads until a 2026-10-12 cleanup pass caught it; 3.4+ moved into source/, 2.9-3.3 deleted per user confirmation. Matched existing Notion row (Owned: Yes, was Wishlist) -- updated in place, no duplicate created."
+  },
+  "auto-rig-pro": {
+    "type": "addon",
+    "display_name": "Auto-Rig Pro",
+    "source_url": "https://superhivemarket.com/products/auto-rig-pro",
+    "notion_url": "https://app.notion.com/p/3d586ab69e8481acae56cf0bfe4670b5",
+    "install_method": "SuperHive 'Install in Blender as Extension' (account-gated Remote Extension) or manual download. Not yet installed in any profile. The 'rig_tools' and 'proxy_picker' zips are Auto-Rig Pro's own helper addons (install separately); 'io_scene_gltf2' is Blender's built-in glTF importer/exporter, bundled here for ARP's export compatibility.",
+    "module": null,
+    "current_version": "3.70.38",
+    "versions": {
+      "3.70.38": "auto-rig-pro/source/auto_rig_pro_3.70.38.zip (4.6MB)",
+      "rig_tools 3.78.24": "auto-rig-pro/source/rig_tools_3.78.24.zip (61.3KB, ARP companion addon)",
+      "proxy_picker 1.1.11": "auto-rig-pro/source/proxy_picker_1.1.11.zip (6.3KB, ARP companion addon)",
+      "io_scene_gltf2": "auto-rig-pro/source/io_scene_gltf2.zip (1.3MB, bundled glTF I/O addon)"
+    },
+    "installed_in": {},
+    "notes": "Well-known advanced rigging addon by Artell. SuperHive order dzobb0 (#2606018), Free 'Birthday Gift', downloaded 2026-10-12. Matched an existing stale placeholder Notion row (web-verified mention, Cost type Paid) -- filled in, no duplicate created."
+  },
+  "petz-library": {
+    "type": "asset-library",
+    "display_name": "PETZ Library",
+    "source_url": "https://superhivemarket.com/products/petz-library",
+    "notion_url": "https://app.notion.com/p/3f686ab69e848174bb48d30808fd433f",
+    "install_method": "Register as a Blender Asset Library -- not yet installed in any profile. Exact scope/content not yet verified by opening the file.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "petz-library/source/PETZ library.zip (120.1MB)"
+    },
+    "installed_in": {},
+    "notes": "Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total). No existing Notion row found -- created new. This bundle is being cataloged incrementally as its many large files finish downloading -- see the other 'acxstv bundle' entries added around the same time."
+  },
+  "ultimate-basemesh-collection": {
+    "type": "asset-library",
+    "display_name": "Ultimate Basemesh Collection",
+    "source_url": "https://superhivemarket.com/products/ultimate-basemesh",
+    "notion_url": "https://app.notion.com/p/29a86ab69e8480fabb79ca1460f3bb95",
+    "install_method": "Register as a Blender Asset Library -- not yet installed in any profile. Author: Tashi59.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "ultimate-basemesh-collection/source/Ultimate Basemesh Collection Tashi59.zip (313.4MB)"
+    },
+    "installed_in": {},
+    "notes": "Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing stale placeholder Notion row (Owned: Yes, blank otherwise) -- filled in, no duplicate created."
+  },
+  "quick-baker": {
+    "type": "addon",
+    "display_name": "Quick Baker",
+    "source_url": "https://superhivemarket.com/products/quick-baker",
+    "notion_url": "https://app.notion.com/p/29a86ab69e8480c0a0d9d009f553017f",
+    "install_method": "Legacy addon zip -- not yet installed in any profile. Author: Karan (same author as the blender_to_unity/blender_to_unreal export addons in this same bundle).",
+    "module": null,
+    "current_version": "2.7.1",
+    "versions": {
+      "2.7.1": "quick-baker/source/quick_baker_v2.7.1 Karan.zip (305.7KB)"
+    },
+    "installed_in": {},
+    "notes": "Texture bake setup/export tool by Karan. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free), downloaded 2026-10-12. Matched an existing stale placeholder Notion row (Owned: Yes, Must have) -- filled in, no duplicate created."
+  },
+  "autobake-2": {
+    "type": "addon",
+    "display_name": "Auto Bake 2",
+    "source_url": "https://superhivemarket.com/products/autobake",
+    "notion_url": "https://app.notion.com/p/29a86ab69e8480838cede2225c141f03",
+    "install_method": "Legacy addon zip -- not yet installed in any profile. Author: Daniel Horvath.",
+    "module": null,
+    "current_version": "2",
+    "versions": {
+      "2": "autobake-2/source/AutoBake Dániel Horváth.zip (116.6KB)"
+    },
+    "installed_in": {},
+    "notes": "Baking workflow automation tool by Daniel Horvath. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free), downloaded 2026-10-12. Matched an existing stale placeholder Notion row (Owned: Yes, Nice to have, titled 'Auto Bake 2') -- filled in, no duplicate created."
+  },
+  "action-commander": {
+    "type": "addon",
+    "display_name": "Action Commander - Game Animation Tool",
+    "source_url": "https://superhivemarket.com/products/action-commander",
+    "notion_url": "https://app.notion.com/p/29a86ab69e848035865fea709796c880",
+    "install_method": "Legacy addon zip -- not yet installed in any profile. Author: TinkerBoi.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "action-commander/source/ActionCommander TinkerBoi.zip (17.8MB)"
+    },
+    "installed_in": {},
+    "notes": "Game animation action management tool by TinkerBoi. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free), downloaded 2026-10-12. Matched an existing stale placeholder Notion row (Owned: Yes, Nice to have) -- filled in, no duplicate created."
+  },
+  "bakemaster": {
+    "type": "addon",
+    "display_name": "Bakemaster",
+    "source_url": "https://superhivemarket.com/products/bakemaster",
+    "notion_url": "https://app.notion.com/p/29a86ab69e8480cf83baedc14908ce4b",
+    "install_method": "Legacy addon zip -- not yet installed in any profile. Author: Kiril Strezikozin.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "bakemaster/source/BakeMaster Kiril Strezikozin.zip (188.8KB)"
+    },
+    "installed_in": {},
+    "notes": "Texture baking toolset by Kiril Strezikozin. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free), downloaded 2026-10-12. Matched an existing stale placeholder Notion row (Owned: Yes, Must have) -- filled in, no duplicate created."
+  },
+  "sanctus-library": {
+    "type": "addon",
+    "display_name": "Sanctus Library - Procedural Materials",
+    "source_url": "https://blendermarket.com/products/sanctus-library-addon---procedural-shaders-collection-for-blender",
+    "notion_url": "https://app.notion.com/p/12f86ab69e8480f38d54ddbc1a45f8e1",
+    "install_method": "SuperHive Remote Extension (one-time API token auth) or manual zip install -- not yet installed in any profile.",
+    "module": null,
+    "current_version": "3.4.20 (Commercial)",
+    "versions": {
+      "3.4.20 (Commercial)": "sanctus-library/source/Sanctus_Library_v3.4.20.zip -- 294.8 MB -- 08-26-26 -- SuperHive order 6fwutg (#1563997), Paid, Commercial License. Full library (1843 assets per the product page's own Asset Library widget).",
+      "alternative asset browser": "sanctus-library/source/alternative_asset_browser_v3.4.0.zip -- 166.4 MB -- 07-09-26 -- bonus file bundled with the Commercial order, not present in the Starter order",
+      "3.4.20-Starter": "deleted 2026-10-11 -- superseded by the Commercial zip (superset), re-download from the Starter order page if ever needed again. FREE_Sanctus_Bake_addon_here.pdf and Documentation.pdf and sl_material_testing_scene_v1.0.blend (shared across both orders, confirmed byte-identical via md5sum) kept, only one copy."
+    },
+    "installed_in": {},
+    "notes": "Procedural shader/material library addon. Confirmed Extension-Compatible on SuperHive ('Install in Blender as Extension', account-gated Remote Extension mechanism via personal API token) -- distinct from the free public extensions.blender.org catalog, which has zero match for this product. Matched existing Notion row 'Sanctus Library - Procedural Materials' (Owned: Yes, was Wishlist) -- updated in place, no duplicate created. Two separate SuperHive orders for the same product: Starter/free tier, then Commercial (Paid, order 6fwutg #1563997). Starter zip deleted 2026-10-11 after user confirmation, superseded by the Commercial zip."
+  },
+  "conform-object": {
+    "type": "addon",
+    "display_name": "Conform Object",
+    "source_url": "https://www.blendermarket.com/products/conform-object",
+    "notion_url": "https://app.notion.com/p/29986ab69e8480cfacd9f62f0d31f55e",
+    "install_method": "Legacy addon zip (or Extension, exact packaging unconfirmed) -- not yet installed in any profile. Extract into a profile's scripts/addons/ (or Preferences -> Get Extensions -> Install from Disk if packaged as an Extension) and enable via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "conform-object/source/conform object.zip (880.8KB)"
+    },
+    "installed_in": {},
+    "notes": "Shrinkwrap-style surface-projection modeling tool. Verified via web search: author is Mark Kingsnorth (readthedocs documentation, Blender Market + Gumroad listings found) -- product identity is clean, not ambiguous as the task briefing suggested it might be. Acquired via Humble Bundle, downloaded 2026-10-10. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "perspective-plotter": {
+    "type": "addon",
+    "display_name": "Perspective Plotter",
+    "source_url": "https://blendermarket.com/products/perspective-plotter",
+    "notion_url": "https://app.notion.com/p/29986ab69e848014baffe1792796688d",
+    "install_method": "Legacy addon zip (or Extension, exact packaging unconfirmed) -- not yet installed in any profile. Extract into a profile's scripts/addons/ (or Preferences -> Get Extensions -> Install from Disk if packaged as an Extension) and enable via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "1.3.2",
+    "versions": {
+      "1.0": "perspective-plotter/source/perspective plotter.zip (1.1MB) -- acquired via Humble Bundle",
+      "1.3.2": "perspective-plotter/source/perspective_plotter.v1.3.2.install.me.zip (27.9KB) -- order 71zw2a (#2844343), seller Mark Kingsnorth, Paid, Install in Blender as Extension (SuperHive Remote Extension), released 2026-07-30"
+    },
+    "installed_in": {},
+    "notes": "Well-known addon for matching camera perspective to a reference image. Author confirmed as Mark Kingsnorth (same seller as the already-cataloged conform-object, also his product) via order 71zw2a. Two versions kept: an older Humble Bundle copy (1.0) and this direct SuperHive purchase (1.3.2) -- sequential addon-version releases, not a Blender-version-build pattern, so both are kept per the Decision Gate. Part of SuperHive Humble Bundle order 4gpd70 (#2976227), 'Blender Market: Best of 2024', Tier 3, Free."
+  },
+  "speedsculpt": {
+    "type": "addon",
+    "display_name": "Speedsculpt",
+    "source_url": "https://superhivemarket.com/creators/pitiwazou",
+    "notion_url": "https://app.notion.com/p/12f86ab69e84809aa32bcad04ce41d27",
+    "install_method": "Legacy addon zip -- not yet installed in any profile, and not yet downloaded (reference only). Install by extracting into a profile's scripts/addons/ and enabling via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "0.3.9 (Blender 5.2.0)",
+    "versions": {
+      "0.3.9 (Blender 5.2.0)": "speedsculpt/source/speedsculpt_v_0_3_9_blender_5_2_0.zip -- 13.3 MB -- 07-19-26 (latest; downloaded and moved into source/ -- SuperHive order fhs5i8 (#1093788), Blender Market)",
+      "0.3.8 (Blender 5.1.0)": "deleted 2026-10-11 -- superseded per README's Blender-version-build policy, re-download from the SuperHive order page (fhs5i8, #1093788) if ever needed again",
+      "0.3.7 (Blender 5.1.0)": "deleted 2026-10-11 -- superseded per README's Blender-version-build policy, re-download from the SuperHive order page (fhs5i8, #1093788) if ever needed again",
+      "0.3.6 (Blender 5.0.0)": "deleted 2026-10-11 -- superseded per README's Blender-version-build policy, re-download from the SuperHive order page (fhs5i8, #1093788) if ever needed again",
+      "0.3.5 (Blender 5.0.0)": "deleted 2026-10-11 -- superseded per README's Blender-version-build policy, re-download from the SuperHive order page (fhs5i8, #1093788) if ever needed again",
+      "0.3.4 (Blender 4.5.3)": "deleted 2026-10-11 -- superseded per README's Blender-version-build policy, re-download from the SuperHive order page (fhs5i8, #1093788) if ever needed again",
+      "0.3.3 (Blender 4.4.3)": "deleted 2026-10-11 -- superseded per README's Blender-version-build policy, re-download from the SuperHive order page (fhs5i8, #1093788) if ever needed again",
+      "0.3.2 (Blender 4.4.3)": "deleted 2026-10-11 -- superseded per README's Blender-version-build policy, re-download from the SuperHive order page (fhs5i8, #1093788) if ever needed again"
+    },
+    "installed_in": {},
+    "notes": "Sculpting workflow addon (Pitiwazou), Paid Personal license. downloaded and moved into source/ -- SuperHive order fhs5i8 (#1093788), Blender Market. Ships one file per Blender-version build rather than per addon-version only -- versions map keys use the new '<addon version> (Blender <blender version>)' convention (documented in this file's README.md, 'Upgrading an addon' section). current_version tracks the build matching Blender 5.2.0 LTS, since all profiles on this machine run that."
+  },
+  "pbr-materials-1000": {
+    "type": "asset-library",
+    "display_name": "PBR Materials 1000+",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3f586ab69e8481798f3ef53232514db2",
+    "install_method": "Register as a Blender Asset Library (Preferences -> File Paths -> Asset Libraries) pointed at an extracted copy of the source file(s) -- not yet installed in any profile, and not yet downloaded (reference only).",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1000+ PBR Asset Browser Ready": "pbr-materials-1000/source/1000+ PBR Asset Browser Ready.zip -- 1.4 GB -- 12-07-22 (SuperHive order fhs5i8 (#1093788), Blender Market -- downloaded and moved into source/)",
+      "1000+ Full Catalogs Ready": "pbr-materials-1000/source/1000+ Full Catalogs Ready.rar -- 1.1 GB -- 12-08-22 (SuperHive order fhs5i8 (#1093788), Blender Market -- downloaded and moved into source/)",
+      "160+ Fabric Materials Ready": "pbr-materials-1000/source/160+ Fabric Materials Ready.zip -- 239.4 MB -- 11-23-22 (SuperHive order fhs5i8 (#1093788), Blender Market -- downloaded and moved into source/)",
+      "Metal Asset Browser 280+ Ready": "pbr-materials-1000/source/Metal Asset Browser 280 + Ready.zip -- 437.2 MB -- 11-21-22 (SuperHive order fhs5i8 (#1093788), Blender Market -- downloaded and moved into source/)",
+      "500+ Asset Browser Ready": "pbr-materials-1000/source/500 + Asset Browser Ready.rar -- 537.8 MB -- 10-28-22 (SuperHive order fhs5i8 (#1093788), Blender Market -- downloaded and moved into source/)",
+      "Sci-fi 100+ Asset Ready": "pbr-materials-1000/source/Sci fi 100+ Asset Ready.zip -- 121.1 MB -- 11-21-22 (SuperHive order fhs5i8 (#1093788), Blender Market -- downloaded and moved into source/)",
+      "Brick Asset Browser Ready": "pbr-materials-1000/source/Brick asset browser ready.blend -- 77.9 MB -- 12-07-22 (SuperHive order fhs5i8 (#1093788), Blender Market -- downloaded and moved into source/)",
+      "Dirt Asset Browser Ready": "pbr-materials-1000/source/Dirt asset Browser Ready.blend -- 68.7 MB -- 11-24-22 (SuperHive order fhs5i8 (#1093788), Blender Market -- downloaded and moved into source/)",
+      "Wall Asset Browser": "pbr-materials-1000/source/Wall Asset Browser.rar -- 64.3 MB -- 10-28-22 (SuperHive order fhs5i8 (#1093788), Blender Market -- downloaded and moved into source/)",
+      "Stone Asset Browser Ready": "pbr-materials-1000/source/Stone Asset Browser Ready.rar -- 133.3 MB -- 10-27-22 (SuperHive order fhs5i8 (#1093788), Blender Market -- downloaded and moved into source/)",
+      "1-5 Wood Asset Browser Ready": "pbr-materials-1000/source/1-5 Wood ASSET BROWSER READY.rar -- 98.4 MB -- 10-27-22 (SuperHive order fhs5i8 (#1093788), Blender Market -- downloaded and moved into source/)",
+      "Stylized Asset Pack Ready": "pbr-materials-1000/source/Stylized Asset pack Ready.rar -- 62.1 MB -- 10-27-22 (SuperHive order fhs5i8 (#1093788), Blender Market -- downloaded and moved into source/)",
+      "Vegetable Asset Browser Ready": "pbr-materials-1000/source/vegetable asset browser ready.rar -- 15.8 MB -- 10-27-22 (SuperHive order fhs5i8 (#1093788), Blender Market -- downloaded and moved into source/)",
+      "Water Asset Ready": "pbr-materials-1000/source/water Asset Ready.blend -- 10.5 MB -- 10-28-22 (SuperHive order fhs5i8 (#1093788), Blender Market -- downloaded and moved into source/)",
+      "Stone NN Asset Pack": "pbr-materials-1000/source/Stone nn Asset Pack.blend -- 30.3 MB -- 10-28-22 (SuperHive order fhs5i8 (#1093788), Blender Market -- downloaded and moved into source/)",
+      "Abstract Ready": "pbr-materials-1000/source/Abstract Ready.zip -- 25.5 MB -- 11-24-22 (SuperHive order fhs5i8 (#1093788), Blender Market -- downloaded and moved into source/)",
+      "Imperfections Asset Browser Ready": "pbr-materials-1000/source/Imperfactoins Asset Browser ready.rar -- 2.9 MB -- 10-27-22 (SuperHive order fhs5i8 (#1093788), Blender Market -- downloaded and moved into source/)",
+      "catalog metadata (not content)": "pbr-materials-1000/source/blender_assets.cats.rar -- 775.0 B -- 12-10-22 (SuperHive order fhs5i8 (#1093788), Blender Market -- downloaded and moved into source/)",
+      "usage doc (not content)": "pbr-materials-1000/source/How to use catalogs 1000+ Full Catalogs Ready blend.txt -- 1.4 KB -- 02-15-23 (SuperHive order fhs5i8 (#1093788), Blender Market -- downloaded and moved into source/)"
+    },
+    "installed_in": {},
+    "notes": "Large PBR material/asset pack (seller account now shows as 'deleteduser' on Blender Market), Paid. downloaded and moved into source/ -- SuperHive order fhs5i8 (#1093788), Blender Market. One Notion row and one manifest entry cover the whole pack per the task's own instruction -- every material-category file is listed in the versions map above so nothing is lost, rather than giving each sub-pack its own row/entry. No existing Notion row was found for this product -- created new."
+  },
+  "dermis": {
+    "type": "addon",
+    "display_name": "Dermis",
+    "source_url": "https://superhivemarket.com/creators/fridje",
+    "notion_url": "https://app.notion.com/p/12f86ab69e848010b958eb12706f46d0",
+    "install_method": "Legacy addon zip (shader/material-focused) -- not yet installed in any profile, and not yet downloaded (reference only). Install by extracting into a profile's scripts/addons/ and enabling via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "1.3",
+    "versions": {
+      "1.3": "dermis/source/Dermis Shader v1.3.zip -- 2.3 MB -- 11-23-23 (latest; downloaded and moved into source/ -- SuperHive order fhs5i8 (#1093788), Blender Market)",
+      "1.2": "dermis/source/Dermis Shader v1.2.zip -- 58.9 MB -- 11-25-21 (SuperHive order fhs5i8 (#1093788), Blender Market -- downloaded and moved into source/)",
+      "1.1": "dermis/source/Dermis Shader v1.1.zip -- 29.2 MB -- 06-05-20 (SuperHive order fhs5i8 (#1093788), Blender Market -- downloaded and moved into source/)"
+    },
+    "installed_in": {},
+    "notes": "'Dermis: A Multi-Level SSS Principled Shader for Cycles' (fridje), Paid. downloaded and moved into source/ -- SuperHive order fhs5i8 (#1093788), Blender Market. Matched an existing Notion row ('Dermis: A Multi-Level Sss Principled Shader For Cycles') that a prior Humble Bundle session had already confirmed has a preview image added -- updated in place, no duplicate created."
+  },
+  "simply-cloth": {
+    "type": "addon",
+    "display_name": "Simply Cloth Studio",
+    "source_url": "https://superhivemarket.com/creators/vjaceslavt",
+    "notion_url": "https://app.notion.com/p/12f86ab69e848033a5cfc5a97e0a06f6",
+    "install_method": "Legacy addon zip -- not yet installed in any profile, and not yet downloaded (reference only). Install by extracting into a profile's scripts/addons/ and enabling via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install. Companion asset-library packs (see versions below) install instead by registering as a Blender Asset Library.",
+    "module": null,
+    "current_version": "1.5.5 (Blender 5.0)",
+    "versions": {
+      "1.5.5 (Blender 5.0)": "simply-cloth/source/B.5.0-SimplyClothStudio_v.1.5.5.zip -- 14.7 MB -- 12-23-25 (latest addon build; downloaded and moved into source/ -- SuperHive order fhs5i8 (#1093788), Blender Market)",
+      "1.5.2 (Blender 4.5.2)": "deleted 2026-10-11 -- superseded per README's Blender-version-build policy, re-download from the SuperHive order page (fhs5i8, #1093788) if ever needed again",
+      "1.5 (Blender 4.4.3)": "deleted 2026-10-11 -- superseded per README's Blender-version-build policy, re-download from the SuperHive order page (fhs5i8, #1093788) if ever needed again",
+      "1.4.4 (Blender 4.3.2)": "deleted 2026-10-11 -- superseded per README's Blender-version-build policy, re-download from the SuperHive order page (fhs5i8, #1093788) if ever needed again",
+      "1.0 (Blender 4.3)": "deleted 2026-10-11 -- superseded per README's Blender-version-build policy, re-download from the SuperHive order page (fhs5i8, #1093788) if ever needed again",
+      "Pro 3.3 (Blender 4.2)": "deleted 2026-10-11 -- superseded per README's Blender-version-build policy, re-download from the SuperHive order page (fhs5i8, #1093788) if ever needed again",
+      "legacy (Blender 3.0-4.0)": "deleted 2026-10-11 -- superseded per README's Blender-version-build policy, re-download from the SuperHive order page (fhs5i8, #1093788) if ever needed again",
+      "legacy (Blender 2.83-2.9)": "deleted 2026-10-11 -- superseded per README's Blender-version-build policy, re-download from the SuperHive order page (fhs5i8, #1093788) if ever needed again",
+      "asset-library: SCP Basic Cloth Library": "simply-cloth/source/22-02-26 SCP Basic Cloth Library.zip -- 37.0 MB -- 08-27-25 (SuperHive order fhs5i8 (#1093788), Blender Market -- downloaded and moved into source/)",
+      "asset-library: Cut and Sew Pattern": "simply-cloth/source/2023-11-25-Simply Cut and Sew Pattern.zip -- 130.4 MB -- 09-17-25 (SuperHive order fhs5i8 (#1093788), Blender Market -- downloaded and moved into source/)",
+      "asset-library: SCS Cut and Sewing Asset Library": "simply-cloth/source/2024-08-SCS_Cut_and_Sewing_Asset_Library.zip -- 273.1 MB -- 04-09-25 (full asset library; downloaded and moved into source/ -- SuperHive order fhs5i8 (#1093788), Blender Market)",
+      "asset-library: Free Simply Cloth Library": "simply-cloth/source/Free-SimplyCloth-Library.zip -- 9.6 MB -- 04-09-25 (SuperHive order fhs5i8 (#1093788), Blender Market -- downloaded and moved into source/)"
+    },
+    "installed_in": {},
+    "notes": "Simply Cloth Studio (VjaceslavT), Paid. downloaded and moved into source/ -- SuperHive order fhs5i8 (#1093788), Blender Market. One product: historical Blender-version-tagged addon builds (new '<addon version> (Blender <blender version>)' versions-map convention, documented in README.md's 'Upgrading an addon' section) plus several companion asset-library packs, all kept under this one manifest entry and its one matching Notion row ('Simply Cloth Studio Addon + Cut & Sewing Pattern Asset Library') -- consistent with how the Hard Ops/BoxCutter bundle and SMOUSE shader trio were handled in the prior Humble Bundle pass, except here the Notion row itself already combined addon+asset-library into one page, so no extra manifest entries were needed. Two documentation PDFs (24-10-07_JAP and 24-10-07_US 'Simply Cloth Studio Documentation') are not catalogued as versions, per instruction -- mentioned here only."
+  },
+  "bagapie": {
+    "type": "addon",
+    "display_name": "BagaPie V11",
+    "source_url": "https://extensions.blender.org/add-ons/bagapie/",
+    "notion_url": "https://app.notion.com/p/a9a6fff6f01c4afc8493badee9726fa5",
+    "install_method": "Free and listed on the public extensions.blender.org catalog (confirmed, unlike most paid SuperHive products) -- can install via Preferences -> Get Extensions, or the manual zip from this order. Not yet installed in any profile.",
+    "module": null,
+    "current_version": "11.0.11 (Blender 5.2)",
+    "versions": {
+      "11.0.10": "bagapie/source/Bagapie-11.0.10.zip (10.3MB)",
+      "11.0.11 (Blender 5.2)": "bagapie/source/Bagapie-11.0.11_Blender_5.2.zip (10.3MB)",
+      "assets: BagaPie_Assets_Essential": "bagapie/source/BagaPie_Assets_Essential.baga (937.8MB, essential companion asset pack)",
+      "assets: GeoPack Demo Pack": "bagapie/source/GeoPack_-_Demo_Pack.geopack (193.1MB, demo geometry pack)"
+    },
+    "installed_in": {},
+    "notes": "Procedural architecture/vegetation/rocks/trees generator by antoine bagattini. SuperHive order cpvqbg (#2462577), Free, downloaded 2026-10-12. The '11.0.11_Blender_5.2' filename looks like the Blender-version-build pattern but isn't one here -- it's the newest sequential addon version (10 -> 11) that happens to explicitly target Blender 5.2 (which matches this machine's current Blender); no sibling 11.0.11 build for another Blender version exists, so both 11.0.10 and 11.0.11 were kept per the default sequential-version rule, not deleted. Also includes 'INSTALLATION and ASSETS.pdf' (1.9MB) and 'BagaPie_Info_and_Download.pdf' (2.6KB), both docs, moved alongside but not versioned. Matched/merged two pre-existing Notion rows for the same product: this entry's 'BagaPie V11' page (already Owned: Yes, Must have, correctly pointing at the public extensions.blender.org listing) was filled in with manifest/README tracking it was missing (same pre-existing gap pattern as Dynamic Pose Library Free and Ultimate IMM Anatomy Primitives); the older stale auto-populated placeholder row 'Baga Pie | Architecture & Vegetation, Rocks, Trees' (blank Owned, Blender Market URL) was archived as a duplicate rather than merged in-place, since BagaPie V11 was already the more complete/authoritative row."
+  },
+  "better-lighting-v2": {
+    "type": "asset-library",
+    "display_name": "Better Lighting V2 - Light Presets and Gobos Library",
+    "source_url": "https://blendermarket.com/products/better-lighting/",
+    "notion_url": "https://app.notion.com/p/3d586ab69e848141976deccdf22be1aa",
+    "install_method": "Light preset / gobo asset pack (addon-driven, exact packaging unconfirmed) -- not yet installed in any profile. Extract into a profile's scripts/addons/ and enable via Preferences once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "2.1.0",
+    "versions": {
+      "2.1.0": "better-lighting-v2/source/better_lighting_v2_1_0.zip (16.3MB)"
+    },
+    "installed_in": {},
+    "notes": "Light presets and gobos library, Casey_Sheep brand (same seller as BlendShop/FloraPaint/RealCloud/Real Water, all already cataloged). SuperHive order d1wfww (#2411136), Free ('Birthday Gift' full-version giveaway), downloaded 2026-10-12. Single addon build, no version alternatives to choose between. Matched an existing stale placeholder Notion row (auto-populated from a YouTube video pass, Cost type Unknown) -- filled in, no duplicate created."
+  },
+  "divine-cut": {
+    "type": "addon",
+    "display_name": "Divine Cut | Smart Cloth Generator V4",
+    "source_url": "https://superhivemarket.com/products/divine-cut-smart-cloth-generator",
+    "notion_url": "https://app.notion.com/p/3d986ab69e848169a94ac12955a1ab89",
+    "install_method": "Legacy addon zip -- not yet installed in any profile. IMPORTANT: this is an EXPIRED trial build (order page itself labels it '[EXPIRED DO NOT BUY]'), not the current V4 product -- confirm current paid version before relying on this for real work.",
+    "module": null,
+    "current_version": "2.5.5 (Vanilla Trial, expired)",
+    "versions": {
+      "2.5.5 (Vanilla Trial, expired)": "deleted 2026-10-12 by user confirmation -- expired trial, not the real product; re-download from SuperHive order f61y4r (#2388520) if ever needed for reference"
+    },
+    "installed_in": {},
+    "notes": "Smart cloth generator by Xane Studios. SuperHive order f61y4r (#2388520), Free. The order page's own version label reads '🥻 DivineCut (TM) Free Trial [EXPIRED DO NOT BUY]' and the zip was explicitly 'Vanilla Trial' v2.5.5 -- this was NOT the current/full V4 product, just a leftover expired trial download. All 3 files (addon zip 6.7MB, 'DivineCut - Mannequin(Catwalk).blend' demo scene 43.3MB, 'New Installation Video.mp4' tutorial 12.6MB) deleted 2026-10-12 per explicit user confirmation -- not kept as reference since the content itself is non-functional (expired). Matched an existing stale placeholder Notion row (web-verified mention, Cost type Paid) -- filled in and corrected Cost type to Free/trial, no duplicate created."
+  },
+  "chat-companion": {
+    "type": "addon",
+    "display_name": "Chat Companion",
+    "source_url": "https://superhivemarket.com/products/chat-companion",
+    "notion_url": "https://app.notion.com/p/3f686ab69e8481358ca7e31910cbfa9d",
+    "install_method": "SuperHive 'Install in Blender as Extension' (account-gated Remote Extension, requires a personal SuperHive API token) or manual download. Not in the free public extensions.blender.org catalog (checked 2026-10-12, zero match). Not yet installed in any profile.",
+    "module": null,
+    "current_version": "1.5.14",
+    "versions": {
+      "1.5.14": "chat-companion/source/Chat Companion Full v1.5.14.zip (148.8KB)"
+    },
+    "installed_in": {},
+    "notes": "Addon by Polygoningenieur (Addons category). SuperHive order 5avwyz (#2356377), Free ('Birthday Gift' giveaway), downloaded 2026-10-12. No existing Notion row found -- created new. Single addon build; companion 'PLEASE RATE CHAT COMPANION.txt' (163B) kept alongside, not versioned."
+  },
+  "population": {
+    "type": "addon",
+    "display_name": "Population - Human Crowd Simulation",
+    "source_url": "https://superhivemarket.com/products/population",
+    "notion_url": "https://app.notion.com/p/3b4a9aac209448a2a322922458023e40",
+    "install_method": "Legacy addon zip -- not yet installed in any profile. Extract into a profile's scripts/addons/ and enable via Preferences once the module name is confirmed on first real install. Compatibility with this machine's Blender 5.2.0 LTS is unverified -- both addon builds are 2024-era (4.0/4.1 targeted) and predate 5.2.",
+    "module": null,
+    "current_version": "1.1.2 (Blender 4.1)",
+    "versions": {
+      "1.1.1 (Blender 4.0)": "population/source/Population_Addon_v1.1.1_Blender4.0.zip (16.8KB)",
+      "1.1.2 (Blender 4.1)": "population/source/Population_Addon_v1.1.2_Blender4.1.zip (240.3KB)",
+      "assets: Population_library_Free": "population/source/Population_library_Free_.zip (386.1MB, character/crowd asset library)"
+    },
+    "installed_in": {},
+    "notes": "Human crowd simulation addon, Bproduction brand (same seller as CloudScapes/Realistic Touch, already cataloged from Humble Bundle). SuperHive order ar5lqe (#2312794), Free (free tier -- order page labels the paid tier 'Population - Not Available'), downloaded 2026-10-12. Addon zip version numbers (1.1.1 -> 1.1.2) also carry different Blender-version labels (4.0 -> 4.1), but this reads as sequential addon-version releases that each targeted the newest Blender at the time, not a parallel multi-build release -- no sibling '1.1.2 (Blender 4.0)' exists -- so both were kept per the default rule rather than treated as the Blender-version-build case. Matched an existing stale placeholder Notion row (Cost type Unknown, Store 'Other') -- filled in, no duplicate created."
+  },
+  "cubicity": {
+    "type": "asset-library",
+    "display_name": "Cubicity: Creating & Utilizing Asset Libraries With Blender",
+    "source_url": "https://superhivemarket.com/products/cubicity",
+    "notion_url": "https://app.notion.com/p/3f786ab69e84812e9daece9d44794748",
+    "install_method": "Video training course (not an installable addon), with a companion Blender Asset Library of 51 registered assets (SuperHive's own in-page Asset Browser integration widget -- UI chrome on the product page, not a separate downloadable file). Source files and asset library not yet extracted/registered in any profile.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "source-files": "cubicity/source/cgcookie_cubicity_source-files.zip (7.5MB)",
+      "videos_ch01": "cubicity/source/cubicity_videos_ch01.zip (825.2MB)",
+      "videos_ch02_01": "cubicity/source/cubicity_videos_ch02_01.zip (651.0MB)",
+      "videos_ch02_02": "cubicity/source/cubicity_videos_ch02_02.zip (557.7MB)",
+      "videos_ch03_01": "cubicity/source/cubicity_videos_ch03_01.zip (1.0GB)",
+      "videos_ch03_02": "cubicity/source/cubicity_videos_ch03_02.zip (762.9MB)",
+      "videos_ch04_01": "cubicity/source/cubicity_videos_ch04_01.zip (710.9MB)",
+      "videos_ch04_02": "cubicity/source/cubicity_videos_ch04_02.zip (755.1MB)"
+    },
+    "installed_in": {},
+    "notes": "CG Cookie training course on creating/using Blender asset libraries, bundled with a 51-asset CUBICITY asset library (SuperHive-side, not a separate file to download). SuperHive order 9vwbw3 (#2545206), Free ('Birthday Gift'), all 8 files (~5.3GB of ch01-ch04 video zips + a small source-files zip) confirmed downloaded and moved into source/ 2026-10-12 -- the 6 chapter-video zips initially got stuck mid-download (0 bytes + growing .part siblings, same pattern seen repeatedly this session), user relaunched and all completed successfully, sizes verified against the order page. No existing Notion row found -- created new; type set to asset-library since the primary cataloged artifact (the 51-asset library) is asset-library-shaped even though most of the download is video training content, not code. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12."
+  },
+  "better-fbx-importer-exporter": {
+    "type": "addon",
+    "display_name": "Better FBX Importer & Exporter",
+    "source_url": "https://superhivemarket.com/products/better-fbx-importer--exporter",
+    "notion_url": "https://app.notion.com/p/29a86ab69e8480418d9be169e63f2dd2",
+    "install_method": "Legacy addon zip -- not yet installed in any profile.",
+    "module": null,
+    "current_version": "unknown",
+    "versions": {
+      "unknown": "/home/jose-daniel/apps/blender/addons-library/better-fbx-importer-exporter/source/Better_Fbx_Importer_and_Exporter.zip (24.4MB)"
+    },
+    "installed_in": {},
+    "notes": "FBX import/export improvement addon. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "blender-to-godot4-pipeline": {
+    "type": "addon",
+    "display_name": "Blender To Godot 4 Pipeline Addon",
+    "source_url": "https://superhivemarket.com/products/blender-godot-pipeline-addon",
+    "notion_url": "https://app.notion.com/p/29a86ab69e8480859d4df5ee17e0b887",
+    "install_method": "Legacy addon zip -- not yet installed in any profile. Author: Michael Burt.",
+    "module": null,
+    "current_version": "unknown",
+    "versions": {
+      "unknown": "/home/jose-daniel/apps/blender/addons-library/blender-to-godot4-pipeline/source/BlenderToGodot4PipelineAddon Michael Burt.zip (4.2MB)"
+    },
+    "installed_in": {},
+    "notes": "Blender-to-Godot4 asset pipeline addon by Michael Burt. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "blender-to-unity": {
+    "type": "addon",
+    "display_name": "Blender To Unity",
+    "source_url": "https://superhivemarket.com/products/blender-to-unity",
+    "notion_url": "https://app.notion.com/p/29a86ab69e8480a89535e4de8cf9021b",
+    "install_method": "Legacy addon zip -- not yet installed in any profile. Author: Karan (same author as quick-baker/autobake-2/action-commander/bakemaster/blender-to-unreal in this same bundle).",
+    "module": null,
+    "current_version": "unknown",
+    "versions": {
+      "unknown": "/home/jose-daniel/apps/blender/addons-library/blender-to-unity/source/blender_to_unity_extract_me Karan.zip (405.0KB)"
+    },
+    "installed_in": {},
+    "notes": "Blender-to-Unity export pipeline addon by Karan. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "blender-to-unreal": {
+    "type": "addon",
+    "display_name": "Blender to Unreal",
+    "source_url": "https://superhivemarket.com/products/blender-to-unreal",
+    "notion_url": "https://app.notion.com/p/29a86ab69e84806eb2d5d92defcb4808",
+    "install_method": "Legacy addon zip -- not yet installed in any profile. Author: Karan.",
+    "module": null,
+    "current_version": "2.5.3",
+    "versions": {
+      "2.5.3": "/home/jose-daniel/apps/blender/addons-library/blender-to-unreal/source/blender_to_unreal_v2.5.3 Karan.zip (396.8KB)"
+    },
+    "installed_in": {},
+    "notes": "Blender-to-Unreal export pipeline addon by Karan. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "empire-of-the-sands": {
+    "type": "asset-library",
+    "display_name": "Empire of the Sands",
+    "source_url": "https://superhivemarket.com/products/empire-of-the-sands---desert-structures-kitbash-greeble-assets",
+    "notion_url": "https://app.notion.com/p/29a86ab69e8480a8a7e3f447fb6ab86c",
+    "install_method": "Asset pack (2-part archive) -- not yet extracted or registered in any profile.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "empire-of-the-sands/source/ (Pt1 1.5GB + Pt2 4.1GB)"
+    },
+    "installed_in": {},
+    "notes": "Desert structures kitbash/greeble asset pack, 2-part archive, both parts present and complete. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "faceit": {
+    "type": "addon",
+    "display_name": "Faceit : Facial Expressions And Performance Capture",
+    "source_url": "https://superhivemarket.com/products/faceit",
+    "notion_url": "https://app.notion.com/p/29a86ab69e8480338104cef01ec3af8c",
+    "install_method": "Legacy addon zip -- not yet installed in any profile. Author: Fynn.",
+    "module": null,
+    "current_version": "unknown",
+    "versions": {
+      "unknown": "/home/jose-daniel/apps/blender/addons-library/faceit/source/Faceit Fynn (Faceit).zip (2.0MB)"
+    },
+    "installed_in": {},
+    "notes": "Facial expression/performance-capture rigging addon by Fynn. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "fasttrack-hero-asset-course": {
+    "type": "asset-library",
+    "display_name": "FastTrackTutorials Hero Asset Course",
+    "source_url": "https://superhivemarket.com/products/hero-asset-creation---in-depth-tutorial-course",
+    "notion_url": "https://app.notion.com/p/0b57dc73c90f4df78f8209a414bec275",
+    "install_method": "Video training course + source files -- not applicable to Blender install.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "fasttrack-hero-asset-course/source/ (SourceFiles 1.1GB + VideoFiles_Part1 3.1GB + VideoFiles_Part2 2.5GB)"
+    },
+    "installed_in": {},
+    "notes": "Hero asset creation tutorial course by FastTrackTutorials. All 3 files complete as of 2026-10-12 (VideoFiles_Part1 arrived, completing the set). Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12."
+  },
+  "full-environment-creation-ue5": {
+    "type": "asset-library",
+    "display_name": "Full Environment Creation In UE5 & Blender - In-Depth Course",
+    "source_url": "https://superhivemarket.com/products/western-game-environment-course",
+    "notion_url": "https://app.notion.com/p/06a7c5a75c6b4c9d94ec9bc720411fbb",
+    "install_method": "Video training course (7-part archive, ~24.4GB) -- not applicable to Blender install.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "full-environment-creation-ue5/source/ (part1 3.5GB, part2 3.5GB, part3 4.0GB, part4 3.8GB, part5-1 2.4GB, part5-2 4.1GB, part6 3.1GB)"
+    },
+    "installed_in": {},
+    "notes": "In-depth environment-art course for Unreal Engine 5 and Blender. All 7 parts present and complete (~24.4GB). Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12."
+  },
+  "gamerigtools": {
+    "type": "addon",
+    "display_name": "Game Rig Tools (Addon) - Game-Ready Rigs In Seconds",
+    "source_url": "https://superhivemarket.com/products/game-rig-tools-blender-addon-game-rigs",
+    "notion_url": "https://app.notion.com/p/29a86ab69e84805aac57c483e1929dc3",
+    "install_method": "Legacy addon zip -- not yet installed in any profile. Author: Todor Nikolov.",
+    "module": null,
+    "current_version": "unknown",
+    "versions": {
+      "unknown": "/home/jose-daniel/apps/blender/addons-library/gamerigtools/source/GameRigTools_UNZIP_THIS Todor Nikolov.zip (566.0KB)"
+    },
+    "installed_in": {},
+    "notes": "Game-ready character rigging addon by Todor Nikolov. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "massive-240-piece-modular-mega-pack": {
+    "type": "asset-library",
+    "display_name": "Massive 240-Piece Modular Mega Pack",
+    "source_url": "https://superhivemarket.com/products/blender-massive-250-piece-modular-mega-pack-for---kitbash-immersive-castles-and-towns-for-game-dev-animation-and-archviz",
+    "notion_url": "https://app.notion.com/p/29a86ab69e8480188eb3efbbd6ada2a9",
+    "install_method": "Asset pack -- not yet extracted or registered in any profile. Author: 3D Tudor.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "/home/jose-daniel/apps/blender/addons-library/massive-240-piece-modular-mega-pack/source/Massive 240-Piece Modular Mega Pack 3D Tudor.zip (897.2MB)"
+    },
+    "installed_in": {},
+    "notes": "Large modular kitbash asset pack (castles/towns/archviz) by 3D Tudor. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "scifi-panel-vol-02": {
+    "type": "asset-library",
+    "display_name": "Sci-Fi Modular Panel Kit Vol -2",
+    "source_url": "https://superhivemarket.com/products/sci-fi-modular-panel-kit-vol--2",
+    "notion_url": "https://app.notion.com/p/29a86ab69e848026ae83d7739646f613",
+    "install_method": "Asset pack (.rar) -- not yet extracted or registered in any profile. Author: sajjad alavi.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "/home/jose-daniel/apps/blender/addons-library/scifi-panel-vol-02/source/sci fI panel Vol 02 sajjad alavi.rar (3.0GB)"
+    },
+    "installed_in": {},
+    "notes": "Modular sci-fi hard-surface panel kit by sajjad alavi. Was stuck/0-byte earlier this session, now complete. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "trashkit": {
+    "type": "asset-library",
+    "display_name": "Trash Kit - 3D Assetkit",
+    "source_url": "https://superhivemarket.com/products/trashkit---3d-assetkit",
+    "notion_url": "https://app.notion.com/p/29a86ab69e848045ae8afcd9cb778c77",
+    "install_method": "4-volume split archive (part1, part2, part3, .004) -- all 4 volumes present as of 2026-10-12, not yet extracted/verified internally.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "trashkit/source/ (TrashKit Martin Koehler - AssetKit_part1.zip 1.5GB + AssetKit_part2.zip 4.0GB + AssetKit_part3.zip 3.9GB + TrashKit_HB_Split.zip Martin Koehler AssetKit.004 1.8GB)"
+    },
+    "installed_in": {},
+    "notes": "3D trash/debris asset kit by Martin Koehler. COMPLETE as of 2026-10-12: all 4 split-archive volumes (part1, part2, part3, .004) present. Archive not yet extracted/verified internally. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total). Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "tread": {
+    "type": "asset-library",
+    "display_name": "Tread: Hard Surface Asset Creation For Video Games",
+    "source_url": "https://superhivemarket.com/products/tread-hard-surface-asset-creation-for-video-games",
+    "notion_url": "https://app.notion.com/p/17355de780224b55ae065dd5bfa35252",
+    "install_method": "Video training course (6-file archive) -- not applicable to Blender install.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "tread/source/ (TREAD_CH01.zip 122.5MB, TREAD_CH02.zip 815.7MB, TREAD_CH03.zip 1.1GB, TREAD_CH04.zip 139.7MB, TreadCH5.zip 72.8MB, TREAD_CourseFiles_01.zip 292.9MB)"
+    },
+    "installed_in": {},
+    "notes": "Hard-surface asset creation course for video games. All 6 files present and complete. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12."
+  },
+  "ultimate-game-asset-course-blender": {
+    "type": "asset-library",
+    "display_name": "Ultimate Game Asset Course With Blender",
+    "source_url": "https://superhivemarket.com/products/blender-game-asset-course",
+    "notion_url": "https://app.notion.com/p/82dedf5504774f20bc9d27b065083075",
+    "install_method": "Video training course -- not applicable to Blender install. Author: Victor Deno.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "/home/jose-daniel/apps/blender/addons-library/ultimate-game-asset-course-blender/source/Ultimate Game Asset Course With Blender Victor Deno.zip (3.0GB)"
+    },
+    "installed_in": {},
+    "notes": "Game asset creation course using Blender, by Victor Deno. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12."
+  },
+  "uvpackmaster3": {
+    "type": "addon",
+    "display_name": "Uvpackmaster 3",
+    "source_url": "https://superhivemarket.com/products/uvpackmaster",
+    "notion_url": "https://app.notion.com/p/29a86ab69e84803786bee0512ec88b9a",
+    "install_method": "Legacy addon zip -- not yet installed in any profile. Author: Lukasz Czyz.",
+    "module": null,
+    "current_version": "unknown",
+    "versions": {
+      "unknown": "/home/jose-daniel/apps/blender/addons-library/uvpackmaster3/source/UVPackmaster3 Łukasz Czyż.zip (68.3MB)"
+    },
+    "installed_in": {},
+    "notes": "Automated UV unwrapping/packing addon by Lukasz Czyz. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "blender-game-development-tutorial": {
+    "type": "asset-library",
+    "display_name": "Blender Game Development Tutorial",
+    "source_url": "https://superhivemarket.com/products/blender-game-development-tutorial",
+    "notion_url": "https://app.notion.com/p/77d2431f0b57455c8ef3e4a613c985ec",
+    "install_method": "Video tutorial course -- not an addon, reference material only.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "blender-game-development-tutorial/source/Blender Game Development Tutorial Mesh Online.zip (1.4GB)"
+    },
+    "installed_in": {},
+    "notes": "Video tutorial course on Blender game development, by Mesh Online. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. No existing Notion row found -- new row created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12."
+  },
+  "sci-fi-crate-pack": {
+    "type": "asset-library",
+    "display_name": "Blender & Unreal Engine Massive Stylized Sci-Fi Crate Pack",
+    "source_url": "https://superhivemarket.com/products/blender--unreal-engine-massive-stylized-sci-fi-crate-pack",
+    "notion_url": "https://app.notion.com/p/29a86ab69e848012b2b8f043d5c05929",
+    "install_method": "Static asset pack (.blend/fbx models) -- not an addon.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "sci-fi-crate-pack/source/Blender & Unreal Engine Massive Stylized Sci-Fi Crate Pack 3D Tudor.zip (363.5MB)"
+    },
+    "installed_in": {},
+    "notes": "Stylized sci-fi crate asset pack for Blender and Unreal environment building, by 3D Tudor (same author as the already-cataloged Massive 240-Piece Modular Mega Pack). Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "creative-trio-food-pack-01": {
+    "type": "asset-library",
+    "display_name": "Stylized Low Poly Food Pack 01",
+    "source_url": "https://superhivemarket.com/products/stylized-low-poly-food-pack-01",
+    "notion_url": "https://app.notion.com/p/29a86ab69e84800292f1cf8e05488bd8",
+    "install_method": "Static asset pack (.blend/fbx models) -- not an addon.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "creative-trio-food-pack-01/source/Creative_Trio_Stylized_Lowpoly_Food_pack_01 João Paulo.zip (1.9MB)"
+    },
+    "installed_in": {},
+    "notes": "Stylized low-poly food asset pack for props, scenes, and game environments, by João Paulo. Delivered as 'Creative Trio Stylized Lowpoly Food Pack 01'. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "rev-model-muscle-car": {
+    "type": "asset-library",
+    "display_name": "REV Model Muscle Car",
+    "source_url": "https://superhivemarket.com/products/rev-model-muscle-car",
+    "notion_url": "https://app.notion.com/p/509ec371e9ac41f3b37bf226a790a178",
+    "install_method": "Static 3D model asset -- not an addon.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "rev-model-muscle-car/source/REV_ModelMuscleCar.zip (805.9MB)"
+    },
+    "installed_in": {},
+    "notes": "Muscle car 3D model asset pack. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. No existing Notion row found -- new row created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12."
+  },
+  "rigging-transforming-rifle": {
+    "type": "asset-library",
+    "display_name": "Rigging Transforming Rifle",
+    "source_url": "https://superhivemarket.com/products/rigging-transforming-rifle",
+    "notion_url": "https://app.notion.com/p/88a8eeb9b8314524941bc5ee440a3530",
+    "install_method": "Static rigged 3D model asset -- not an addon.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "rigging-transforming-rifle/source/RiggingTransformingRifle.zip (821.0MB)"
+    },
+    "installed_in": {},
+    "notes": "Rigged, transforming rifle 3D model/tutorial asset. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. No existing Notion row found -- new row created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12."
+  },
+  "scifi-station-vol-02": {
+    "type": "asset-library",
+    "display_name": "Scifi Station Vol.2 - Stylized Low Poly 3D Art Asset Pack",
+    "source_url": "https://superhivemarket.com/products/scifi-station-vol-2",
+    "notion_url": "https://app.notion.com/p/29a86ab69e8480cea4d9eddfce9b3c75",
+    "install_method": "Static asset pack (.blend/fbx models) -- not an addon.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "scifi-station-vol-02/source/ScifiStationVol2.zip (5.7MB)"
+    },
+    "installed_in": {},
+    "notes": "Stylized low-poly sci-fi station asset pack for game environments and concept scenes. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "threedee-family": {
+    "type": "asset-library",
+    "display_name": "Family - Cartoon Modular Fully Rigged 3D Family",
+    "source_url": "https://superhivemarket.com/products/family---cartoon-modular-fully-rigged-3d-family",
+    "notion_url": "https://app.notion.com/p/29a86ab69e84805ea2acf392f192ccbf",
+    "install_method": "Static rigged character asset library -- not an addon.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "threedee-family/source/ThreeDee Family HumbleBundle Samuel.zip (1.3GB)"
+    },
+    "installed_in": {},
+    "notes": "Modular cartoon family character library with fully rigged 3D models, by Samuel. Delivered as 'ThreeDee Family' via Humble Bundle. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "uvflow": {
+    "type": "addon",
+    "display_name": "Uv Flow",
+    "source_url": "https://superhivemarket.com/products/uv-flow",
+    "notion_url": "https://app.notion.com/p/29a86ab69e8480c39be7fbe3f327215a",
+    "install_method": "Addon zip -- not yet installed in any profile.",
+    "module": null,
+    "current_version": "unknown",
+    "versions": {
+      "unknown": "uvflow/source/UVFlow.zip (8.9MB)"
+    },
+    "installed_in": {},
+    "notes": "UV packing/unwrapping utility addon for Blender; alternative to UVPackmaster3 (already cataloged this session). Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "50-sword-base-mesh-vol5": {
+    "type": "asset-library",
+    "display_name": "50 Sword Base Mesh - Vol 05 ( Game Ready )",
+    "source_url": "https://superhivemarket.com/products/swordbase",
+    "notion_url": "https://app.notion.com/p/29a86ab69e8480498d2fe1e649e8dfeb",
+    "install_method": "Mesh asset pack (.zip) -- not yet extracted or registered in any profile.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "50-sword-base-mesh-vol5/source/50SwordBaseMeshVol5.zip (22.8MB)"
+    },
+    "installed_in": {},
+    "notes": "Game-ready sword base mesh pack for weapon modeling practice. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "ak47": {
+    "type": "asset-library",
+    "display_name": "AK-47 Game Ready",
+    "source_url": "https://superhivemarket.com/products/ak-47-game-ready",
+    "notion_url": "https://app.notion.com/p/29a86ab69e8480e9a570e3f9887436e0",
+    "install_method": "Model asset (.zip) -- not yet extracted or registered in any profile. Author: Francesco Saviano.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "ak47/source/AK47 Francesco Saviano.zip (837.4MB)"
+    },
+    "installed_in": {},
+    "notes": "Game-ready AK-47 model asset for FPS/weapon scenes and kitbashing. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "animating-first-person-character-weapons": {
+    "type": "asset-library",
+    "display_name": "Animating First Person Character Weapons in Blender",
+    "source_url": "https://superhivemarket.com/products/animating-first-person-character-weapons-in-blender",
+    "notion_url": "https://app.notion.com/p/a7296afe4dc14662b11fb390ebf55d17",
+    "install_method": "Video training course (.zip) -- not applicable to Blender install.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "animating-first-person-character-weapons/source/AnimatingFirstPersonCHaracterWeapons.zip (2.7GB)"
+    },
+    "installed_in": {},
+    "notes": "Training course on animating first-person weapon views in Blender. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12."
+  },
+  "animation-bootcamp": {
+    "type": "asset-library",
+    "display_name": "Blender Animation Bootcamp",
+    "source_url": "https://superhivemarket.com/products/blender-animation-bootcamp",
+    "notion_url": "https://app.notion.com/p/97230fb947774809a75183ed09db0f56",
+    "install_method": "Video training course (.zip) -- not applicable to Blender install.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "animation-bootcamp/source/AnimationBootcamp.zip (3.6GB)"
+    },
+    "installed_in": {},
+    "notes": "Training course for Blender animation fundamentals and production workflows. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12."
+  },
+  "cairo-city-cyberpunk-street": {
+    "type": "asset-library",
+    "display_name": "Cairo City Cyberpunk Streets - Animated Neon Signs - Day And Night - Egyptian Cyberpunk",
+    "source_url": "https://superhivemarket.com/products/egyptian-cyberpunk",
+    "notion_url": "https://app.notion.com/p/29a86ab69e848016a491f2cf292026c3",
+    "install_method": "Environment asset pack (.zip) -- not yet extracted or registered in any profile. Author: Refaei.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "cairo-city-cyberpunk-street/source/Cairo_City_Cyberpunk_Street Refaei.zip (950.6MB)"
+    },
+    "installed_in": {},
+    "notes": "Cyberpunk Cairo street environment pack with animated neon signage, day/night scenes. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "modeling-robot-game-character": {
+    "type": "asset-library",
+    "display_name": "Modeling A Robot Game Character With Blender",
+    "source_url": "https://superhivemarket.com/products/modeling-a-robot-game-character-with-blender",
+    "notion_url": "https://app.notion.com/p/2c780bcb3ad649bab172a3110bea1059",
+    "install_method": "Video training course (.zip) -- not applicable to Blender install.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "modeling-robot-game-character/source/ModelingRobotGameCharacter.zip (3.2GB)"
+    },
+    "installed_in": {},
+    "notes": "Training course for modeling a robot game character in Blender. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12."
+  },
+  "outpost": {
+    "type": "asset-library",
+    "display_name": "Outpost - Medieval Military Buildings 3D Kitbash Pack",
+    "source_url": "https://superhivemarket.com/products/outpost---medieval-military-buildings-3d-kitbash-pack-",
+    "notion_url": "https://app.notion.com/p/29a86ab69e848054b173d21c07d1ab64",
+    "install_method": "Model kitbash pack (.zip) -- not yet extracted or registered in any profile. Author: Kieran Tait.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "outpost/source/Outpost Kieran Tait.zip (1.9GB)"
+    },
+    "installed_in": {},
+    "notes": "Medieval military building kitbash pack for outposts and fortifications. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "scattershot-1-12": {
+    "type": "asset-library",
+    "display_name": "Scattershot - Pbr Texture Bombing For Blender",
+    "source_url": "https://superhivemarket.com/products/scattershot---procedural-image-texture-scattering--tiling-with-voronoi",
+    "notion_url": "https://app.notion.com/p/29a86ab69e8480c48b42e67f6473f747",
+    "install_method": "Shader/geometry-nodes asset file(s), via Humble Bundle -- not yet installed/linked in any profile.",
+    "module": null,
+    "current_version": "1-12",
+    "versions": {
+      "1-12": "scattershot-1-12/source/scattershot_1-12_HB.zip (1.7MB)"
+    },
+    "installed_in": {},
+    "notes": "Procedural PBR texture scattering/tiling tool, acquired via Humble Bundle. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "sci-fi-modular-asset-pack": {
+    "type": "asset-library",
+    "display_name": "Sci-Fi Modular Asset Pack",
+    "source_url": "https://superhivemarket.com/products/sfy-sci-fi-modular-asset-pack",
+    "notion_url": "https://app.notion.com/p/29a86ab69e84809d8e39f65262ddcee5",
+    "install_method": "Modular environment asset pack (.zip) -- not yet extracted or registered in any profile. Author: sfy srl.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "sci-fi-modular-asset-pack/source/Sci-Fi_Modular_Asset_Pack.zip sfy srl.zip (2.2GB)"
+    },
+    "installed_in": {},
+    "notes": "Sci-fi modular asset pack for game-ready futuristic environments. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "stylized-castle-ruins-asset-pack": {
+    "type": "asset-library",
+    "display_name": "Stylized Castle Ruins Asset Pack",
+    "source_url": "https://superhivemarket.com/products/stylized-castle-ruins-asset-pack",
+    "notion_url": "https://app.notion.com/p/29a86ab69e8480fca604db2c917302f8",
+    "install_method": "Model asset pack (.zip) -- not yet extracted or registered in any profile. Author: Chase Hochstatter.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "stylized-castle-ruins-asset-pack/source/StylizedCastleRuinsAssetPack Chase Hochstatter.zip (436.7MB)"
+    },
+    "installed_in": {},
+    "notes": "Stylized castle ruins model pack for fantasy and low-poly environments. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "fantasy-cemetery-2": {
+    "type": "asset-library",
+    "display_name": "Fantasy Cemetery 2",
+    "source_url": "https://superhivemarket.com/products/fantasy-cemetery-2",
+    "notion_url": "https://app.notion.com/p/29a86ab69e848019b435c1abdad69292",
+    "install_method": "Environment asset pack (.zip) -- not yet extracted or registered in any profile. Author: Haridon.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "fantasy-cemetery-2/source/Fantasy_Cemetery_2 Haridon.zip (1.3GB)"
+    },
+    "installed_in": {},
+    "notes": "Fantasy cemetery environment asset pack for dark, gothic, or stylized scenes. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "game-render-ready-rock-pack": {
+    "type": "asset-library",
+    "display_name": "Game and Render Ready Rock Pack",
+    "source_url": "https://superhivemarket.com/products/realistic-low-poly-rock-pack",
+    "notion_url": "https://app.notion.com/p/29a86ab69e848033913ce12260c62bb5",
+    "install_method": "Environment asset pack (.zip) -- not yet extracted or registered in any profile.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "game-render-ready-rock-pack/source/Game And Render Ready Rock Pack .zip (1.0GB)"
+    },
+    "installed_in": {},
+    "notes": "Game- and render-ready rock model pack for natural environment scenes. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "rig-blenders-character-rigging-playbook": {
+    "type": "asset-library",
+    "display_name": "RIG: Blender's Character Rigging Playbook",
+    "source_url": "https://superhivemarket.com/products/rig-blenders-character-rigging-playbook",
+    "notion_url": "https://app.notion.com/p/2f575e93fbe44925a1c20b2b652935bf",
+    "install_method": "Video training course (4 chapters + source files) -- not applicable to Blender install. CG Cookie, instructor Wayne Dixon.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "rig-blenders-character-rigging-playbook/source/RIG.zip (3.1GB; contains RIG Chapter 1-4.zip, luna-source-files.zip, warm-up-exercise-files.zip, Humble Bundle Welcome.pdf, Royalty Free License.pdf -- not extracted)"
+    },
+    "installed_in": {},
+    "notes": "Character rigging training course covering practical Blender rig setup and workflows. \"Luna\" is the character CG Cookie designed specifically for this course. Identified via web search (cgcookie.com/courses/rig-blender-s-character-rigging-playbook, blendermarket.com/products/rig-blenders-character-rigging-playbook) since the downloaded filename ('RIG.zip') and internal contents did not state the product name directly. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12."
+  },
+  "brushflow": {
+    "type": "asset-library",
+    "display_name": "BrushFlow - 3D Normal Map Painting",
+    "source_url": "https://blendermarket.com/products/brushflow",
+    "notion_url": "https://app.notion.com/p/944921b226b24179b2f22738724d7d44",
+    "install_method": "Not a Python addon -- open/append from BrushFlow Studio.blend (brush/material setups for painting normal-map detail). No module/enable step.",
+    "module": null,
+    "current_version": "unversioned",
+    "versions": {
+      "unversioned": "brushflow/source/BrushFlow Studio.blend (20.8MB) + BrushFlow Studio - Read Me.docx (17.1KB) + RGB_Strokes.png (7.3MB, reference image)"
+    },
+    "installed_in": {},
+    "notes": "3D normal-map painting tool/setup, by seller Tradigital3D (same brand as the already-cataloged tradigitalist-toolbag). Order 5m2pgh (#2832352), Free. The existing Notion placeholder had listed Cost type as Paid/Store Blender Market from an earlier pass, but this order's own page showed Price: Free -- Cost type corrected to Free. Downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "autouv": {
+    "type": "addon",
+    "display_name": "AutoUV",
+    "source_url": "https://blendermarket.com/products/free-addon-autouv",
+    "notion_url": "https://app.notion.com/p/3d586ab69e84813992f1d3ac52d9371b",
+    "install_method": "Addon zip -- not yet installed in any profile. Install via Preferences -> Add-ons -> Install from Disk, then enable via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "1.0.1",
+    "versions": {
+      "1.0.1": "autouv/source/autouv_1.0.1.zip (254.1KB)"
+    },
+    "installed_in": {},
+    "notes": "UV unwrapping automation addon, by seller Blender Procedural (same brand as the already-cataloged Minecraft World Generator). Order annawd (#2810807), Paid 'Support The Developer' tier. Includes CustomUVChecker_byValle_2K (2).png (361.1KB) as a bundled UV checker reference texture, not addon code. Downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "quick-turnaround-camera": {
+    "type": "addon",
+    "display_name": "Quick Turnaround Camera",
+    "source_url": "https://superhivemarket.com/products/quick-turnaround-camera-addons",
+    "notion_url": "https://app.notion.com/p/27086ab69e8480638453ce05b3d1d8fc",
+    "install_method": "Addon zip -- not yet installed in any profile. Install via Preferences -> Add-ons -> Install from Disk, then enable via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "V4",
+    "versions": {
+      "V4": "quick-turnaround-camera/source/Camera Turnaround Addons V4 _ HuyKhoi2407.zip (3.2KB)"
+    },
+    "installed_in": {},
+    "notes": "Camera turnaround tool for quickly presenting models with rotating showcase shots, by seller HuyKhoi2407. Order bo0goi (#3533848), Free, Normal License. Downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "ultimate-character-kit": {
+    "type": "asset-library",
+    "display_name": "Ultimate Character Kit",
+    "source_url": "https://superhivemarket.com/products/ultimate-character-kit",
+    "notion_url": "https://app.notion.com/p/27086ab69e8480ad8c52dc607fcdcd12",
+    "install_method": "Static character asset pack (multiple formats) -- not an addon. Use whichever format variant matches your pipeline.",
+    "module": null,
+    "current_version": "unversioned",
+    "versions": {
+      "unversioned": "ultimate-character-kit/source/: 'Ultimate Character Kit for Speedsculpt and AM.zip' (372.0MB, tailored for the already-owned Speedsculpt and Adjustable Mannequin addons), 'Ultimate Character Kit.zip' (372.0MB, base/generic -- confirmed NOT byte-identical to the Speedsculpt-and-AM variant despite the matching order-page size label), 'Ultimate Character Kit OBJ.zip' (387.9MB), 'Ultimate Character Kit FBX.zip' (472.5MB), 'Ultimate Character Kit documentation.pdf' (2.6MB)"
+    },
+    "installed_in": {},
+    "notes": "Character asset pack by seller Pitiwazou, Paid, 'Ultimate Character Kit' version/license, 5 downloads. Format variants kept per the Decision Gate (render-engine/format-variant pattern, not a Blender-version-build) -- OBJ/FBX/base/Speedsculpt-AM-tailored are different use cases, not sequential upgrades. Order number not shown on the pasted order excerpt (unlike the sibling 'Quick Turnaround Camera Addons' order bo0goi, which was pasted in the same batch but is a separate, unrelated order) -- ask the user if it's needed later. Downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "simple-tabs": {
+    "type": "addon",
+    "display_name": "Simple Tabs",
+    "source_url": "https://blendermarket.com/products/simple-tabs",
+    "notion_url": "https://app.notion.com/p/3d586ab69e848103aa6bc2ac3ad08bda",
+    "install_method": "Addon zip -- not yet installed in any profile. Install via Preferences -> Add-ons -> Install from Disk, then enable via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "1.2.5",
+    "versions": {
+      "1.2.4": "simple-tabs/source/simple-tabs-1.2.4.zip (99.6KB) -- uploaded 2023-01-31",
+      "1.2.5": "simple-tabs/source/simple-tabs-125.zip (30.6KB) -- uploaded 2025-11-24"
+    },
+    "installed_in": {},
+    "notes": "UI tool for organizing addon panels into tabs, by seller Chipp Walters (same author as the already-cataloged Spock, Kit Ops 3 Pro, and Sci-Fi Flex). Order 84s63w (#3097213), Free. Two sequential addon-version releases kept per the Decision Gate (rollback safety) -- 1.2.4 (2023) and 1.2.5 (2025, smaller filesize, likely a cleanup/refactor). Downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "simplicage": {
+    "type": "addon",
+    "display_name": "Simplicage",
+    "source_url": "https://superhivemarket.com/products/simplicage",
+    "notion_url": "https://app.notion.com/p/27086ab69e848066985cfc2fdd7e52f7",
+    "install_method": "Not yet downloaded -- not installed in any profile.",
+    "module": null,
+    "current_version": "not yet downloaded",
+    "versions": {},
+    "installed_in": {},
+    "notes": "Tool for generating/simplifying cage meshes used in baking and retopology workflows, by seller morelewd. Order 5afy1j (#3087298), Free, Free version. Order page shows no downloadable file ('No downloads found') and a warning that the selected version is not extension-compatible -- reference only, nothing to move. Checked 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "lods-maker": {
+    "type": "addon",
+    "display_name": "Level Of Detail Generator | LODs Maker",
+    "source_url": "https://blendermarket.com/products/lods-maker--create-level-of-details-in-1-click/",
+    "notion_url": "https://app.notion.com/p/503462de77aa49f5b0ded09862189aa9",
+    "install_method": "Addon zip -- not yet installed in any profile. Install via Preferences -> Add-ons -> Install from Disk, then enable via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "v4",
+    "versions": {
+      "v4": "lods-maker/source/LODs Maker addons v4 - HuyKhoi2407.zip (4.2KB)"
+    },
+    "installed_in": {},
+    "notes": "LOD generator for creating multiple levels of detail from Blender models, by seller HuyKhoi2407 (same author as the already-cataloged Quick Turnaround Camera). Order 7rh85j (#3057362), Free, Normal License. Order also included a promo text file (HALLOWEEN SALE - 30% COUPON CODE .txt, 393B, not product content) -- kept alongside for completeness rather than discarded. Downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "printlab": {
+    "type": "asset-library",
+    "display_name": "Printlab | Your Guide to 3D Printing With Blender and a Prusa Printer",
+    "source_url": "https://blendermarket.com/products/printlab",
+    "notion_url": "https://app.notion.com/p/3f786ab69e84813ba611ed4581179569",
+    "install_method": "Video training course (course files + captions + videos) -- not applicable to Blender install. CG Cookie (same brand as the already-cataloged Cubicity and RIG: Blender's Character Rigging Playbook).",
+    "module": null,
+    "current_version": "01",
+    "versions": {
+      "01": "printlab/source/Printlab-CourseFiles-01.zip (209.8MB) + Printlab-Captions-English-01.zip (172.7KB) + Printlab-Videos-01.zip (2.1GB)"
+    },
+    "installed_in": {},
+    "notes": "3D printing training course (Blender-to-Prusa-printer workflow), seller CG Cookie. Order 841uzi (#3050716), Free. No existing Notion row found -- new row created. All 3 files now complete and moved 2026-10-12. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12."
+  },
+  "furnishing": {
+    "type": "asset-library",
+    "display_name": "Furnishing 1.4 - Furniture Pack - Ultimate Furniture Collection",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3f786ab69e84816a99d6cd1916407997",
+    "install_method": "Static furniture asset pack (.blend/fbx models, exact formats unconfirmed, not extracted) -- not an addon.",
+    "module": null,
+    "current_version": "1.4",
+    "versions": {
+      "1.4": "furnishing/source/growing FREE library zip.zip (457.1MB)"
+    },
+    "installed_in": {},
+    "notes": "Free furniture asset library by Dimensiva, distributed via seller 3D SHAKER (same seller as the already-cataloged Free Spring Grass Set). Order 4ulptm (#2993709), Free, labeled 'Growing FREE library' version -- the seller periodically grows this same free pack over time, so re-checking for a newer version later is worthwhile. No product page URL was given on the order excerpt; left null rather than guessed. No existing Notion row found -- new row created. Downloaded 2026-10-12."
+  },
+  "zenshaders-free": {
+    "type": "asset-library",
+    "display_name": "ZenShaders Free Library",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3f786ab69e84816a8e83e3a7438fb4da",
+    "install_method": "Static material/decal/brush/texture library, separate asset sets per app (Blender, Substance Painter, ZBrush) -- not an addon. See bundled installation guide .txt per app.",
+    "module": null,
+    "current_version": "unversioned",
+    "versions": {
+      "unversioned": "zenshaders-free/source/: Blender_ZenShaders_Free_Materials.zip (552.0MB), Blender_ZenShaders_Free_Brushes.zip (993.2MB), Blender_ZenShaders_Free_Decals.zip (35.9MB), Blender_ZenShaders_Free_Textures.zip (6.6MB), SPainter_ZenShaders_Free_Materials.zip (742.9MB), SPainter_ZenShaders_Free_Brushes.zip (447.3MB), SPainter_ZenShaders_Free_Decals.zip (80.0MB), SPainter_ZenShaders_Free_Textures.zip (12.4MB), Zbrush_ZenShaders_Free_Brushes.zip (765.7MB), plus 3 installation guide .txt files (Blender/Substance Painter/Zbrush)"
+    },
+    "installed_in": {},
+    "notes": "Free material/decal/brush/texture library by ZenShaders, cross-compatible across Blender, Substance Painter, and ZBrush (separate asset sets per app). Order 9qd932 (#2958414), Free. No product page URL was given on the order excerpt; left null rather than guessed. No existing Notion row found -- new row created. Downloaded 2026-10-12."
+  },
+  "lazy-animation": {
+    "type": "addon",
+    "display_name": "Lazy Animation",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3f786ab69e848138b2cec6eae876be43",
+    "install_method": "Addon zip -- not yet installed in any profile. Install via Preferences -> Add-ons -> Install from Disk, then enable via bpy.ops.preferences.addon_enable(module=...) once the module name is confirmed on first real install.",
+    "module": null,
+    "current_version": "1.0",
+    "versions": {
+      "1.0": "lazy-animation/source/Lazy Animation_v1.0_.zip (1.6MB)"
+    },
+    "installed_in": {},
+    "notes": "Animation helper addon by seller MeiU. Order 9qd932 (#2958414), Free -- pasted in the same batch as ZenShaders Free Library but a separate, unrelated product. No product page URL was given on the order excerpt; left null rather than guessed. No existing Notion row found -- new row created. Downloaded 2026-10-12."
+  },
+  "sanctus-vault": {
+    "type": "asset-library",
+    "display_name": "Sanctus Vault",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3f786ab69e8481cf82a7d85f995d48d6",
+    "install_method": "Install in Blender as Extension (SuperHive Remote Extension, account-gated via personal API token) -- not yet installed in any profile.",
+    "module": null,
+    "current_version": "1.2.0",
+    "versions": {
+      "1.2.0": "sanctus-vault/source/sanctus_vault_v1.2.0.zip (6.9MB) -- released 2026-05-28"
+    },
+    "installed_in": {},
+    "notes": "Asset vault by seller Sanctus (same brand as the already-cataloged Sanctus Library). Order bm0d1k (#3918236), Free. No product page URL was given on the order excerpt; left null rather than guessed. No existing Notion row found -- new row created. Downloaded 2026-10-12."
+  },
+  "kin-kollection": {
+    "type": "asset-library",
+    "display_name": "Kin Kollection - Procedural Clay Materials",
+    "source_url": "https://superhivemarket.com/products/kin-klei",
+    "notion_url": "https://app.notion.com/p/2fe86ab69e8480459706f69b2bdf6e13",
+    "install_method": "Procedural clay material library (node groups) -- not an addon. Append/link material node groups from the extracted file.",
+    "module": null,
+    "current_version": "unversioned",
+    "versions": {
+      "unversioned": "kin-kollection/source/kin kollection.zip (3.9MB)"
+    },
+    "installed_in": {},
+    "notes": "Procedural clay material library by seller Kinpraw, for handcrafted/tactile stylized surfaces. Order ddb2t7 (#3877623), Paid, 'kin kollection' version. Downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "customisable-female-basemesh": {
+    "type": "asset-library",
+    "display_name": "Customisable Female Basemesh",
+    "source_url": "https://superhivemarket.com/products/customisable-female-basemesh",
+    "notion_url": "https://app.notion.com/p/2fe86ab69e8480218726d78488a12218",
+    "install_method": "Static character basemesh asset (.blend) -- not an addon. Requires Blender 5.0+.",
+    "module": null,
+    "current_version": "2.1.2",
+    "versions": {
+      "2.1.2": "customisable-female-basemesh/source/Customisable Female Basemesh v2.1.2.zip (372.4MB) -- Blender 5.0+ required"
+    },
+    "installed_in": {},
+    "notes": "Customizable female base mesh for character modeling/sculpting/blockouts, by seller Vertex Arcade. Order ddb2t7 (#3877623), Paid. Notion placeholder was titled 'V2.0' -- this is a version upgrade to 2.1.2, same product. Downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created."
+  },
+  "casey-sheep-free-bundle": {
+    "type": "asset-library",
+    "display_name": "Casey_Sheep Free Bundle",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3f786ab69e8481788920e50784fda87e",
+    "install_method": "Not yet extracted -- contents unconfirmed.",
+    "module": null,
+    "current_version": "unversioned",
+    "versions": {
+      "unversioned": "casey-sheep-free-bundle/source/Free_Bundle.zip (55.7MB) -- not extracted, contents unconfirmed"
+    },
+    "installed_in": {},
+    "notes": "Free grab-bag bundle by Casey_Sheep (same brand as the already-cataloged BlendShop, FloraPaint, RealCloud, Better Lighting V2, and Real Water). Order 17uppz (#3973744), Free, 100% off 'Free Bundle' version. No product page URL given; left null rather than guessed. No existing Notion row found -- new row created. Downloaded 2026-10-12."
+  }
+}
