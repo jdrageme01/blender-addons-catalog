@@ -1,7 +1,5 @@
 # Blender addons library
 
-> **Public mirror of a personal catalog.** This is the metadata only — no purchased/licensed asset files (the real local copy is ~166GB and isn't published here). Exact prices have been generalized to `Free`/`Paid`; the local version keeps real amounts for personal spend-tracking. The linked Notion database is private and the referenced setup script isn't included in this repo — both are internal to the author's own machine.
-
 **Before downloading anything, check the [Addons database in Notion](https://app.notion.com/p/a899ed69265744e7855528f65d002731) first** (under the `Blender` page). That's the real answer to "do I already have this, even disabled/archived somewhere?" — `Status` covers exactly that: `Wishlist` → `Backlog` → `Testing` → `Using` → `Archived` → `Avoid`. An addon you disabled and forgot about should show up there as `Archived` or `Using` with `Owned: Yes`, not silently vanish — that's the whole reason it exists.
 
 This local folder is the technical companion, not a replacement: it holds
