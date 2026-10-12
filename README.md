@@ -249,3 +249,23 @@ first, file copied into `<slug>/source/`, manifest entry with `module: null`.
 | [Kin Kollection - Procedural Clay Materials](https://superhivemarket.com/products/kin-klei) | asset-library | not installed yet | unversioned | [page](https://app.notion.com/p/2fe86ab69e8480459706f69b2bdf6e13) |
 | [Customisable Female Basemesh](https://superhivemarket.com/products/customisable-female-basemesh) | asset-library | not installed yet | 2.1.2 | [page](https://app.notion.com/p/2fe86ab69e8480218726d78488a12218) |
 | Casey_Sheep Free Bundle (no source URL given) | asset-library | not installed yet | unversioned | [page](https://app.notion.com/p/3f786ab69e8481788920e50784fda87e) |
+| 3D Tudor - Blender 4 Modeling and Geo Nodes (no source URL given) | asset-library | not yet downloaded | n/a | [page](https://app.notion.com/p/3f786ab69e84810c8f69d195101f33ed) |
+| 3D Tudor - Blender 4 Creator Course Stylized 3D Models (no source URL given) | asset-library | not yet downloaded | n/a | [page](https://app.notion.com/p/3f786ab69e848184b342f95fd155cc08) |
+| UH Studio - Architecture Masterclass (no source URL given) | asset-library | not yet downloaded | n/a | [page](https://app.notion.com/p/3f786ab69e8481a998a5d4aefe5fd318) |
+| Harry Helps - Complete Beginners Guide to Blender (no source URL given) | asset-library | not yet downloaded | n/a | [page](https://app.notion.com/p/3f786ab69e848103aaa4c705d78ad926) |
+| CGDive - Rig Anything with Rigify (no source URL given) | asset-library | not yet downloaded | n/a | [page](https://app.notion.com/p/3f786ab69e848109b807e98c19625ef0) |
+| True VFX - PostPRO (no source URL given) | asset-library | not yet downloaded | n/a | [page](https://app.notion.com/p/3f786ab69e84812e906ff4503f8a5004) |
+| Ducky 3D - Intro to Motion Graphics (no source URL given) | asset-library | not yet downloaded | n/a | [page](https://app.notion.com/p/3f786ab69e848173805ac9cd2e0575dd) |
+| Creative Shrimp - Hard Surface Modeling (no source URL given) | asset-library | not yet downloaded | n/a | [page](https://app.notion.com/p/3f786ab69e84815a9b52e392f676df80) |
+| Ducky 3D - Intro to Geometry Nodes (no source URL given) | asset-library | not yet downloaded | n/a | [page](https://app.notion.com/p/3f786ab69e8481e580e8f5062a3b80a2) |
+| Creative Shrimp - Space VFX Elements (no source URL given) | asset-library | not yet downloaded | n/a | [page](https://app.notion.com/p/3f786ab69e8481be9582c15cf6c48c82) |
+| Creative Shrimp - Game Asset Workflow (no source URL given) | asset-library | not yet downloaded | n/a | [page](https://app.notion.com/p/3f786ab69e84811cbe13c24fd63dde32) |
+| CG Cookie - Pothead Hard Surface Character (no source URL given) | asset-library | not yet downloaded | n/a | [page](https://app.notion.com/p/3f786ab69e848185904bedb1c531986a) |
+| CG Cookie - Realistic Industrial Environment (no source URL given) | asset-library | not yet downloaded | n/a | [page](https://app.notion.com/p/3f786ab69e848101b9f5e2a7db5cfa49) |
+| CG Cookie - Off Road (no source URL given) | asset-library | not yet downloaded | n/a | [page](https://app.notion.com/p/3f786ab69e8481409a78eadb50039269) |
+| CG Cookie - Particles (no source URL given) | asset-library | not yet downloaded | n/a | [page](https://app.notion.com/p/3f786ab69e84818a980ae6d70f7dcbce) |
+| CG Cookie - ASSEMBLE (no source URL given) | asset-library | not yet downloaded | n/a | [page](https://app.notion.com/p/3f786ab69e8481299026ff519e4d3eb6) |
+| CG Cookie - HUMAN (no source URL given) | asset-library | not yet downloaded | n/a | [page](https://app.notion.com/p/3f786ab69e8481b68634f6c8bc3ed5ea) |
+| CG Cookie - SESSIONS (no source URL given) | asset-library | not yet downloaded | n/a | [page](https://app.notion.com/p/3f786ab69e8481689869e19abeb04b3d) |
+| CG Cookie - BCITY (no source URL given) | asset-library | not yet downloaded | n/a | [page](https://app.notion.com/p/3f786ab69e84813fb7b5ec748d48a712) |
+| CG Cookie - CORE (no source URL given) | asset-library | not yet downloaded | n/a | [page](https://app.notion.com/p/3f786ab69e848187a3cff99417d92eaf) |

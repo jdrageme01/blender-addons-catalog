@@ -1236,10 +1236,11 @@
       "videos_ch03_01": "cubicity/source/cubicity_videos_ch03_01.zip (1.0GB)",
       "videos_ch03_02": "cubicity/source/cubicity_videos_ch03_02.zip (762.9MB)",
       "videos_ch04_01": "cubicity/source/cubicity_videos_ch04_01.zip (710.9MB)",
-      "videos_ch04_02": "cubicity/source/cubicity_videos_ch04_02.zip (755.1MB)"
+      "videos_ch04_02": "cubicity/source/cubicity_videos_ch04_02.zip (755.1MB)",
+      "repack (Best of Blender Education copy)": "CUBICITY_01.zip (2.0GB) + CUBICITY_02.zip (3.2GB) -- not yet downloaded, not confirmed byte-identical to the ch01-ch04 copy above, kept separate until compared"
     },
     "installed_in": {},
-    "notes": "CG Cookie training course on creating/using Blender asset libraries, bundled with a 51-asset CUBICITY asset library (SuperHive-side, not a separate file to download). SuperHive order 9vwbw3 (#2545206), Free ('Birthday Gift'), all 8 files (~5.3GB of ch01-ch04 video zips + a small source-files zip) confirmed downloaded and moved into source/ 2026-10-12 -- the 6 chapter-video zips initially got stuck mid-download (0 bytes + growing .part siblings, same pattern seen repeatedly this session), user relaunched and all completed successfully, sizes verified against the order page. No existing Notion row found -- created new; type set to asset-library since the primary cataloged artifact (the 51-asset library) is asset-library-shaped even though most of the download is video training content, not code. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12."
+    "notes": "CG Cookie training course on creating/using Blender asset libraries, bundled with a 51-asset CUBICITY asset library (SuperHive-side, not a separate file to download). SuperHive order 9vwbw3 (#2545206), Free ('Birthday Gift'), all 8 files (~5.3GB of ch01-ch04 video zips + a small source-files zip) confirmed downloaded and moved into source/ 2026-10-12 -- the 6 chapter-video zips initially got stuck mid-download (0 bytes + growing .part siblings, same pattern seen repeatedly this session), user relaunched and all completed successfully, sizes verified against the order page. No existing Notion row found -- created new; type set to asset-library since the primary cataloged artifact (the 51-asset library) is asset-library-shaped even though most of the download is video training content, not code. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12. Also appears in the SuperHive order gcuacl (#3594578) 'Best of Blender Education' bundle (Paid, Paid total) as a 2-file repack (~5.2GB total) -- not yet downloaded, so not MD5-verified against the original; treated as the same course, not a new product."
   },
   "better-fbx-importer-exporter": {
     "type": "addon",
@@ -1614,10 +1615,11 @@
     "module": null,
     "current_version": "1.0",
     "versions": {
-      "1.0": "animation-bootcamp/source/AnimationBootcamp.zip (3.6GB)"
+      "1.0": "animation-bootcamp/source/AnimationBootcamp.zip (3.6GB)",
+      "repack (Best of Blender Education copy)": "Animation Bootcamp.zip (3.4GB) -- not yet downloaded, not confirmed byte-identical to the 1.0 copy above, kept separate until compared"
     },
     "installed_in": {},
-    "notes": "Training course for Blender animation fundamentals and production workflows. Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12."
+    "notes": "Training course for Blender animation fundamentals and production workflows, by CG Cookie (same studio as the already-cataloged cubicity, rig-blenders-character-rigging-playbook, printlab, cgcookie-pothead-hard-surface-character, cgcookie-realistic-industrial-environment, cgcookie-off-road, and cgcookie-particles). Part of the SuperHive order acxstv (#2789580) 'Blender Market's Essential Game Modding Toolkit' giveaway bundle (Tier 3, Free, 60 files total), downloaded 2026-10-12. Matched an existing Notion placeholder -- filled in, no duplicate created. Notion record lives in the Tips, Tricks and Tutorials database, not Addons -- migrated 2026-10-12. Also appears in the SuperHive order gcuacl (#3594578) 'Best of Blender Education' bundle (Paid, Paid total) as a slightly different-sized repack (3.4GB vs 3.6GB) -- not yet downloaded, so not MD5-verified against the original; treated as the same course, not a new product."
   },
   "cairo-city-cyberpunk-street": {
     "type": "asset-library",
@@ -1953,5 +1955,245 @@
     },
     "installed_in": {},
     "notes": "Free grab-bag bundle by Casey_Sheep (same brand as the already-cataloged BlendShop, FloraPaint, RealCloud, Better Lighting V2, and Real Water). Order 17uppz (#3973744), Free, 100% off 'Free Bundle' version. No product page URL given; left null rather than guessed. No existing Notion row found -- new row created. Downloaded 2026-10-12."
+  },
+  "3d-tudor-blender-4-modeling-geo-nodes": {
+    "type": "asset-library",
+    "display_name": "3D Tudor - Blender 4 Modeling and Geo Nodes",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3f786ab69e84810c8f69d195101f33ed",
+    "install_method": "Video training course (16 lesson zips + resource pack) -- not applicable to Blender install.",
+    "module": null,
+    "current_version": "not yet downloaded",
+    "versions": {},
+    "installed_in": {},
+    "notes": "Files: Course Resource Pack v1.1.zip (549.3MB), Lesson 10 - Using Boolean and Bend Modifier to create a stylized bridge in greybox_1.zip (1.4GB), Lesson 20 - Modeling Bridge railings and using Mirror Modifier_1.zip (1.3GB), Lesson 30 - Modelling framework support for structure extentions_1.zip (1.8GB), Lesson 40 - Modelling main roof_1.zip (1.8GB), Lesson 50 - Modelling unique shaped Window Variation_1.zip (1.7GB), Lesson 60 - Ading decorative wood framework onto tower using solidify, bevel and mirror modifiers_1.zip (1.9GB), Lesson 80 - Continuing hinge modeling process to create another variation_1.zip (1.8GB), Lesson 90 - Modeling framework to decorate tower_1.zip (1.8GB), Lesson 120 - Adding windows and decorative wood frame_1.zip (1.9GB), Lesson 130 - Adding final frame work to lantern_1.zip (1.7GB), Lesson 70 - Modelling wood supports for staircase on 2nd floor_1.zip (2.2GB), Lesson 100 - continuing to model roof attachment for the front_1.zip (2.1GB), Lesson 140 - Modeling and simulating a cloth flag_1.zip (2.1GB), Lesson 110 - modeling backdoor extention_1.zip (2.0GB), Lesson 153 - final compositor tweaks and background applying_1.zip (2.4GB). Part of SuperHive Humble Bundle order gcuacl (#3594578), 'Best of Blender Education', Superhive, Training, Paid (Paid total for the whole bundle). Not yet downloaded as of 2026-10-12 -- reference only, catalogued from the order page before any bytes exist locally."
+  },
+  "3d-tudor-creator-course-stylized-models": {
+    "type": "asset-library",
+    "display_name": "3D Tudor - Blender 4 Creator Course Stylized 3D Models",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3f786ab69e848184b342f95fd155cc08",
+    "install_method": "Video training course (resource pack + 11 model-pack zips) -- not applicable to Blender install.",
+    "module": null,
+    "current_version": "not yet downloaded",
+    "versions": {},
+    "installed_in": {},
+    "notes": "Files: Resource pack - The Blender 4 Creator Course Download Pack.blend (314.7MB), Resource pack - Texture Pack.zip (229.6MB), Blender 4 Creator Course Stylized 3D Models Pack (1).zip (2.2GB), (2).zip (2.7GB), (3).zip (3.5GB), (4).zip (3.5GB), (5).zip (3.2GB), (6).zip (3.5GB), (7).zip (3.8GB), (8).zip (3.8GB), (9).zip (4.0GB), (10).zip (4.5GB), (11).zip (826.2MB). Part of SuperHive Humble Bundle order gcuacl (#3594578), 'Best of Blender Education', Superhive, Training, Paid (Paid total for the whole bundle). Not yet downloaded as of 2026-10-12 -- reference only, catalogued from the order page before any bytes exist locally."
+  },
+  "uh-studio-architecture-masterclass": {
+    "type": "asset-library",
+    "display_name": "UH Studio - Architecture Masterclass",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3f786ab69e8481a998a5d4aefe5fd318",
+    "install_method": "Video training course (single archive) -- not applicable to Blender install.",
+    "module": null,
+    "current_version": "not yet downloaded",
+    "versions": {},
+    "installed_in": {},
+    "notes": "Files: architecture-masterclass.zip (3.4GB). Part of SuperHive Humble Bundle order gcuacl (#3594578), 'Best of Blender Education', Superhive, Training, Paid (Paid total for the whole bundle). Not yet downloaded as of 2026-10-12 -- reference only, catalogued from the order page before any bytes exist locally."
+  },
+  "harry-helps-complete-beginners-guide": {
+    "type": "asset-library",
+    "display_name": "Harry Helps - Complete Beginners Guide to Blender",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3f786ab69e848103aaa4c705d78ad926",
+    "install_method": "Video training course (2 archives) -- not applicable to Blender install.",
+    "module": null,
+    "current_version": "not yet downloaded",
+    "versions": {},
+    "installed_in": {},
+    "notes": "Files: CompleteBeginnersGuidetoBlender1 Harry Helps.zip (3.4GB), CompleteBeginnersGuidetoBlender2 Harry Helps.zip (4.3GB). Part of SuperHive Humble Bundle order gcuacl (#3594578), 'Best of Blender Education', Superhive, Training, Paid (Paid total for the whole bundle). Not yet downloaded as of 2026-10-12 -- reference only, catalogued from the order page before any bytes exist locally."
+  },
+  "cgdive-rig-anything-with-rigify": {
+    "type": "asset-library",
+    "display_name": "CGDive - Rig Anything with Rigify",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3f786ab69e848109b807e98c19625ef0",
+    "install_method": "Video training course (basics + Ogre + Dragon examples + manual + subtitles) -- not applicable to Blender install.",
+    "module": null,
+    "current_version": "not yet downloaded",
+    "versions": {},
+    "installed_in": {},
+    "notes": "Files: readme.pdf (142.1KB), RigAnythingWithRigify_01_Basics.zip (2.5GB), RigAnythingWithRigify_02_Manual.zip (967.2MB), RigAnythingWithRigify_03_Ogre.zip (2.7GB), RigAnythingWithRigify_04_Dragon.zip (1.8GB), Rigify_Courses_Subtitles.zip (1.0MB). Seller CGDive is Todor (cgdive.com) -- also the author of an external review of this very 'Best of Blender Education' bundle, found via web search earlier this session. Part of SuperHive Humble Bundle order gcuacl (#3594578), 'Best of Blender Education', Superhive, Training, Paid (Paid total for the whole bundle). Not yet downloaded as of 2026-10-12 -- reference only, catalogued from the order page before any bytes exist locally."
+  },
+  "true-vfx-postpro": {
+    "type": "asset-library",
+    "display_name": "True VFX - PostPRO",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3f786ab69e84812e906ff4503f8a5004",
+    "install_method": "Video training course (lessons 0-9 + additional videos + extra resources + PSDs) -- not applicable to Blender install.",
+    "module": null,
+    "current_version": "not yet downloaded",
+    "versions": {},
+    "installed_in": {},
+    "notes": "Files: PostPRO_V1.0.0 Richard Traynor.zip (23.5KB), postPRO psd pt1 Richard Traynor.zip (2.4GB), postPRO Lessons 0-3 Richard Traynor.zip (2.6GB), postPRO Lessons 4-6 Richard Traynor.zip (3.7GB), postPRO Lessons 7-9 Richard Traynor.zip (4.1GB), postPRO Additonal Videos Richard Traynor.zip (3.9GB), postPRO Extra Resources Richard Traynor.zip (1.6GB). Richard Traynor/True-VFX is already a known seller in this manifest (slugs true-terrain-5, true-sky, true-vfx-undergrowth) -- this is a distinct compositing course, not a duplicate of those asset packs. Part of SuperHive Humble Bundle order gcuacl (#3594578), 'Best of Blender Education', Superhive, Training, Paid (Paid total for the whole bundle). Not yet downloaded as of 2026-10-12 -- reference only, catalogued from the order page before any bytes exist locally."
+  },
+  "ducky3d-intro-motion-graphics": {
+    "type": "asset-library",
+    "display_name": "Ducky 3D - Intro to Motion Graphics",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3f786ab69e848173805ac9cd2e0575dd",
+    "install_method": "Video training course (14 lessons + intro video + resource files) -- not applicable to Blender install.",
+    "module": null,
+    "current_version": "not yet downloaded",
+    "versions": {},
+    "installed_in": {},
+    "notes": "Files: Files.zip (3.2MB), 1Watch This First.mp4 (315.3MB), Lesson 1.mp4 (1.0GB), Lesson 2.mp4 (842.3MB), Lesson 3.mp4 (691.9MB), Lesson 4 Part 1.mp4 (1.4GB), Lesson 4 Part 2.mp4 (1.6GB), Lesson 5.mp4 (1.7GB), Lesson 6.mp4 (1.5GB), Lesson 7.mp4 (1.2GB), Lesson 8 Part 1.mp4 (808.1MB), Lesson 8 Part 2.mp4 (1.6GB), Lesson 9.mp4 (1.7GB), Lesson 10.mp4 (1.8GB), Lesson 11.mp4 (1.7GB), Lesson 12.mp4 (1.0GB), Lesson 13.mp4 (1.0GB), Lesson 14 part 1.mp4 (1.1GB), Lesson 14 part 2.mp4 (1.2GB). Ducky 3D/Nathan Duck is already a known seller in this manifest (slug realtime-materials) -- this is a distinct motion-graphics course, not a duplicate. Part of SuperHive Humble Bundle order gcuacl (#3594578), 'Best of Blender Education', Superhive, Training, Paid (Paid total for the whole bundle). Not yet downloaded as of 2026-10-12 -- reference only, catalogued from the order page before any bytes exist locally."
+  },
+  "creative-shrimp-hard-surface-modeling": {
+    "type": "asset-library",
+    "display_name": "Creative Shrimp - Hard Surface Modeling",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3f786ab69e84815a9b52e392f676df80",
+    "install_method": "Video training course -- not applicable to Blender install.",
+    "module": null,
+    "current_version": "not yet downloaded",
+    "versions": {},
+    "installed_in": {},
+    "notes": "Hard-surface modeling course by Aidy Burrows (Creative Shrimp), delivered as a 5-volume split 7z archive: HardSurfaceModeling Aidy Burrows from Creative Shrimp-repack.7z.001 through .005 (4.0GB, 4.0GB, 4.0GB, 4.0GB, 2.8GB). Part of SuperHive Humble Bundle order gcuacl (#3594578), 'Best of Blender Education', Superhive, Training, Paid (Paid total for the whole bundle). Not yet downloaded as of 2026-10-12 -- reference only."
+  },
+  "ducky3d-intro-geometry-nodes": {
+    "type": "asset-library",
+    "display_name": "Ducky 3D - Intro to Geometry Nodes",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3f786ab69e8481e580e8f5062a3b80a2",
+    "install_method": "Video training course -- not applicable to Blender install.",
+    "module": null,
+    "current_version": "not yet downloaded",
+    "versions": {},
+    "installed_in": {},
+    "notes": "Geometry Nodes introduction course by Ducky 3D (Nathan Duck, same author as the already-cataloged realtime-materials and ducky3d-intro-motion-graphics). 20 lessons: 1 Intro And First Lesson.mp4 (3.7GB), 2 Making Arrays.mp4 (3.2GB), 3 Deleting Things.mp4 (1.5GB), 4 Displacement.mp4 (1.1GB), 5 Proximity.mp4 (2.6GB), 6 Text, Solidify, Wireframe.mp4 (1.2GB), 7 The Particle System.mp4 (938.6MB), 8 Triangulate, Split Edges.mp4 (742.4MB), 9 Instancing Collections.mp4 (897.5MB), 10 Curves.mp4 (1.1GB), 11 Intro Second Half.mp4 (178.9MB), 12 Wave Color Loop.mp4 (1.7GB), 13 Destructive Icosphere.mp4 (2.0GB), 14 Proximity Spiral.mp4 (1.3GB), 15 Volume Collection.mp4 (1.4GB), 16 Hexagon Stack.mp4 (3.7GB), 17 Math Spiral.mp4 (1.3GB), 18 Curve Color.mp4 (2.0GB), 19 Particle Volume.mp4 (2.0GB), 20 Proximity Hop.mp4 (1.8GB). Part of SuperHive Humble Bundle order gcuacl (#3594578), 'Best of Blender Education', Superhive, Training, Paid (Paid total for the whole bundle). Not yet downloaded as of 2026-10-12 -- reference only."
+  },
+  "creative-shrimp-space-vfx-elements": {
+    "type": "asset-library",
+    "display_name": "Creative Shrimp - Space VFX Elements",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3f786ab69e8481be9582c15cf6c48c82",
+    "install_method": "Video training course -- not applicable to Blender install.",
+    "module": null,
+    "current_version": "not yet downloaded",
+    "versions": {},
+    "installed_in": {},
+    "notes": "Space-themed VFX elements course by Aidy Burrows (Creative Shrimp, same author as the already-cataloged creative-shrimp-hard-surface-modeling). 3 files: SpaceVFX1 Aidy Burrows from Creative Shrimp.zip (3.0GB), SpaceVFX2 Aidy Burrows from Creative Shrimp.zip (4.9GB), SpaceVFX3 Aidy Burrows from Creative Shrimp.zip (4.1GB). Part of SuperHive Humble Bundle order gcuacl (#3594578), 'Best of Blender Education', Superhive, Training, Paid (Paid total for the whole bundle). Not yet downloaded as of 2026-10-12 -- reference only."
+  },
+  "creative-shrimp-game-asset-workflow": {
+    "type": "asset-library",
+    "display_name": "Creative Shrimp - Game Asset Workflow",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3f786ab69e84811cbe13c24fd63dde32",
+    "install_method": "Video training course -- not applicable to Blender install.",
+    "module": null,
+    "current_version": "not yet downloaded",
+    "versions": {},
+    "installed_in": {},
+    "notes": "Game asset production workflow course by Aidy Burrows (Creative Shrimp, same author as the already-cataloged creative-shrimp-hard-surface-modeling and creative-shrimp-space-vfx-elements). 3 files: GameAssetWorkflow1 Aidy Burrows from Creative Shrimp.zip (3.6GB), GameAssetWorkflow2 Aidy Burrows from Creative Shrimp.zip (4.5GB), GameAssetWorkflow3 Aidy Burrows from Creative Shrimp.zip (3.5GB). Part of SuperHive Humble Bundle order gcuacl (#3594578), 'Best of Blender Education', Superhive, Training, Paid (Paid total for the whole bundle). Not yet downloaded as of 2026-10-12 -- reference only."
+  },
+  "cgcookie-pothead-hard-surface-character": {
+    "type": "asset-library",
+    "display_name": "CG Cookie - Pothead Hard Surface Character",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3f786ab69e848185904bedb1c531986a",
+    "install_method": "Video training course -- not applicable to Blender install.",
+    "module": null,
+    "current_version": "not yet downloaded",
+    "versions": {},
+    "installed_in": {},
+    "notes": "Hard-surface character creation course by CG Cookie (same studio as the already-cataloged cubicity, rig-blenders-character-rigging-playbook, and printlab). 2 files: pothead_hard-surface-character-creation_01.zip (2.8GB), pothead_hard-surface-character-creation_02.zip (4.0GB). Part of SuperHive Humble Bundle order gcuacl (#3594578), 'Best of Blender Education', Superhive, Training, Paid (Paid total for the whole bundle). Not yet downloaded as of 2026-10-12 -- reference only."
+  },
+  "cgcookie-realistic-industrial-environment": {
+    "type": "asset-library",
+    "display_name": "CG Cookie - Realistic Industrial Environment",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3f786ab69e848101b9f5e2a7db5cfa49",
+    "install_method": "Video training course -- not applicable to Blender install.",
+    "module": null,
+    "current_version": "not yet downloaded",
+    "versions": {},
+    "installed_in": {},
+    "notes": "Realistic EEVEE industrial environment course by CG Cookie (same studio as cubicity, rig-blenders-character-rigging-playbook, printlab, and cgcookie-pothead-hard-surface-character). 1 file: realistic-eevee-environment.zip (2.8GB). Part of SuperHive Humble Bundle order gcuacl (#3594578), 'Best of Blender Education', Superhive, Training, Paid (Paid total for the whole bundle). Not yet downloaded as of 2026-10-12 -- reference only."
+  },
+  "cgcookie-off-road": {
+    "type": "asset-library",
+    "display_name": "CG Cookie - Off Road",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3f786ab69e8481409a78eadb50039269",
+    "install_method": "Video training course -- not applicable to Blender install.",
+    "module": null,
+    "current_version": "not yet downloaded",
+    "versions": {},
+    "installed_in": {},
+    "notes": "RC monster truck animation course by CG Cookie (same studio as cubicity, rig-blenders-character-rigging-playbook, printlab, cgcookie-pothead-hard-surface-character, and cgcookie-realistic-industrial-environment). 4 files: offroad_animate-rc-monster-truck_01.zip (3.1GB), _02.zip (3.7GB), _03.zip (1.9GB), _04.zip (4.4GB). Part of SuperHive Humble Bundle order gcuacl (#3594578), 'Best of Blender Education', Superhive, Training, Paid (Paid total for the whole bundle). Not yet downloaded as of 2026-10-12 -- reference only."
+  },
+  "cgcookie-particles": {
+    "type": "asset-library",
+    "display_name": "CG Cookie - Particles",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3f786ab69e84818a980ae6d70f7dcbce",
+    "install_method": "Video training course -- not applicable to Blender install.",
+    "module": null,
+    "current_version": "not yet downloaded",
+    "versions": {},
+    "installed_in": {},
+    "notes": "Particle system course by CG Cookie (same studio as cubicity, rig-blenders-character-rigging-playbook, printlab, cgcookie-pothead-hard-surface-character, cgcookie-realistic-industrial-environment, and cgcookie-off-road). 6 files: PARTICLES_CH01.zip (620.5MB), PARTICLES_CH02.zip (1014.7MB), PARTICLES_CH03.zip (413.0MB), particles-closed-captions.zip (188.1KB), particles-project-files.zip (1.1MB), Unlock Your Full Potential with CG Cookie.pdf (93.0KB, promo). Part of SuperHive Humble Bundle order gcuacl (#3594578), 'Best of Blender Education', Superhive, Training, Paid (Paid total for the whole bundle). Not yet downloaded as of 2026-10-12 -- reference only."
+  },
+  "cgcookie-assemble": {
+    "type": "asset-library",
+    "display_name": "CG Cookie - ASSEMBLE",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3f786ab69e8481299026ff519e4d3eb6",
+    "install_method": "Video training course -- not applicable to Blender install.",
+    "module": null,
+    "current_version": "not yet downloaded",
+    "versions": {},
+    "installed_in": {},
+    "notes": "CG Cookie course (same studio as cubicity, rig-blenders-character-rigging-playbook, printlab, cgcookie-pothead-hard-surface-character, cgcookie-realistic-industrial-environment, cgcookie-off-road, and cgcookie-particles). Exact topic unconfirmed -- title suggests a mechanical assembly/kitbash workflow, not verified. 2 files: ASSEMBLE.zip (1.5GB), ASSEMBLE-captions.zip (240.6KB). Part of SuperHive Humble Bundle order gcuacl (#3594578), 'Best of Blender Education', Superhive, Training, Paid (Paid total for the whole bundle). Not yet downloaded as of 2026-10-12 -- reference only."
+  },
+  "cgcookie-human": {
+    "type": "asset-library",
+    "display_name": "CG Cookie - HUMAN",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3f786ab69e8481b68634f6c8bc3ed5ea",
+    "install_method": "Video training course -- not applicable to Blender install.",
+    "module": null,
+    "current_version": "not yet downloaded",
+    "versions": {},
+    "installed_in": {},
+    "notes": "CG Cookie course (same studio as cubicity, rig-blenders-character-rigging-playbook, printlab, cgcookie-pothead-hard-surface-character, cgcookie-realistic-industrial-environment, cgcookie-off-road, cgcookie-particles, and cgcookie-assemble) -- title suggests human character creation/anatomy, not verified. 17 files: HUMAN_00_extras.zip (1.1GB), HUMAN_01_videos.zip (2.8GB), HUMAN_02_videos.zip (4.5GB), HUMAN_03_videos_01.zip (3.0GB), HUMAN_03_videos_02.zip (1.9GB), HUMAN_04_videos.zip (2.3GB), HUMAN_05_videos.zip (1.6GB), HUMAN_source-files_v3.zip.001 through .009 (1000.0MB each) + .010 (583.6MB) -- a 10-volume split archive. Part of SuperHive Humble Bundle order gcuacl (#3594578), 'Best of Blender Education', Superhive, Training, Paid (Paid total for the whole bundle). Not yet downloaded as of 2026-10-12 -- reference only."
+  },
+  "cgcookie-sessions": {
+    "type": "asset-library",
+    "display_name": "CG Cookie - SESSIONS",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3f786ab69e8481689869e19abeb04b3d",
+    "install_method": "Video training course -- not applicable to Blender install.",
+    "module": null,
+    "current_version": "not yet downloaded",
+    "versions": {},
+    "installed_in": {},
+    "notes": "CG Cookie course (same studio as cubicity, rig-blenders-character-rigging-playbook, printlab, cgcookie-pothead-hard-surface-character, cgcookie-realistic-industrial-environment, cgcookie-off-road, cgcookie-particles, cgcookie-assemble, and cgcookie-human) -- exact topic unconfirmed. 3 files: sessions_01.zip (4.3GB), sessions_2.zip (4.2GB), sessions_03.zip (2.4GB). Part of SuperHive Humble Bundle order gcuacl (#3594578), 'Best of Blender Education', Superhive, Training, Paid (Paid total for the whole bundle). Not yet downloaded as of 2026-10-12 -- reference only."
+  },
+  "cgcookie-bcity": {
+    "type": "asset-library",
+    "display_name": "CG Cookie - BCITY",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3f786ab69e84813fb7b5ec748d48a712",
+    "install_method": "Video training course -- not applicable to Blender install.",
+    "module": null,
+    "current_version": "not yet downloaded",
+    "versions": {},
+    "installed_in": {},
+    "notes": "CG Cookie course (same studio as cubicity, rig-blenders-character-rigging-playbook, printlab, cgcookie-pothead-hard-surface-character, cgcookie-realistic-industrial-environment, cgcookie-off-road, cgcookie-particles, cgcookie-assemble, cgcookie-human, and cgcookie-sessions) -- title suggests a city-building/environment course, possibly related to the already-cataloged cubicity asset library but not confirmed identical. 1 file: BCITY.zip (2.0GB). Part of SuperHive Humble Bundle order gcuacl (#3594578), 'Best of Blender Education', Superhive, Training, Paid (Paid total for the whole bundle). Not yet downloaded as of 2026-10-12 -- reference only."
+  },
+  "cgcookie-core": {
+    "type": "asset-library",
+    "display_name": "CG Cookie - CORE",
+    "source_url": null,
+    "notion_url": "https://app.notion.com/p/3f786ab69e848187a3cff99417d92eaf",
+    "install_method": "Video training course -- not applicable to Blender install.",
+    "module": null,
+    "current_version": "not yet downloaded",
+    "versions": {},
+    "installed_in": {},
+    "notes": "CG Cookie flagship Blender fundamentals course, 10 chapters: CORE_00-getting-started.zip (198.1KB), CORE_01-mesh-modeling.zip (2.2GB), CORE_02-sculpting.zip (2.6GB), CORE_03-lighting.zip (2.1GB), CORE_04-materials-shading.zip (830.6MB), CORE_05-texturing.zip (2.3GB), CORE_06-animation.zip (348.3MB), CORE_07-rigging.zip (2.0GB), CORE_08-physics.zip (3.0GB), CORE_09-compositing.zip (880.3MB). Same studio as cubicity, rig-blenders-character-rigging-playbook, printlab, cgcookie-pothead-hard-surface-character, cgcookie-realistic-industrial-environment, cgcookie-off-road, cgcookie-particles, cgcookie-assemble, cgcookie-human, cgcookie-sessions, and cgcookie-bcity. Part of SuperHive Humble Bundle order gcuacl (#3594578), 'Best of Blender Education', Superhive, Training, Paid (Paid total for the whole bundle) -- confirmed by the user as the final course in this order. Not yet downloaded as of 2026-10-12 -- reference only."
   }
 }
